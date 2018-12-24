@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rescue Polar Bear</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 微軟正黑體;
+            text-align: justify;
+            cursor: context-menu;
+        }
+
+        body {
+            margin: 0;
+            background-color: #E6ECF0;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        hr {
+            margin: 0;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* navbar */
+        .navbar {
+            height: 80px;
+            background-color: cornflowerblue;
+            padding-top: 15px;
+            box-shadow: 1px 1px 1px gray;
+        }
+
+        .navbar .container .box {
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            background-color: white;
+            border-radius: 999em;
+            padding: 5px;
+            background-image: url("/Polar bear/img/polar.png");
+            background-size: cover;
+            background-position: center;
+            transition: 2s;
+        }
+
+        .navbar .container .box:hover {
+            transition: 3s;
+            transform: rotateY(360deg);
+            cursor: pointer;
+        }
+
+        /* banner-top文字 */
+        .topword-container {
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .banner-top-container a {
+            float: left;
+            width: 100%;
+            font-size: 50px;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            line-height: 75px;
+        }
+
+        .banner-top-container p {
+            text-align: center;
+            animation-name: rotate;
+            animation-duration: 2s;
+        }
+
+        .banner-top-container p:hover {
+            color: cornflowerblue;
+            cursor: pointer;
+        }
+
+        @keyframes rotate {
+            0% {
+                color: white;
+                transform: rotateY(0);
+            }
+
+            50% {
+                color: red;
+                transform: scale(0.8);
+            }
+
+            100% {
+                color: white;
+            }
+        }
+
+        /* banner背景圖 */
+        .banner {
+            width: 100%;
+            height: calc(100vh - 80px);
+            background-image: url("/Polar bear/img/polarbear-banner.jpg");
+            padding-top: 80px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: 50;
+        }
+
+        /* 主選單部分 */
+        .navbar2 {
+            background-color: cornflowerblue;
+            position: sticky;
+            top: 75px;
+            box-shadow: 1px 1px 1px gray;
+            z-index: 10;
+        }
+
+        .navbar2 a {
+            width: 25%;
+            float: left;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .navbar2 a:hover {
+            background-color: orange;
+            cursor: pointer;
+        }
+
+        /* content-認識北極熊 */
+        .content .boxtop {
+            padding-top: 125px;
+        }
+
+        .content .boxtop .left {
+            float: left;
+            width: 50%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content .boxtop .left img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content .boxtop .left img:hover {
+            transform: scale(1.1);
+        }
+
+        .content .boxtop .right {
+            width: 50%;
+            padding: 30px;
+            float: left;
+        }
+
+        .content .boxtop .right .polarbear {
+            color: cornflowerblue;
+            font-size: 35px;
+        }
+
+        .content .boxtop .right p {
+            font-size: 20px;
+        }
+
+        /* content-熊熊危機*/
+        .content .center-top {
+            padding-top: 125px;
+        }
+
+        .content .center-top .left {
+            width: 50%;
+            padding: 30px;
+            float: left;
+        }
+
+        .content .center-top .left p {
+            font-size: 20px;
+        }
+
+        .content .center-top .right {
+            float: left;
+            width: 50%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content .center-top .right img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content .center-top .right img:hover {
+            transform: scale(1.1);
+        }
+
+        /* content-你知道嗎? */
+        .content .center-bottom {
+            padding-top: 125px;
+        }
+
+        .content .center-bottom .leftbox {
+            width: 50%;
+            height: 90vh;
+            background-image: url("/Polar bear/img/bigleft.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            float: left;
+        }
+
+        .content .center-bottom .left {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+        }
+
+        .content .center-bottom .leftbox p {
+            font-size: 20px;
+            color: white;
+        }
+
+        .content .center-bottom .right {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 50px;
+        }
+
+        .content .center-bottom .rightbox {
+            width: 50%;
+            height: 90vh;
+            background-image: url("/Polar bear/img/bigright.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            float: left;
+        }
+
+        .content .center-bottom .rightbox p {
+            font-size: 20px;
+        }
+
+        /* content-救救北極熊 */
+        .content .center-foot {
+            padding: 125px 0;
+        }
+
+        .content .center-foot .topword {
+            color: cornflowerblue;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .content .center-foot .leftbox {
+            width: 33.33%;
+            float: left;
+            margin: 50px 0;
+        }
+
+        .content .center-foot .left img {
+            width: 100%;
+            height: 400px;
+        }
+
+        .content .center-foot .centerbox {
+            width: 33.33%;
+            float: left;
+            margin: 50px 0;
+        }
+
+        .content .center-foot .center img {
+            width: 100%;
+            height: 400px;
+        }
+
+        .content .center-foot .rightbox {
+            width: 33.33%;
+            float: left;
+            margin: 50px 0;
+        }
+
+        .content .center-foot .right img {
+            width: 100%;
+            height: 400px;
+        }
+
+        .content .center-foot p {
+            text-align: center;
+            font-size: 25px;
+            color: brown;
+        }
+
+        .content .center-foot .footword {
+            color: blue;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        /* footer */
+        .footer {
+            background-color: cornflowerblue;
+            padding: 5px 0;
+        }
+
+        .footer .container .box {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 999px;
+            background-image: url("/Polar bear/img/polar.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: auto;
+        }
+
+        .footer .container .box:hover {
+            border: 3px solid cornflowerblue;
+            cursor: pointer;
+        }
+
+        .footer .container p {
+            margin-top: 5px;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+        }
+
+        /* ipad-pro */
+        /* 螢幕寬度小於1024px進行變化 */
+        @media(max-width: 1024px) {
+            .banner {
+                background-image: url("/Polar bear/img/polarbear-banner-small.jpg");
+                background-size: cover;
+            }
+
+            .content .boxtop .left {
+                width: 100%;
+                height: 50vh;
+                padding: 0 30px;
+            }
+
+            .content .boxtop .right {
+                width: 100%;
+            }
+
+            .content .center-top .left {
+                width: 100%;
+            }
+
+            .content .center-top .right {
+                width: 100%;
+                height: 50vh;
+                padding: 0 30px;
+            }
+
+            .content .center-bottom .leftbox {
+                width: 100%;
+                height: 50vh;
+            }
+
+            .content .center-bottom .rightbox {
+                width: 100%;
+                height: 50vh;
+            }
+
+            .content .center-foot .topword {
+                font-size: 25px;
+            }
+
+            .content .center-foot .leftbox {
+                width: 50%;
+            }
+
+            .content .center-foot .centerbox {
+                width: 50%;
+            }
+
+            .content .center-foot .rightbox {
+                width: 100%;
+                padding: 0 50px;
+            }
+        }
+
+        /* 手機 */
+        /* 當螢幕寬度小於600px進行改變 */
+        @media (max-width:600px) {
+            .banner {
+                background-image: url("/Polar bear/img/polarbear-banner-cellphone.jpg");
+                height: 80vh;
+                background-size: cover;
+            }
+
+            .banner-top-container a {
+                font-size: 25px;
+                line-height: 50px;
+            }
+
+            .navbar2 {
+                position: sticky;
+                top: 50px;
+            }
+
+            .navbar2 a {
+                font-size: 15px;
+            }
+
+            .content .boxtop {
+                padding-top: 100px;
+            }
+
+            .content .boxtop .right p {
+                font-size: 15px;
+            }
+
+            .content .center-top {
+                padding-top: 100px;
+            }
+
+            .content .center-top .left p {
+                font-size: 15px;
+            }
+
+            .content .center-bottom {
+                padding-top: 100px;
+            }
+
+            .content .center-bottom .leftbox p {
+                font-size: 15px;
+            }
+
+            .content .center-bottom .rightbox p {
+                font-size: 15px;
+            }
+
+            .content .center-foot {
+                padding: 100px 0;
+            }
+
+            .content .center-foot .topword {
+                font-size: 20px;
+            }
+
+            .content .center-foot .leftbox {
+                width: 100%;
+            }
+
+            .content .center-foot .left img {
+                width: 100%;
+                height: 300px;
+            }
+
+            .content .center-foot .centerbox {
+                width: 100%;
+                margin: auto;
+            }
+
+            .content .center-foot .center img {
+                width: 100%;
+                height: 300px;
+            }
+
+            .content .center-foot .right img {
+                width: 100%;
+                height: 300px;
+            }
+
+            .content .center-foot p {
+                font-size: 20px;
+            }
+
+            .content .center-foot .footword {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <a href="">
+                <div class="box">
+                </div>
+            </a>
+        </div>
+    </nav>
+    <div class="clearfix"></div>
+
+    <!-- banner頂部文字 -->
+    <div class="topword-container">
+        <div class="banner-top-container">
+            <div class="box">
+                <a href="">
+                    <p>Rescue Polar Bear！</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- banner -->
+    <div class="banner"></div>
+
+    <!-- navbar選單內容 -->
+    <nav class="navbar2">
+        <div class="container">
+            <div class="left">
+                <a href="#top">認識北極熊</a>
+                <a href="#centent-top">熊熊危機</a>
+            </div>
+            <div class="right">
+                <a href="#center-bottom">你知道嗎？</a>
+                <a href="#center-foot">救救北極熊</a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </nav>
+
+    <!-- content-主要內容 -->
+    <div class="content">
+        <!-- 認識北極熊 -->
+        <div id=top class="boxtop">
+            <div class="container">
+                <div class="left"><img src="/Polar bear/img/polarbear-left.jpg" alt="polarbear-left"></div>
+                <div class="right">
+                    <p><b class="polarbear">北極熊</b>，在不同的語言中又稱為白熊或冰熊，被全世界公認是北極地區最具代表性的動物。</p><br>
+                    <p>在所生存的空間裡，北極熊位於食物鏈的最頂層。</p><br>
+                    <p>健康的北極熊會擁有極厚的脂肪及毛髮，以在北極這種極端嚴寒的氣候中生存。其中白色的外表在雪白的雪地上是良好的保護色。</p><br>
+                    <p>北極熊是游泳健將，主要在海冰上捕捉海豹為食，但因全球暖化導致海冰減少、人類捕殺、棲息地被破壞、及以人類工業排放物的污染等等影響，北極熊的數量在幾十年間嚴重減少，如今已列為
+                        <b>瀕臨絕種動物</b>。</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- 熊熊危機 -->
+        <div id="centent-top" class="center-top">
+            <div class="container">
+                <div class="left">
+                    <p>全球暖化所造成的海冰減少、以致捕獵的機會降低、食物來源不足。此情況將導致成熊平均體重的下降、身長的減少、小北極熊和年輕北極熊存活率嚴重降低、懷孕母熊的儲脂量減少、小熊平均孕育隻數減低等。</p><br>
+                    <p>科學家認為，<b>如果全球暖化的速率不減，可能在本世紀中，北極熊的數量會銳減2/3，本世紀末是否會全面滅絕，則是未可知。</b></p><br>
+                    <p>由於全球暖化、北極熊覓食困難，加上人類移居到他們的棲息地域，北極熊、尤其是獵捕困難的母熊或沒有經驗年輕公熊，有時會闖入人類的社區中，而被人類射殺。</p>
+                </div>
+                <div class="right"><img src="/Polar bear/img/polarbear-right.jpg" alt="polarbear-right"></div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <!-- 你知道嗎? -->
+        <div id=center-bottom class="center-bottom">
+            <div class="leftbox">
+                <div class="left">
+                    <p>北極熊被全世界公認是北極地區最具代表性的動物，可能是六十多萬年前，由灰熊演化出來。</p><br>
+                    <p>然而近年卻因為全球暖化的關係，棲地受到破壞，再加上人為的獵殺，北極熊的生存受到相當大的衝擊。</p><br>
+                    <p>北極熊主食海豹，然而全球暖化導致冰層減少，少了海豹上岸曬太陽的機會，北極熊捕食的機會自然減少，進而變成捕不到食物而陷入飢餓狀態，最後活活餓死。</p>
+                </div>
+            </div>
+            <div class="rightbox">
+                <div class="right">
+                    <p>為了維持食物鏈的平衡，一旦北極熊滅絕，生態將會改變。牽一髮而動全身，或許生態一旦改變，到最後會演變成對人類有著強烈的影響也說不定。</p><br>
+                    <p>讓北極熊繼續存活在這個地球上，需要你我共同來維護，只需要平時養成幾個習慣，就能夠讓環境漸漸好轉，不至於使北極熊的生存環境繼續受到受到莫大的衝擊。</p>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <!-- 救救北極熊 -->
+        <div id=center-foot class="center-foot">
+            <div class="container">
+                <p class="topword">只要簡單幾個動作，就能改善北極熊生存的環境</p>
+                <div class="leftbox">
+                    <div class="left"><img src="./img/light.png" alt="light"></div>
+                    <p>減少用電</p>
+                </div>
+                <div class="centerbox">
+                    <div class="center"><img src="./img/car.png" alt="car"></div>
+                    <p>搭乘大眾交通工具</p>
+                </div>
+                <div class="rightbox">
+                    <div class="right"><img src="./img/tree.png" alt="tree"></div>
+                    <p>綠化環境</p>
+                </div>
+                <p class="footword">愛護北極熊，你我做起來！</p>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="background-color">
+            <div class="container">
+                <a href="#navbar">
+                    <div class="box"></div>
+                </a>
+                <p>©2018 Rescue Polar Bear</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
