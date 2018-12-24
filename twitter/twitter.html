@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+        crossorigin="anonymous">
+
+    <style>
+        body {
+            margin: 0;
+            height: 3000px;
+            background-color: #E6ECF0;
+            padding-top: 40px;
+        }
+
+        .nav {
+            height: 40px;
+            box-shadow: 1px 1px 3px gray;
+            background-color: white;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 99;
+        }
+
+        .nav .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .nav .left{
+            float: left;
+        }
+
+        .nav .right{
+            float: right;
+        }
+        
+        .nav .fa-twitter {
+            color: #1DA1F2;
+            margin-right: 10px;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+
+        .nav .container .word{
+            margin-right: 20px;
+        }
+
+        .nav .container .link {
+            text-decoration: none;
+            line-height: 40px;
+            font-size: 13px;
+            color: rgb(102, 117, 127);
+        }
+        .nav .left .clearfix{
+            clear: both;
+        }
+
+        .nav .input{
+            border-radius: 50px;
+            border: 1px solid gray;
+            margin-right: 10px;
+            padding: 5px 10px;
+            outline: none;
+        }
+
+        .nav .input:hover{
+           outline: none;
+           border: 1px solid #1DA1F2;
+        }
+
+        .banner{
+            height: 45vh;
+            margin: auto;
+            background-image: url("/twitter/img/smilecat.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+            position: sticky;
+            top: -650px;
+        }
+
+        .nav2{
+            position: sticky;
+            top: 50px;
+            z-index: 50;
+            background-color: white;
+            height: 80px;
+            box-shadow: 1px 1px 3px gray;
+            box-sizing: border-box;
+           
+        }
+
+        .nav2 .container{
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .nav2 .left-box{
+            width: 200px;
+            height: 200px;
+            background-image: url("/twitter/img/goodcat.jpg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 999px;
+            border: 5px solid white;
+            float: left;
+            margin-top: -100px;
+        }
+
+        .nav2 .center-box{
+            margin-left: 300px;
+        }
+
+        .nav2 .wordbox{
+            text-align: center;
+           
+        }
+
+        .nav2 .topword{
+            float: left;
+            line-height: 30px;
+            margin-right: 30px;
+            color:  rgb(102, 117, 127);
+            font-weight: 700;
+            font-size: 15px;
+            display: block;
+            text-decoration: none;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .nav2 .wordbox span{
+            font-size: 18px;
+            line-height: 5px;
+            padding: 20px;
+        }
+
+        .nav2 .wordbox span:hover{
+            color: #1DA1F2;
+            border-bottom: 2px solid #1DA1F2;
+        }
+
+        .nav2 .right-box{
+            float: right;
+            padding-top: 25px;
+        }
+
+        .nav2 .right-box .button{
+            width: 100px;
+            height: 30px;
+            background-color: white;
+            border-radius: 15px;
+            border: 1px solid #1DA1F2;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .nav2 .right-box .button:hover{
+            outline: none;
+        }
+
+        .nav2 .right-box .button:active{
+            border: 3px solid #1DA1F2;
+        }
+
+        .nav2 .word{
+            line-height: 3px;
+            text-align: center;
+            color: #1DA1F2;
+        }
+
+        .nav2 .clearfix-center{
+            clear: both;
+        }
+
+        .content .container{
+            clear: both;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .content .leftbox{
+            width: 300px;
+            height: 300px;
+            margin-top: 50px;
+            float: left;
+        }
+
+        .content .name{
+            font-size: 30px;
+            text-decoration: none;
+            color: #14171A;
+        }
+
+        .content .name:hover{
+            text-decoration: underline ;
+        }
+
+        .content .email{
+            color: rgb(102, 117, 127);
+            text-decoration: none;
+        }
+
+         .content .email:hover{
+            text-decoration:underline;
+        }
+
+        .content .leftbox .label{
+            color: rgb(102, 117, 127);
+            font-size: 15px;
+        }
+
+         .content .leftbox .picword{
+             text-decoration: none;
+         }
+
+        .content .leftbox .fas{
+            margin-right: 10px;
+        }
+        .content .leftbox .far{
+            margin-right: 10px;
+        }
+
+        .content .leftbox .img{
+           width: 100px;
+           height: 100px;
+           background-image: url("/twitter/img/boxcat.jpg");
+           background-size: cover;
+           background-position: center;
+           border-radius: 5px;
+        }
+
+        .content .centerbox{
+            float: left;
+            width: 550px;
+        }
+
+        .content .centerbox .topbox{
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            margin-top: -18px;
+            margin-bottom: 3px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="left">
+                <a href="#" class="link word"><i class="fab fa-twitter"></i>首頁</a>
+                <a href="#" class="link">關於</a>
+                <div class="clearfix"></div>
+            </div>
+            <div class="right">
+                <a href="#" class="link">
+                    <input type="text" class="input" placeholder="搜尋 Twitter" value="">
+                    <span>已經擁有帳戶？<b>登入</b></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner"></div>
+
+    <nav class="nav2">
+        <div class="container">
+            <div class="left-box"></div>
+            <div class="clearfix-left"></div>
+            <div class="center-box">
+                <div class="wordbox">
+                    <a class="topword" href="">推文<br><span>666</span></a>
+                    <a class="topword" href="">正在跟隨<br><span>666</span></a>
+                    <a class="topword" href="">跟隨者<br><span>87</span></a>
+                    <a class="topword" href="">喜歡的內容<br><span>87</span></a>
+                </div>
+            </div>
+            <div class="right-box">
+                <a href="">
+                    <button class="button">
+                        <p class="word">跟隨</p>
+                    </button>
+                </a>
+            </div>
+            <div class="clearfix-center"></div>
+        </div>
+    </nav>
+
+    <dic class="content">
+        <div class="container">
+            <div class="leftbox">
+                <a class="name" href="">ComeCome<br><a class="email" href="">@aobacomecome</a></a>
+                <p>給我貓貓ㄒㄧ喔</p>
+                <p class="label"><i class="fas fa-map-marker-alt"></i>夾在太平洋與中華台北海峽中間的島礁</p>
+                <p class="label"><i class="far fa-calendar-alt"></i>88888年13月32日加入</p>
+                <p class="label"><i class="far fa-image"></i><a class="picword" href="">圖片與影片</a></p>
+                <a href="">
+                    <div class="img"></div>
+                </a>
+            </div>
+            <div class="centerbox">
+                <div class="topbox"></div>
+                <div class="wordbox"></div>
+            </div>
+            <div class="rightbox"></div>           
+        </div>
+
+    </dic>
+
+</body>
+
+</html>
