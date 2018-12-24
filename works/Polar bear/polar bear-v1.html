@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 微軟正黑體;
+        }
+
+        body {
+            margin: 0;
+            background-color: #E6ECF0;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 80px;
+            background-color: cornflowerblue;
+            box-sizing: border-box;
+            padding-top: 15px;
+        }
+
+        .navbar .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .navbar .container .box {
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            background-color: white;
+            border-radius: 999em;
+            padding: 5px;
+        }
+
+        .navbar .container img {
+            margin: auto;
+            padding: 5px;
+
+        }
+
+        .banner {
+            height: calc(100vh - 80px);
+            background-image: url("/works/Polar bear/img/polarbear-banner.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .navbar2 {
+            margin: 0;
+            width: 100%;
+            background-color: cornflowerblue;
+        }
+
+        .navbar2 .container {
+            max-width: 1200px;
+            height: 50px;
+            margin: auto;
+        }
+
+        .navbar2 .container .box {
+            width: 300px;
+            float: left;
+            text-align: center;
+        }
+
+        .navbar2 .container .box:hover {
+            background-color: coral;
+        }
+
+        .navbar2 .container .box a {
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 20px;
+            line-height: 50px;
+            padding: 15px 100px 15px 100px;
+        }
+
+        .content .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .content .container .boxtop {
+            width: 100%;
+        }
+
+        .content .container .boxtop .top {
+           padding: 5px;
+           height: 75px;
+        }
+
+        .content .container .boxtop .top .box {
+            margin: auto;
+            width: 25%;
+            height: 100%;
+            background-color: pink;
+            border-radius: 50px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .content .container .boxtop .top .box span {
+            margin: 0;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 75px;
+            margin: auto;
+        }
+
+        .content .container .boxtop .left {
+            width: 50%;
+            height: 90vh;
+            margin: auto;
+            float: left;
+            background-image: url("/works/Polar bear/img/polarbear-left.jpg");
+            background-position: 40% 20%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .content .container .boxtop .right {
+            width: 50%;
+            height: calc(100vh - 75px);
+            margin: auto;
+            float: left;
+            padding: 10px 20px;
+        }
+
+        .content .container .boxtop .right .p1 {
+            margin: 0;
+        }
+
+        .content .container .boxtop .right .p1 b {
+            color: cornflowerblue;
+            font-size: 30px;
+            font-weight: 900;
+            text-align: justify;
+        }
+
+        .content .container .boxtop .right p {
+            font-size: 25px;
+            font-weight: 500;
+            text-align: justify;
+            line-height: 40px;
+        }
+
+        .content .container .center-top {
+            width: 100%;
+        }
+
+        .content .container .center-top .top {
+           padding: 5px;
+           height: 75px;
+        }
+
+        .content .container .center-top .top .box {
+            margin: auto;
+            width: 25%;
+            height: 100%;
+            background-color: pink;
+            border-radius: 50px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .content .container .center-top .top .box span {
+            margin: 0;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 75px;
+            margin: auto;
+        }
+
+        .content .container .center-top .left {
+            width: 50%;
+            height: calc(100% -75px);
+            margin: auto;
+            float: left;
+        }
+
+        .content .container .center-top .left p {
+            font-size: 25px;
+            font-weight: 500;
+            text-align: justify;
+            line-height: 40px;
+            padding: 0px 20px;
+        }
+
+        .content .container .center-top .right {
+            width: 50%;
+            height: 90vh;
+            margin: auto;
+            float: right;
+            background-image: url("/works/Polar bear/img/polarbear-right.jpg");
+            background-position: 0 45%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="box">
+                <a href="#navbar"><img src="/works/Polar bear/img/polar-bear.png" alt="polarbear-logo"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="clearfix"></div>
+    <div class="banner"></div>
+    <nav class="navbar2">
+        <div class="container">
+            <div class="box"><span><a href="#top">認識北極熊</a></span></div>
+            <div class="box"><span><a href="#centent-top">熊熊危機</a></span></div>
+            <div class="box"><span><a href="">你知道嗎？</a></span></div>
+            <div class="box"><span><a href="">救救北極熊</a></span></div>
+        </div>
+    </nav>
+    <div class="clearfix"></div>
+    <div class="content">
+        <div class="container">
+            <div id=top class="boxtop">
+                <div class="top">
+                    <div class="box">
+                        <span>認識北極熊</span>
+                    </div>
+                </div>
+                <div class="left"></div>
+                <div class="right">
+                    <p class="p1"><b>北極熊</b>，在不同的語言中又稱為白熊或冰熊，被全世界公認是北極地區最具代表性的動物。</p>
+                    <p>在所生存的空間裡，北極熊位於食物鏈的最頂層。</p>
+                    <p>健康的北極熊會擁有極厚的脂肪及毛髮，以在北極這種極端嚴寒的氣候中生存。其中白色的外表在雪白的雪地上是良好的保護色。</p>
+                    <p>北極熊是游泳健將，主要在海冰上捕捉海豹為食，但因<ins>全球暖化</ins>導致海冰減少、<ins>人類捕殺</ins>、<ins>棲息地被破壞</ins>、及以人類<ins>工業排放物</ins>的污染等等影響，北極熊的數量在幾十年間嚴重減少，如今已列為瀕臨絕種動物。</p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div id="centent-top" class="center-top">
+                <div class="top">
+                    <div class="box">
+                        <span>熊熊危機</span>
+                    </div>
+                </div>
+                <div class="left">
+                    <p>全球暖化所造成的海冰減少、以致捕獵的機會降低、食物來源不足。此情況將導致成熊平均體重的下降、身長的減少、小北極熊和年輕北極熊存活率嚴重降低、懷孕母熊的儲脂量減少、小熊平均孕育隻數減低等。</p>
+                    <p>科學家認為，如果全球暖化的速率不減，可能在本世紀中，北極熊的數量會銳減2/3，本世紀末是否會全面滅絕，則是未可知。</p>
+                    <p>由於全球暖化、北極熊覓食困難，加上人類移居到他們的棲息地域，北極熊、尤其是獵捕困難的母熊或沒有經驗年輕公熊，有時會闖入人類的社區中，而被人類射殺。</p>
+                </div>
+                <div class="right"></div>
+            </div>
+        </div>
+        <div class="center-bottom"></div>
+        <div class="center-footer"></div>
+    </div>
+
+    </div>
+    <div class="footer"></div>
+
+</body>
+
+</html>

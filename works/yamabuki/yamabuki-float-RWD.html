@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yamabuki Bakery-Float-RWD</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        /* 背景動圖 */
+        .opacity {
+            width: 100%;
+            height: 100vh;
+            background-image: url("/works/yamabuki/img/pangif.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+
+        .opacity .gif {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255, 0.5);
+        }
+
+        /* navbar */
+        .all {
+            position: relative;
+        }
+
+        nav {
+            width: 366px;
+            height: 100%;
+            background-color: rgba(255, 140, 0, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 75px;
+            position: fixed;
+        }
+
+        nav .box {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        nav .box .logo {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+        }
+
+        nav .box .logo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        nav .box .word {
+            margin-top: 30px;
+        }
+
+        nav .box a {
+            font-size: 24px;
+            line-height: 50px;
+            color: #F0F0F0;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav .box a:hover {
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+        }
+
+        nav .box a:active {
+            font-size: 15px;
+            color: tomato;
+        }
+
+        nav .box a:visited {
+            color: pink;
+            border: 1px splid white;
+        }
+
+        nav .box .copyright {
+            width: 100%;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        nav .box .copyright p {
+            margin: 0;
+            font-size: 10px;
+            color: wheat;
+        }
+
+        nav .box .ham {
+            display: none;
+        }
+
+        /* 主內容 */
+        .content {
+            width: calc(100% - 366px);
+            height: 100vh;
+            margin-left: 366px;
+            position: relative;
+        }
+
+        .content .menu {
+            max-width: 957px;
+            width: 100%;
+            height: 570px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .content .menu .choco {
+            width: 33%;
+            height: 100%;
+            margin-right: 4px;
+            float: left;
+            background-image: url("/works/yamabuki/img/chocolate cornet.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: 2s;
+        }
+
+        .content .menu .choco:hover {
+            transform: scale(1.02);
+            transition: 0.5s;
+        }
+
+        .content .french {
+            width: 33%;
+            height: 100%;
+            margin-right: 4px;
+            background-image: url("/works/yamabuki/img/French bread.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: left;
+            transition: 2s;
+        }
+
+        .content .french:hover {
+            transform: scale(1.02);
+            transition: 0.5s;
+        }
+
+        .content .polo {
+            width: 33%;
+            height: 100%;
+            float: left;
+            background-image: url("/works/yamabuki/img/Polo bread.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: 2s;
+        }
+
+        .content .polo:hover {
+            transform: scale(1.02);
+            transition: 0.5s;
+        }
+
+        .content .copy {
+            display: none;
+        }
+
+        /* 當螢幕寬度小於、等於1280，進行變化 */
+        @media(max-width:1280px) {
+            .content .menu {
+                width: 100%;
+                max-width: 800px;
+                height: 100%;
+                max-height: 567px;
+            }
+
+            .content .menu .choco {
+                width: 100%;
+                height: 49%;
+                margin-bottom: 1vmin;
+            }
+
+            .content .menu .choco:hover {
+                transform: scale(1.05);
+            }
+
+            .content .french {
+                width: 49%;
+                height: 49%;
+            }
+
+            .content .french:hover {
+                transform: scale(1.05);
+            }
+
+            .content .polo {
+                width: 49%;
+                height: 49%;
+                float: right;
+            }
+
+            .content .polo:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        /* 當螢幕寬度小於、等於768px，進行變化 */
+        @media(max-width:768px) {
+            nav {
+                width: 100vw;
+                height: 100px;
+                padding: 10px 20px;
+                position: relative;
+            }
+
+            nav .box .logo {
+                width: 80px;
+                height: 80px;
+                float: left;
+            }
+
+            nav .box .word {
+                margin-top: 0;
+                float: right;
+                position: absolute;
+                right: 45px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            nav .box a {
+                font-size: 24px;
+                line-height: 5px;
+                display: inline;
+            }
+
+            nav .box .copyright {
+                display: none;
+            }
+
+            .content {
+                width: 100%;
+                height: calc(100vh - 100px);
+                margin: 0;
+                position: relative;
+            }
+
+            .content .menu {
+                width: 100%;
+                max-width: 700px;
+                height: 100%;
+                max-height: 800px;
+            }
+
+            .content .copy {
+                position: absolute;
+                margin: 0;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                font-size: 10px;
+                color: wheat;
+            }
+        }
+
+        /* 當螢幕小於等於375px進行變化 */
+        @media (max-width:375px) {
+            nav {
+                width: 100%;
+                height: 60px;
+                padding: 5px 20px;
+
+            }
+
+            nav .box {
+                position: relative;
+            }
+
+            nav .box .logo {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100px;
+                height: 50px;
+                padding: 5px 0;
+            }
+
+            nav .box .word {
+                display: none;
+            }
+
+            nav .box .ham {
+                font-size: 25px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                color: white;
+            }
+
+            .content {
+                width: 100%;
+                height: calc(100vh - 60px);
+                position: relative;
+            }
+
+            .content .menu {
+                max-width: 100%;
+                max-height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+            }
+
+            .content .menu .choco {
+                width: 100%;
+                height: 33.333%;
+                margin-bottom: 0;
+            }
+
+            .content .copy {
+                display: none;
+            }
+
+            .content .french {
+                width: 100%;
+                height: 33.333%;
+            }
+
+            .content .polo {
+                width: 100%;
+                height: 33.333%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="opacity">
+        <div class="gif">
+            <div class="all">
+                <nav>
+                    <div class="box">
+                        <div class="ham"><i class="fas fa-bars"></i></div>
+                        <div class="logo"><img src="/works/yamabuki/img/smalllogo.png" alt="logo"></div>
+                        <div class="word">
+                            <a href="https://zh.wikipedia.org/wiki/BanG_Dream%EF%BC%81%E5%B0%91%E5%A5%B3%E6%A8%82%E5%9C%98%E6%B4%BE%E5%B0%8D">山吹烘焙坊</a>
+                            <a href="https://bang-dream.com/">新鮮出爐</a>
+                            <a href="https://twitter.com/bang_dream_info">聯絡我們</a>
+                        </div>
+                        <div class="copyright">
+                            <p>©2018 Yamabuki Bakery</p>
+                            <p>練習用切版</p>
+                        </div>
+                    </div>
+                </nav>
+                <div class="content">
+                    <div class="menu">
+                        <div class="choco"></div>
+                        <div class="french"></div>
+                        <div class="polo"></div>
+                    </div>
+                    <p class="copy">©2018 Yamabuki Bakery 練習用切版</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
