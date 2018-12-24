@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yamabuki Bakery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        p {
+            margin: 0;
+        }
+        
+        /* 背景GIF */
+        .bg-img {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("/works/yamabuki/img/pangif.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .opacity {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+
+        .all{
+            max-width: 1920px;
+            width: 100%;
+            margin: auto;
+        }
+
+        /* 右方選單 */
+        .left {
+            width: 366px;
+            height: 100vh;
+            background-color: rgba(255, 140, 0, 0.7);
+            float: left;
+            overflow: hidden;
+        }
+
+        .left .logo {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            margin-top: 75px;
+            margin-bottom: 65px;
+        }
+
+        .left .logo img {
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+            overflow-x: hidden;
+        }
+
+        .left .logo img:hover {
+            width: 105%;
+            height: 105%;
+            transform: scale(1.01);
+        }
+
+        .left .word {
+            width: 100%;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .left .word a {
+            text-decoration: none;
+            font-size: 24px;
+            line-height: 50px;
+            color: #F0F0F0;
+        }
+
+        .left .word p {
+            position: absolute;
+            bottom: 0px;
+            color: wheat;
+            font-size: 10px;
+            line-height: 5px;
+        }
+
+        .left .word a:hover {
+            font-size: 40px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .left .word a:active {
+            font-size: 20px;
+            color: darkblue;
+        }
+
+        .left .word a:visited {
+            color: darkorchid;
+        }
+
+        /* 左邊圖示 */
+        .right {
+            width: calc(100vw - 366px);
+            height: 100vh;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right .box {
+            width: 957px;
+            height: 570px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+        }
+
+        .right .box .img {
+            width: 33%;
+            height: 100%;
+            position: relative;
+        }
+
+        .right .box .img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .right .box .img .black {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255, 0.5);
+        }
+
+        .right .box .img .black:hover {
+            background-color: rgb(255, 255, 255, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="bg-img">
+            <div class="opacity">
+                <div class="left">
+                    <div class="logo"><img src="/works/yamabuki/img/yamabuki-logov2.png" alt="yamabuki-logo"></div>
+                    <div class="word">
+                        <a href="https://zh.wikipedia.org/wiki/BanG_Dream%EF%BC%81%E5%B0%91%E5%A5%B3%E6%A8%82%E5%9C%98%E6%B4%BE%E5%B0%8D">山吹烘焙坊</a>
+                        <a href="https://bang-dream.com/">新鮮出爐</a>
+                        <a href="https://twitter.com/bang_dream_info">聯絡我們</a>
+                        <p>© 2018 Yamabuki Bakery僅教學練習用切版</p>
+                    </div>
+                    <!-- <div class="clearfix"></div> -->
+                </div>
+                <div class="right">
+                    <div class="box">
+                        <div class="img">
+                            <img src="/works/yamabuki/img/chocolate cornet.jpg" alt="chocolate">
+                            <div class="black"></div>
+                        </div>
+                        <div class="img">
+                            <img src="/works/yamabuki/img/French bread.jpg" alt="french">
+                            <div class="black"></div>
+                        </div>
+                        <div class="img">
+                            <img src="/works/yamabuki/img/Polo bread.jpg" alt="polo">
+                            <div class="black"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
