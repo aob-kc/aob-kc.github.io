@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .navbar {
+            height: 50px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+        }
+
+        .left_box {
+            float: left;
+            
+        }
+
+        .right_box {
+            float: right;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        i.fa-twitter {
+            font-size: 20px;
+            color: #1DA1F2;
+            margin-left: 5px;
+        }
+
+        .navbar-link{
+            line-height: 50px;
+            margin: 0 15px;
+            font-size: 13px;
+            color: rgb(102, 117, 127);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .search-box{
+            border-radius: 15px;
+        }
+
+        .navbar2{
+            height: 50px;
+            background-color: red;
+        }
+
+        .navbar2 .container{
+            position: relative;
+        }
+
+        .box {
+            height: 150px;
+            width: 150px;
+            background-color: aqua;
+            overflow: hidden;
+            border: 5px solid white;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: -50px;
+        }
+
+        .box img{
+            transition: 0.1s;
+        }
+
+        .box img:hover{
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="left_box">
+                <a class="navbar-link" href="#"><i class="fab fa-twitter"></i>首頁</a>
+                <a class="navbar-link" href="#">關於</a>
+            </div>
+            <div class="right_box">
+                <input class="search-box" type="text">
+                <span class="navbar-link">已經擁有帳戶？ 登入</span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+
+    <div class="section_img">
+        <img src="https://images.immediate.co.uk/volatile/sites/4/2018/08/iStock_000044061370_Medium-fa5f8aa.jpg?quality=45&crop=5px,17px,929px,400px&resize=960,413"
+            alt="">
+    </div>
+
+    <nav class="navbar2">
+        <div class="container">
+            <div class="left_box">
+                <div class="box">
+                    <img src="cat.jpg" alt="">
+                </div>
+            </div>
+            <div class="right_box">
+                rfeqwrwer
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+
+</body>
+
+</html>
