@@ -16,7 +16,27 @@
         <h1>HTML、CSS</h1>
     </div>
     <br>
-    <!-- 第一列 -->
+    <!-- tag部分 -->
+    <section>
+        <h3>html tag</h3>
+        <div class="tagword_box">
+            <p>
+                < del> <del>讓文字有刪除線效果</del></del>
+            </p>
+            <p>
+                < small><small>文字會較小</small>正常字大小長這樣
+            </p>
+            <p>
+                < sup>Lorem, ipsum <sup>字體偏上</sup> dolor.
+            </p>
+            <p>
+                < sub>Lorem, <sub>字體偏下</sub> ipsum dolor.
+            </p>
+        </div>
+    </section>
+    <br>
+
+    <!-- 第二列 -->
     <section id="section">
         <!-- 顏色漸層效果 -->
         <h3>顏色漸層</h3>
@@ -43,10 +63,12 @@
         <div>
             <span class="keyword">關鍵字: <br>writing-mode: vertical-lr; </span><br>
             <br>
-            <span><small>其他效果需透過關鍵字查詢<br>雖然也是有html_tag : pre 可以用，但會佔行<br><del>不過都差不多啦</del></small></span>
+            <span><small>其他效果需透過關鍵字查詢<br>雖然也是有html tag < pre>可以用，但會佔行<br><del>不過都差不多啦</del></small></span>
         </div>
     </section>
     <br>
+
+    <!-- 第三列 -->
     <section id="section">
         <h3>animation<br>hover遮色片漸變效果</h3>
         <h1>&nbsp;&nbsp;&nbsp;</h1>
@@ -54,14 +76,19 @@
             <div class="anima_toright"></div>
         </div>
         <h1>&nbsp;&nbsp;&nbsp;</h1>
-        <span class="keyword">關鍵字: <br>animation後，再去設定%數的寬高變化<br>例:<br>from{width: 0;height: 200px;}to{width:
-            250px;height: 200px;}</span><br>
+        <div>
+            <span class="keyword">關鍵字: <br>animation後，再去設定%數的寬高變化<br>例:<br>from{width: 0;height: 200px;}to{width:
+                250px;height: 200px;}</span>
+                <br>
+            <br>
+            <small><del><small>我的animation都會爆掉QQ</small></del></small>
+        </div>
     </section>
 
     <hr>
 
     <!-- JS、JQ區塊 -->
-    <!-- 第二列 -->
+    <!-- 第一列 -->
     <div class="titleword">
         <h1>JS、JQ</h1>
     </div>
@@ -73,7 +100,9 @@
             <div class="slide_opacity"></div>
         </div>
         <h1>&nbsp;&nbsp;&nbsp;</h1>
-        <div><span class="keyword">關鍵字:<br>css設定寬高、顏色，並且先display : none<br>載入jq效果hover時會觸發<br>$('遮色片tag').slideToggle();</span></div><br>
+        <div>
+            <span class="keyword">關鍵字:<br>css設定寬高、顏色，並且先display : none<br>載入jq效果hover時會觸發<br>$('遮色片tag').slideToggle();</span>
+        </div><br>
         <h1>&nbsp;&nbsp;&nbsp;</h1>
         <h3>animate-toggle效果<br>hover遮色片左右漸變</h3>
         <h1>&nbsp;&nbsp;&nbsp;</h1>
@@ -83,8 +112,27 @@
         <h1>&nbsp;&nbsp;&nbsp;</h1>
         <div>
             <span class="keyword">關鍵字: <br>$("遮色片tag").animate({width:'toggle'},作用秒數); </span>
+            <br>
+            <br>
+            <h5>但是此列的hover效果，hover一次，就一定會完整執行才會停止<br><del>經不起調戲</del></small></h6><small>
         </div>
     </section>
+    <br>
+
+    <section id="section">
+        <h3>純JS<br>圖片自動切換</h3>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <img src="" alt="" class="setintervel_img">
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <div>
+            <p>圖片間格設定秒數<br>會自動轉換</p>
+            <br>
+            <span class="keyword">關鍵字:<br>setInterval(function () {}, 變化秒數);</span><br>
+            <br>
+            <p>需額外使用陣列建立輪播圖片的圖庫</p>
+        </div>
+    </section>
+
 
     <!-- 置入jq cdn -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 25px;
+    background-color: rgba(0, 0, 0, 0.09);
 }
 
 .clearfix {
@@ -29,10 +30,12 @@ span {
     font-weight: 700;
 }
 
-
-
 /* html、css區塊 */
-/* 頂部第一塊 */
+/* 頂部html_tag */
+.tagword_box{
+    width: 50%;
+}
+
 #section {
     display: flex;
 }
@@ -72,13 +75,13 @@ h3 {
 
 /* animation左右hover */
 .animation_bgcolor{
-    width: 250px;
+    width: 20%;
     height: 200px;
     border: 1px solid black;
 }
 
 .anima_toright{
-    width: 250px;
+    width: 20%px;
     height: 200px;
     z-index: 999;
     transition: 1s;
@@ -86,7 +89,7 @@ h3 {
 
 .anima_toright:hover{
     transition: 0.5s;
-    animation: 1s animation_toright;
+    animation: 0.5s animation_toright;
     transition-timing-function:ease-in-out;
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -133,12 +136,15 @@ h3 {
     display: none;
 }
 
-
-
 /* 較小螢幕(寬度低於800)轉換 */
 @media(max-width:550px){
     #section {
         display: flex;
         flex-direction: column;
     }
+}
+
+.setintervel_img{
+    width: 30%;
+    height: 250px;
 }
