@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML效果庫</title>
+    <!-- 載入css連結 -->
+    <link rel="stylesheet" href="/html_effect/html_effect.css">
+</head>
+
+<body>
+    <!-- HTML、CSS區塊 -->
+    <div class="titleword">
+        <h1>HTML、CSS</h1>
+    </div>
+    <br>
+    <!-- 第一列 -->
+    <section id="section">
+        <!-- 顏色漸層效果 -->
+        <h3>顏色漸層</h3>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <div id="z">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <div>
+            <span>上述效果:<br>background-image: linear-gradient(to left,rgba(30, 75, 115, 0.3),transparent);</span><br>
+            <br>
+            <span class="keyword">關鍵字:<br>background-image: linear-gradient(to 方向,顏色,顏色);</span>
+        </div>
+        <!-- 下面&nbsp;為輸入空白的指令，用這個去撐開與旁邊的區塊((懶癌 -->
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <div class="clearfix"></div>
+
+        <!-- 讓文字改變排版方向 -->
+        <h3>改變文字排版方向</h3>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <p class="change_word">Lorem ipsum dolor sit amet.<br>然而中文不會轉向</p>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <div>
+            <span class="keyword">關鍵字: <br>writing-mode: vertical-lr; </span><br>
+            <br>
+            <span><small>其他效果需透過關鍵字查詢<br>雖然也是有html_tag : pre 可以用，但會佔行<br><del>不過都差不多啦</del></small></span>
+        </div>
+    </section>
+    <br>
+    <section id="section">
+        <h3>animation<br>hover遮色片漸變效果</h3>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <div class="animation_bgcolor">
+            <div class="anima_toright"></div>
+        </div>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <span class="keyword">關鍵字: <br>animation後，再去設定%數的寬高變化<br>例:<br>from{width: 0;height: 200px;}to{width:
+            250px;height: 200px;}</span><br>
+    </section>
+
+    <hr>
+
+    <!-- JS、JQ區塊 -->
+    <!-- 第二列 -->
+    <div class="titleword">
+        <h1>JS、JQ</h1>
+    </div>
+    <br>
+    <section id="section">
+        <h3>slide效果<br>hover遮色片下降</h3>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <div class="slide">
+            <div class="slide_opacity"></div>
+        </div>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <div><span class="keyword">關鍵字:<br>css設定寬高、顏色，並且先display : none<br>載入jq效果hover時會觸發<br>$('遮色片tag').slideToggle();</span></div><br>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <h3>animate-toggle效果<br>hover遮色片左右漸變</h3>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <div class="slide_order">
+            <div class="slide_order_opacity"></div>
+        </div>
+        <h1>&nbsp;&nbsp;&nbsp;</h1>
+        <div>
+            <span class="keyword">關鍵字: <br>$("遮色片tag").animate({width:'toggle'},作用秒數); </span>
+        </div>
+    </section>
+
+    <!-- 置入jq cdn -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- 載入js連結 -->
+    <script src="/html_effect/html_effect.js"></script>
+</body>
+
+</html>
