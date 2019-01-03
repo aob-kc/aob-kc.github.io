@@ -95,10 +95,10 @@ h3 {
 @keyframes animation_toright{
     from{
         width: 0;
-        height: 200px;
+        height: 100%;
     }to{
-        width: 250px;
-        height: 200px;
+        width: 100%;
+        height: 100%;
     }
 }
 
