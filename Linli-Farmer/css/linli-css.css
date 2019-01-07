@@ -53,7 +53,7 @@ p{
 
 /* banner */
 #banner{
-    margin-top: 15vh;
+    margin-top: 10vh;
 }
 
 /* 鄰里小農 */
@@ -98,4 +98,111 @@ p{
 
 #about #content #bottom b{
     font-size: 25px;
+}
+
+/* 小農產品 */
+#product .bg_img{
+    width: 100%;
+    height: 100%;
+    background-image: url("/Linli-Farmer/img/watermelon.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#product #bg_white{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255,255,0.5);
+}
+
+/* 鄰里趣遊 */
+#fun .bg_img{
+    width: 100%;
+    height: 100%;
+    background-image: url("/Linli-Farmer/img/peanu_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#fun #bg_white{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255,255,0.5);
+}
+
+/* 小農資訊 */
+#news .bg_img{
+    width: 100%;
+    height: 100%;
+    background-image: url("/Linli-Farmer/img/watermelon.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#news #bg_white{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255,255,0.5);
+}
+
+/* footer */
+#footer{
+    background-color: #7EB907;
+}
+
+#footer p{
+    font-family: 微軟正黑體;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+#footer .row{
+    padding: 25px 0;
+}
+
+#footer .row #logo{
+    width:100%;
+    height: 25%;
+    background-image: url('/Linli-Farmer/img/logo-png.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#footer .row #name{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+#footer .row #fb{
+    width: 50%;
+    height: 50%;
+    background-image: url('/Linli-Farmer/img/fb.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#footer .row .top .right #kang_line{
+    width: 50%;
+    height: 50%;
+    background-image: url('/Linli-Farmer/img/kang-line.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#footer .row .bottom .right #wen_line{
+    width: 50%;
+    height: 50%;
+    background-image: url('/Linli-Farmer/img/kang-line.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
