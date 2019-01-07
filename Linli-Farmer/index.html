@@ -24,7 +24,7 @@
                     </a>
                 </div>
                 <div id="word" class="col d-flex align-items-end justify-content-center">
-                    <a href="">
+                    <a href="#product">
                         <p>小農產品</p>
                     </a>
                 </div>
@@ -32,12 +32,12 @@
                     <a id="img_a" href="#"></a>
                 </div>
                 <div id="word" class="col d-flex align-items-end justify-content-center">
-                    <a href="">
+                    <a href="#fun">
                         <p>鄰里趣遊</p>
                     </a>
                 </div>
                 <div id="word" class="col d-flex align-items-end justify-content-center">
-                    <a href="">
+                    <a href="#news">
                         <p>小農資訊</p>
                     </a>
                 </div>
@@ -45,20 +45,41 @@
         </div>
     </nav>
 
+    <!-- 手機版 -->
+    <section id="phone_nav" style="height:15vh" class="container-fluid p-2">
+        <div style="height:50%" class="row">
+            <a id="logo" class="col-12 w-80" href=""></a>
+        </div>
+        <div style="height:50%" class="row">
+            <a class="col" href="#about">
+                <p>鄰里小農</p>
+            </a>
+            <a class="col" href="#product">
+                <p>小農產品</p>
+            </a>
+            <a class="col" href="#fun">
+                <p>鄰里趣遊</p>
+            </a>
+            <a class="col" href="#news">
+                <p>小農資訊</p>
+            </a>
+        </div>
+    </section>
+
     <!-- banner -->
-    <section id="banner" style="height:calc(100vh - 10vh)" class="container-fluid bg-dark text-light">
+    <section id="banner" class="container-fluid bg-dark text-light">
         banner
     </section>
 
     <!-- 鄰里小農 -->
-    <section id="about" style="height:calc(100vh - 10vh)" class="container-fluid">
+    <section id="about" class="container-fluid">
         <div class="bg_img">
             <div id="bg_white">
                 <div id="content" style="height:100%" class="container p-2 d-flex flex-column justify-content-between">
-                    <div id="title" class="text-center">
-                        <p id="title_word">鄰里小農</p>
+                    <div id="title" class="text-center d-flex justify-content-center align-items-center">
+                        <div><p id="title_word">鄰里小農</p></div>
                     </div>
-                    <div style="height:calc(100% - 100px)" class="box">
+                    <div class="box">
                         <div style="height:60%" id="top"></div>
                         <div style="height:40%" id="bottom" class="bg-light p-3">
                             <p>
@@ -74,7 +95,7 @@
     </section>
 
     <!-- 小農產品 -->
-    <section id="product" style="height:calc(100vh - 10vh)" class="container-fluid bg-success">
+    <section id="product" class="container-fluid bg-success">
         <div class="bg_img">
             <div id="bg_white">
                 <div style="height:100%" class="container p-2 bg-light">
@@ -85,7 +106,7 @@
     </section>
 
     <!-- 鄰里趣遊 -->
-    <section id="fun" style="height:calc(50vh - 10vh)" class="container-fluid bg-dark">
+    <section id="fun" class="container-fluid bg-dark">
         <div class="bg_img">
             <div id="bg_white">
                 <div style="height:100%" class="container p-2 bg-info">
@@ -96,7 +117,7 @@
     </section>
 
     <!-- 小農資訊 -->
-    <section id="news" style="height:calc(100vh - 10vh)" class="container-fluid bg-success">
+    <section id="news" class="container-fluid bg-success">
         <div class="bg_img">
             <div id="bg_white">
                 <div style="height:100%" class="container p-2 bg-light">
@@ -107,17 +128,17 @@
     </section>
 
     <!-- footer -->
-    <footer id="footer" style="height:calc(50vh - 10vh)" class="container-fluid">
+    <footer id="footer" class="container-fluid">
         <div id="footer_container" style="height:100%" class="container p-3">
             <div style="height:100%" class="content">
                 <div style="height:100%" class="row">
-                    <a id="logo" href="" class="col-sm-3"></a>
-                    <div class="col">
-                        <div style="height:80%" class="box">
+                    <a id="logo" href="" class="col-12 col-sm-2"></a>
+                    <div id="center" class="col-12 col-sm-5">
+                        <div style="height:100%" class="box">
                             <div style="height:50%" class="top d-flex">
                                 <div style="width:50%" class="left d-flex flex-column justify-content-center">
-                                    <p id="name">康先生</p>
-                                    <p>0936-309-700</p>
+                                    <p>康先生</p>
+                                    <p id="number">0936-309-700</p>
                                 </div>
                                 <div style="width:50%" class="right d-flex align-items-center">
                                     <a id="fb" href=""></a>
@@ -126,8 +147,8 @@
                             </div>
                             <div style="height:50%" class="bottom d-flex">
                                 <div style="width:50%" class="left d-flex flex-column justify-content-center">
-                                    <p id="name">溫小姐</p>
-                                    <p>0936-379-700</p>
+                                    <p>溫小姐</p>
+                                    <p id="number">0936-379-700</p>
                                 </div>
                                 <div style="width:50%" class="right d-flex align-items-center">
                                     <a id="fb" href=""></a>
@@ -136,9 +157,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div style="height:90%" class="bg-success">map</div>
-                        <p style="font-weight: 700" class="text-center">苗栗縣後龍鎮龍津里14鄰</p>
+                    <div class="col-12 col-sm-5">
+                        <a href="">
+                            <div id="map" style="height:90%" class="w-100"></div>
+                        </a>
+                        <p style="font-weight: 700" class="text-center text-light">苗栗縣後龍鎮龍津里14鄰</p>
                     </div>
                 </div>
             </div>
