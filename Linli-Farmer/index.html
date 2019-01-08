@@ -52,65 +52,22 @@
     </nav>
 
     <!-- 手機版 -->
-    <!-- <section id="phone_nav" style="height:10vh" class="container-fluid p-2">
-        <div style="height:50%" class="row">
-            <a id="logo" class="col-12 w-80" href=""></a>
-        </div>
-        <div style="height:50%" class="row">
-            <a id="nav_about" class="col" href="#about">
-                <small>鄰里小農</small>
-            </a>
-            <a id="nav_product" class="col" href="#product">
-                <small>小農產品</small>
-            </a>
-            <a id="nav_fun" class="col" href="#fun">
-                <small>鄰里趣遊</small>
-            </a>
-            <a id="nav_news" class="col" href="#news">
-                <SMall>小農資訊</SMall>
-            </a>
-        </div>
-    </section> -->
-    <section id="phone_nav" class="container-fluid">
-        <div class="row">
-            <div class="col-3 p-2 d-flex align-items-center justify-content-center">
-                <i class="fas fa-bars" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
-                    aria-controls="collapseExample"></i>
+    <section id="phone_nav" class="p-1">
+        <div class="dropdown d-flex">
+            <div class="col btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+                <i class="fas fa-bars"></i>
             </div>
-            <div class="col p-2 d-flex align-items-center justify-content-center">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a id="nav_about" class="dropdown-item text-center" href="#about">鄰里小農</a>
+                <a id="nav_product" class="dropdown-item text-center" href="#product">小農產品</a>
+                <a id="nav_fun" class="dropdown-item text-center" href="#fun">鄰里趣遊</a>
+                <a id="nav_news" class="dropdown-item text-center" href="#news">小農資訊</a>
+            </div>
+            <div class="col-8 p-1 d-flex align-items-center justify-content-center">
                 <a class="phone_logo" href="#"></a>
             </div>
         </div>
-        <div class="collapse" id="collapseExample">
-            <div style="height:50vh" class="card card-body">
-                <a id="nav_about" class="col text-center" href="#about">
-                    <h5>鄰里小農</h5>
-                </a>
-                <a id="nav_product" class="col text-center" href="#product">
-                    <h5>小農產品</h5>
-                </a>
-                <a id="nav_fun" class="col text-center" href="#fun">
-                    <h5>鄰里趣遊</h5>
-                </a>
-                <a id="nav_news" class="col text-center" href="#news">
-                    <h5>小農資訊</h5>
-                </a>
-            </div>
-        </div>
-        <!-- <div class="row d-flex flex-column">
-            <a id="nav_about" class="col text-center" href="#about">
-                <h5>鄰里小農</h5>
-            </a>
-            <a id="nav_product" class="col text-center" href="#product">
-                <h5>小農產品</h5>
-            </a>
-            <a id="nav_fun" class="col text-center" href="#fun">
-                <h5>鄰里趣遊</h5>
-            </a>
-            <a id="nav_news" class="col text-center" href="#news">
-                <h5>小農資訊</h5>
-            </a>
-        </div> -->
     </section>
 
     <!-- banner -->
@@ -135,7 +92,7 @@
                     <div class="box p-3">
                         <div id="top"></div>
                         <div id="bottom" class="bg-light p-3">
-                            <p>
+                            <p class="text-justify">
                                 位處<b class="text-dark">苗栗後龍</b>，小農們依靠零散的田地默默耕耘。<br>
                                 因為年輕人大多搬至外地工作的關係，生活至此的小農們平均歲數超過半百，巡視田地、依靠農活換取小筆金額補貼家用成為他們日常生活的一部分。
                                 鄰里小農的存在目的，就是為了推廣讓更多人知曉小農們所產出的農產品，好讓他們的生活能夠更加安穩、不用為了生活花費而苦惱。
@@ -191,7 +148,7 @@
                         <div id="top"></div>
                         <div id="bottom" class="bg-light p-3">
                             <h5>位置</h5>
-                            <div class="p-3">
+                            <div class="p-3 text-justify">
                                 <p>1.國道三號-後龍交流道西濱交流道中間處</p><br>
                                 <p>2.7-11龍坑門市往西濱交流道一公里處，鐵道與道路交集之處</p>
                             </div>
@@ -215,10 +172,10 @@
                     <div class="word_box p-3">
                         <div id="word_top">
                             <div class="bg_color"></div>
-                            <h4 id="word">您不可不知的事</h4>
+                            <h5 id="word">您不可不知的事</h5>
                         </div>
                         <ul>
-                            <li>後龍的花生、西瓜，可是當地的特產<br>
+                            <li class="text-justify">後龍的花生、西瓜，可是當地的特產<br>
                                 <div id="specialty" data-toggle="modal" data-target="#specialty_modal"></div>
                                 <div class="modal fade" id="specialty_modal" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -235,7 +192,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>雖然不及竹南、頭份出名，可是後龍可是交通要道<br>
+                            <li class="text-justify">雖然不及竹南、頭份出名，可是後龍可是交通要道<br>
                                 <div id="traffic" data-toggle="modal" data-target="#traffic_modal"></div>
                                 <div class="modal fade" id="traffic_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                                     aria-hidden="true">
@@ -252,9 +209,9 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>農產品以當地購買、約地(限苗栗縣)面交為主</li>
-                            <li>量大、熟客另有優惠</li>
-                            <li>現場購買可能會有意想不到的農產品出現喔!</li>
+                            <li class="text-justify">農產品以當地購買、面交(限苗栗縣)為主</li>
+                            <li class="text-justify">量大、熟客另有優惠</li>
+                            <li class="text-justify">現場購買可能會有意想不到的農產品出現喔!</li>
                         </ul>
                     </div>
                 </div>
@@ -274,7 +231,7 @@
                                 <p>康先生</p>
                                 <p id="number">0936-309-700</p>
                             </div>
-                            <div class="right w-50 d-flex align-items-center justify-content-center">
+                            <div class="right w-50 d-flex align-items-center justify-content-around">
                                 <a id="fb" href=""></a>
                                 <a id="kang_line" href="" data-toggle="modal" data-target="#kang_modal"></a>
                                 <div class="modal fade" id="kang_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -298,7 +255,7 @@
                                 <p>溫小姐</p>
                                 <p id="number">0936-379-700</p>
                             </div>
-                            <div class="right w-50 d-flex align-items-center justify-content-center">
+                            <div class="right w-50 d-flex align-items-center justify-content-around">
                                 <a id="fb" href=""></a>
                                 <a id="wen_line" href="" data-toggle="modal" data-target="#wen_modal"></a>
                                 <div class="modal fade" id="wen_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"

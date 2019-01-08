@@ -2,9 +2,6 @@
     box-sizing: border-box;
 }
 
-body{
-    padding: 10vh 0 0 0;
-}
 p{
     margin: 0;
 }
@@ -15,6 +12,7 @@ p{
 
 .container{
     max-width: 1170px;
+    padding: 0;
 }
 
 /* 標題背景及文字((葉子 */
@@ -96,6 +94,7 @@ p{
 /* banner */
 #banner_swiper{
     height: 90vh;
+    margin-top: 10vh;
     background-color: rgb(151, 122, 90,0.3);
 }
 
@@ -234,7 +233,7 @@ p{
 }
 
 #news .word_box #word_top{
-    width: 175px;
+    width: 250px;
     height: 40px;
     position: relative;
 }
@@ -248,7 +247,7 @@ p{
 }
 
 #news .word_box #word_top .bg_color{
-    width: 150px;
+    width: 200px;
     height: 25px;
     position: absolute;
     bottom: 0;
@@ -262,7 +261,7 @@ p{
 }
 
 #news .word_box #specialty{
-    height: 20vh;
+    height: 30vh;
     background-image: url('/Linli-Farmer/img/Houlong-specialty.jpg');
     background-size: contain;
     background-position: center;
@@ -271,7 +270,7 @@ p{
 }
 
 #news .word_box .specialty-body{
-    height: 25vh;
+    height: 35vh;
     background-image: url('/Linli-Farmer/img/Houlong-specialty.jpg');
     background-size: contain;
     background-position: center;
@@ -279,15 +278,16 @@ p{
 }
 
 #news .word_box #traffic{
-    height: 10vh;
+    height: 20vh;
     background-image: url('/Linli-Farmer/img/Houlong-traffic.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
 }
+
 #news .word_box .traffic-body{
-    height: 15vh;
+    height: 25vh;
     background-image: url('/Linli-Farmer/img/Houlong-traffic.jpg');
     background-size: contain;
     background-position: center;
@@ -405,13 +405,15 @@ p{
     }
 
     #phone_nav{
+        width: 100%;
         height: 10vh;
         display: block;
+        position: fixed;
+        top: 0;
     }
 
-    #phone_nav .row{
-        width: 100%;
-        height: 100%;
+    #phone_nav .dropdown-menu {
+        background-color: rgba(255,255,255,0.7);
     }
 
     #phone_nav .phone_logo{
@@ -423,39 +425,31 @@ p{
         background-repeat: no-repeat;
     }
 
-    #phone_nav .card-body{
-       background-color: rgba(255,255,255,0.5);
-    }
-
-    #phone_nav .card-body a{
-        color: #42210B;
-    }
-
-    #phone_nav .card-body a:hover{
-        text-decoration: none;
-    }
-
     /* banner */
     #banner_swiper{
         height: 50vh;
     }
 
-    /* 鄰里小農 */    
-    #about #content #bottom{
-        font-size: 16px;
+    /* 小農資訊 */
+    #news .word_box #specialty{
+        display: none;
     }
 
+    #news .word_box #traffic{
+        display: none;
+    }
+    
     /* footer */
     #footer p{
-        font-size: 16px;
+        font-size: 20px;
     }
 
     #footer .row{
-        padding: 15px 0;
+        padding: 0;
     }
 
     #footer .row #number{
-        font-size: 16px;
+        font-size: 22px;
     }
 
     #footer .row #map_box{
