@@ -8,23 +8,29 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+
     <title>鄰里小農Linli-Farmar</title>
     <!-- css連結 -->
     <link rel="stylesheet" href="/Linli-Farmer/css/linli-css.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+
 </head>
 
 <body>
     <!-- nav -->
-    <nav id="nav" style="height:10vh" class="container-fluid p-2">
+    <nav id="nav" class="container-fluid p-2">
         <div style="height:100%" class="container">
             <div style="height:100%" class="row">
                 <div id="word" class="col d-flex align-items-end justify-content-center">
-                    <a href="#about">
+                    <a id="nav_about" href="#about">
                         <p>鄰里小農</p>
                     </a>
                 </div>
                 <div id="word" class="col d-flex align-items-end justify-content-center">
-                    <a href="#product">
+                    <a id="nav_product" href="#product">
                         <p>小農產品</p>
                     </a>
                 </div>
@@ -32,12 +38,12 @@
                     <a id="img_a" href="#"></a>
                 </div>
                 <div id="word" class="col d-flex align-items-end justify-content-center">
-                    <a href="#fun">
+                    <a id="nav_fun" href="#fun">
                         <p>鄰里趣遊</p>
                     </a>
                 </div>
                 <div id="word" class="col d-flex align-items-end justify-content-center">
-                    <a href="#news">
+                    <a id="nav_news" href="#news">
                         <p>小農資訊</p>
                     </a>
                 </div>
@@ -46,42 +52,89 @@
     </nav>
 
     <!-- 手機版 -->
-    <section id="phone_nav" style="height:15vh" class="container-fluid p-2">
+    <!-- <section id="phone_nav" style="height:10vh" class="container-fluid p-2">
         <div style="height:50%" class="row">
             <a id="logo" class="col-12 w-80" href=""></a>
         </div>
         <div style="height:50%" class="row">
-            <a class="col" href="#about">
-                <p>鄰里小農</p>
+            <a id="nav_about" class="col" href="#about">
+                <small>鄰里小農</small>
             </a>
-            <a class="col" href="#product">
-                <p>小農產品</p>
+            <a id="nav_product" class="col" href="#product">
+                <small>小農產品</small>
             </a>
-            <a class="col" href="#fun">
-                <p>鄰里趣遊</p>
+            <a id="nav_fun" class="col" href="#fun">
+                <small>鄰里趣遊</small>
             </a>
-            <a class="col" href="#news">
-                <p>小農資訊</p>
+            <a id="nav_news" class="col" href="#news">
+                <SMall>小農資訊</SMall>
             </a>
         </div>
+    </section> -->
+    <section id="phone_nav" class="container-fluid">
+        <div class="row">
+            <div class="col-3 p-2 d-flex align-items-center justify-content-center">
+                <i class="fas fa-bars" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                    aria-controls="collapseExample"></i>
+            </div>
+            <div class="col p-2 d-flex align-items-center justify-content-center">
+                <a class="phone_logo" href="#"></a>
+            </div>
+        </div>
+        <div class="collapse" id="collapseExample">
+            <div style="height:50vh" class="card card-body">
+                <a id="nav_about" class="col text-center" href="#about">
+                    <h5>鄰里小農</h5>
+                </a>
+                <a id="nav_product" class="col text-center" href="#product">
+                    <h5>小農產品</h5>
+                </a>
+                <a id="nav_fun" class="col text-center" href="#fun">
+                    <h5>鄰里趣遊</h5>
+                </a>
+                <a id="nav_news" class="col text-center" href="#news">
+                    <h5>小農資訊</h5>
+                </a>
+            </div>
+        </div>
+        <!-- <div class="row d-flex flex-column">
+            <a id="nav_about" class="col text-center" href="#about">
+                <h5>鄰里小農</h5>
+            </a>
+            <a id="nav_product" class="col text-center" href="#product">
+                <h5>小農產品</h5>
+            </a>
+            <a id="nav_fun" class="col text-center" href="#fun">
+                <h5>鄰里趣遊</h5>
+            </a>
+            <a id="nav_news" class="col text-center" href="#news">
+                <h5>小農資訊</h5>
+            </a>
+        </div> -->
     </section>
 
     <!-- banner -->
-    <section id="banner" class="container-fluid bg-dark text-light">
-        banner
-    </section>
+    <div id="banner_swiper" class="swiper-container container-fluid">
+        <div class="swiper-wrapper d-flex">
+            <div id="img_1" class="swiper-slide"></div>
+            <div id="img_2" class="swiper-slide"></div>
+            <div id="img_3" class="swiper-slide"></div>
+        </div>
+    </div>
 
     <!-- 鄰里小農 -->
     <section id="about" class="container-fluid">
         <div class="bg_img">
             <div id="bg_white">
-                <div id="content" style="height:100%" class="container p-2 d-flex flex-column justify-content-between">
+                <div id="content" class="container p-2 d-flex flex-column justify-content-between">
                     <div id="title" class="text-center d-flex justify-content-center align-items-center">
-                        <div><p id="title_word">鄰里小農</p></div>
+                        <div>
+                            <p id="title_word">鄰里小農</p>
+                        </div>
                     </div>
-                    <div class="box">
-                        <div style="height:60%" id="top"></div>
-                        <div style="height:40%" id="bottom" class="bg-light p-3">
+                    <div class="box p-3">
+                        <div id="top"></div>
+                        <div id="bottom" class="bg-light p-3">
                             <p>
                                 位處<b class="text-dark">苗栗後龍</b>，小農們依靠零散的田地默默耕耘。<br>
                                 因為年輕人大多搬至外地工作的關係，生活至此的小農們平均歲數超過半百，巡視田地、依靠農活換取小筆金額補貼家用成為他們日常生活的一部分。
@@ -98,8 +151,12 @@
     <section id="product" class="container-fluid bg-success">
         <div class="bg_img">
             <div id="bg_white">
-                <div style="height:100%" class="container p-2 bg-light">
-                    產品
+                <div id="content" class="container p-2 d-flex flex-column justify-content-between">
+                    <div id="title" class="text-center d-flex justify-content-center align-items-center">
+                        <div>
+                            <p id="title_word">小農產品</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,8 +166,12 @@
     <section id="fun" class="container-fluid bg-dark">
         <div class="bg_img">
             <div id="bg_white">
-                <div style="height:100%" class="container p-2 bg-info">
-                    test
+                <div id="content" class="container p-2 d-flex flex-column justify-content-between">
+                    <div id="title" class="text-center d-flex justify-content-center align-items-center">
+                        <div>
+                            <p id="title_word">鄰里趣遊</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -120,8 +181,82 @@
     <section id="news" class="container-fluid bg-success">
         <div class="bg_img">
             <div id="bg_white">
-                <div style="height:100%" class="container p-2 bg-light">
-                    test
+                <div id="content" class="container p-2 d-flex flex-column justify-content-between">
+                    <div id="title" class="text-center d-flex justify-content-center align-items-center">
+                        <div>
+                            <p id="title_word">小農資訊</p>
+                        </div>
+                    </div>
+                    <div class="box p-3">
+                        <div id="top"></div>
+                        <div id="bottom" class="bg-light p-3">
+                            <h5>位置</h5>
+                            <div class="p-3">
+                                <p>1.國道三號-後龍交流道西濱交流道中間處</p><br>
+                                <p>2.7-11龍坑門市往西濱交流道一公里處，鐵道與道路交集之處</p>
+                            </div>
+                            <button id="button" type="button" class="btn" data-toggle="modal" data-target="#news_modal">Map</button>
+                            <div class="modal fade" id="news_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">鄰里小農 - 地圖資訊</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span id="modal_x" aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="news-body"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="word_box p-3">
+                        <div id="word_top">
+                            <div class="bg_color"></div>
+                            <h4 id="word">您不可不知的事</h4>
+                        </div>
+                        <ul>
+                            <li>後龍的花生、西瓜，可是當地的特產<br>
+                                <div id="specialty" data-toggle="modal" data-target="#specialty_modal"></div>
+                                <div class="modal fade" id="specialty_modal" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 id="exampleModalCenterTitle" class="modal-title">後龍的花生、西瓜，可是當地的特產</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span id="modal_x" aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="specialty-body text-center"><a href="https://zh.wikipedia.org/wiki/%E5%BE%8C%E9%BE%8D%E9%8E%AE_(%E5%8F%B0%E7%81%A3)">連結點我</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>雖然不及竹南、頭份出名，可是後龍可是交通要道<br>
+                                <div id="traffic" data-toggle="modal" data-target="#traffic_modal"></div>
+                                <div class="modal fade" id="traffic_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 id="exampleModalCenterTitle" class="modal-title">雖然不及竹南、頭份出名，可是後龍可是交通要道</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span id="modal_x" aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="traffic-body text-center"><a href="https://zh.wikipedia.org/wiki/%E5%BE%8C%E9%BE%8D%E9%8E%AE_(%E5%8F%B0%E7%81%A3)">連結點我</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>農產品以當地購買、約地(限苗栗縣)面交為主</li>
+                            <li>量大、熟客另有優惠</li>
+                            <li>現場購買可能會有意想不到的農產品出現喔!</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,38 +264,76 @@
 
     <!-- footer -->
     <footer id="footer" class="container-fluid">
-        <div id="footer_container" style="height:100%" class="container p-3">
-            <div style="height:100%" class="content">
-                <div style="height:100%" class="row">
-                    <a id="logo" href="" class="col-12 col-sm-2"></a>
-                    <div id="center" class="col-12 col-sm-5">
-                        <div style="height:100%" class="box">
-                            <div style="height:50%" class="top d-flex">
-                                <div style="width:50%" class="left d-flex flex-column justify-content-center">
-                                    <p>康先生</p>
-                                    <p id="number">0936-309-700</p>
-                                </div>
-                                <div style="width:50%" class="right d-flex align-items-center">
-                                    <a id="fb" href=""></a>
-                                    <a id="kang_line" href=""></a>
+        <div id="footer_container" class="container">
+            <div class="content">
+                <div class="row">
+                    <a id="logo" href="" class="col col-sm-2"></a>
+                    <div id="center" class="col col-sm-5">
+                        <div class="top d-flex">
+                            <div class="left d-flex flex-column justify-content-center">
+                                <p>康先生</p>
+                                <p id="number">0936-309-700</p>
+                            </div>
+                            <div class="right w-50 d-flex align-items-center justify-content-center">
+                                <a id="fb" href=""></a>
+                                <a id="kang_line" href="" data-toggle="modal" data-target="#kang_modal"></a>
+                                <div class="modal fade" id="kang_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalCenterTitle">康先生 - Line</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span id="modal_x" aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="kang-body"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div style="height:50%" class="bottom d-flex">
-                                <div style="width:50%" class="left d-flex flex-column justify-content-center">
-                                    <p>溫小姐</p>
-                                    <p id="number">0936-379-700</p>
-                                </div>
-                                <div style="width:50%" class="right d-flex align-items-center">
-                                    <a id="fb" href=""></a>
-                                    <a id="wen_line" href=""></a>
+                        </div>
+                        <div class="bottom d-flex">
+                            <div class="left d-flex flex-column justify-content-center">
+                                <p>溫小姐</p>
+                                <p id="number">0936-379-700</p>
+                            </div>
+                            <div class="right w-50 d-flex align-items-center justify-content-center">
+                                <a id="fb" href=""></a>
+                                <a id="wen_line" href="" data-toggle="modal" data-target="#wen_modal"></a>
+                                <div class="modal fade" id="wen_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalCenterTitle">溫小姐 - Line</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span id="modal_x" aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="wen-body"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-5">
-                        <a href="">
-                            <div id="map" style="height:90%" class="w-100"></div>
-                        </a>
+                    <div id="map_box" class="col-12 col-sm">
+                        <div id="map" class="w-100" data-toggle="modal" data-target="#map_madal"></div>
+                        <div class="modal fade" id="map_madal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">鄰里小農 - 地圖資訊</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span id="modal_x" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="map-body"></div>
+                                </div>
+                            </div>
+                        </div>
                         <p style="font-weight: 700" class="text-center text-light">苗栗縣後龍鎮龍津里14鄰</p>
                     </div>
                 </div>
@@ -178,6 +351,11 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+    <!-- swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+
+    <!-- 載入js -->
+    <script src="/Linli-Farmer/js/linli-js.js"></script>
 </body>
 
 </html>
