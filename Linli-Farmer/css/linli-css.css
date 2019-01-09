@@ -1,7 +1,11 @@
 *{
     box-sizing: border-box;
+    cursor: context-menu;
 }
 
+body{
+    padding: 10vh 0 0 0;
+}
 p{
     margin: 0;
 }
@@ -12,7 +16,6 @@ p{
 
 .container{
     max-width: 1170px;
-    padding: 0;
 }
 
 /* 標題背景及文字((葉子 */
@@ -27,7 +30,6 @@ p{
 
 #title_word{
     font-size: 35px;
-    font-weight: 700;
     font-family: 微軟正黑體;
 }
 
@@ -94,7 +96,6 @@ p{
 /* banner */
 #banner_swiper{
     height: 90vh;
-    margin-top: 10vh;
     background-color: rgb(151, 122, 90,0.3);
 }
 
@@ -129,7 +130,7 @@ p{
 #about .bg_img{
     width: 100%;
     height: 100%;
-    background-image: url("/Linli-Farmer/img/peanu_bg.jpg");
+    background-image: url("/Linli-Farmer/img/peanut_bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -160,7 +161,7 @@ p{
 #product .bg_img{
     width: 100%;
     height: 100%;
-    background-image: url("/Linli-Farmer/img/watermelon.jpg");
+    background-image: url("/Linli-Farmer/img/watermelon_bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -173,11 +174,139 @@ p{
     background-color: rgba(255, 255,255,0.5);
 }
 
+#product .box p,#product #product_item h5{
+    font-family: 微軟正黑體;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+#product .product_box{
+    overflow: hidden;
+}
+
+#product #product_top, #product #product_bottom{
+    height: 35vh;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+#product #product_item{
+    height: 35vh;
+    margin-bottom: 50px;
+}
+
+#product #peanut{
+    background-image: url("/Linli-Farmer/img/peanut.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 2s;
+}
+
+#product #peanut:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+#product #small_peanut{
+    height: 35vh;
+    background-image: url("/Linli-Farmer/img/peanut.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#product #word_section{
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+#product #word_section .black_circle{
+    width: 35px;
+    height: 35px;
+    background-color: #42210B;
+    border-radius: 99999999px;
+    cursor: pointer;
+    margin: 20px 0;
+    z-index: 5;
+ }
+
+ #product #word_section .border{
+    width: 90%;
+    height: 2px;
+    background-color: #42210B;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+
+#product #watermelon{
+    background-image: url("/Linli-Farmer/img/watermelon.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 2s;
+}
+
+#product #watermelon:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+#product #small_watermelon{
+    height: 35vh;
+    background-image: url("/Linli-Farmer/img/watermelon.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#product #product_item #gourd{
+    width: 100%;
+    height: 25vh;
+    background-image: url("/Linli-Farmer/img/gourd.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#product #product_item #corn{
+    width: 100%;
+    height: 25vh;
+    background-image: url("/Linli-Farmer/img/corn.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#product #product_item #Sweet_potato{
+    width: 100%;
+    height: 25vh;
+    background-image: url("/Linli-Farmer/img/Sweet_potato.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#product #product_item #oyster{
+    width: 100%;
+    height: 25vh;
+    background-image: url("/Linli-Farmer/img/oyster.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#product #product_item h5{
+    margin-top: 1.75em;
+}
+
 /* 鄰里趣遊 */
 #fun .bg_img{
     width: 100%;
     height: 100%;
-    background-image: url("/Linli-Farmer/img/peanu_bg.jpg");
+    background-image: url("/Linli-Farmer/img/peanut_bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -189,11 +318,108 @@ p{
     background-color: rgba(255, 255,255,0.5);
 }
 
+#fun #hover_word{
+    transition: 2s;
+}
+
+#fun #hover_word:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+#fun .circle{
+    width: 50px;
+    height: 50px;
+    border: 2px dashed #762031;
+    border-radius: 999999px;
+}
+
+#fun .row p{
+    font-family: 微軟正黑體;
+    font-size: 22px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+#fun .top{
+    margin-top: 10px;
+}
+
+#fun .row #food{
+    width: 35vw;
+    height: 75vh;
+    background-image: url("/Linli-Farmer/img/food.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#fun .row #view_a{
+    width: 35vw;
+    height: 75vh;
+    background-image: url("/Linli-Farmer/img/view_a.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#fun .row #view_b{
+    width: 35vw;
+    height: 75vh;
+    background-image: url("/Linli-Farmer/img/view_b.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#fun .row #history_a{
+    width: 35vw;
+    height: 75vh;
+    background-image: url("/Linli-Farmer/img/history_a.jpg");
+    background-size: auto;
+    background-position: 5% 65%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#fun .row #history_b{
+    width: 35vw;
+    height: 75vh;
+    background-image: url("/Linli-Farmer/img/history_b.jpg");
+    background-size: auto;
+    background-position: -40% 85%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#fun .row #history_c{
+    width: 35vw;
+    height: 75vh;
+    background-image: url("/Linli-Farmer/img/history_c.jpg");
+    background-size: auto;
+    background-position: 0% 55%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#fun .row #rest{
+    width: 35vw;
+    height: 75vh;
+    background-image: url("/Linli-Farmer/img/rest.jpg");
+    background-size: auto;
+    background-position: -30% 45%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 /* 小農資訊 */
 #news .bg_img{
     width: 100%;
     height: 100%;
-    background-image: url("/Linli-Farmer/img/watermelon.jpg");
+    background-image: url("/Linli-Farmer/img/watermelon_bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -222,6 +448,12 @@ p{
 
 #news #content #bottom #button{
     background-color: #C7B199;
+    transition: 2s;
+}
+
+#news #content #bottom #button:hover{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #news .news-body{
@@ -257,20 +489,26 @@ p{
 
 #news .word_box li{
     color: #762031;
-    font-weight: 700;
+
 }
 
 #news .word_box #specialty{
-    height: 30vh;
+    height: 20vh;
     background-image: url('/Linli-Farmer/img/Houlong-specialty.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: 2s;
+}
+
+#news .word_box #specialty:hover{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #news .word_box .specialty-body{
-    height: 35vh;
+    height: 25vh;
     background-image: url('/Linli-Farmer/img/Houlong-specialty.jpg');
     background-size: contain;
     background-position: center;
@@ -278,16 +516,22 @@ p{
 }
 
 #news .word_box #traffic{
-    height: 20vh;
+    height: 10vh;
     background-image: url('/Linli-Farmer/img/Houlong-traffic.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: 2s;
+}
+
+#news .word_box #traffic:hover{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #news .word_box .traffic-body{
-    height: 25vh;
+    height: 15vh;
     background-image: url('/Linli-Farmer/img/Houlong-traffic.jpg');
     background-size: contain;
     background-position: center;
@@ -315,6 +559,12 @@ p{
     background-size: contain;
     background-position: 0 center;
     background-repeat: no-repeat;
+    transition: 2s;
+}
+
+#footer .row #logo:hover{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #footer .row {
@@ -323,7 +573,6 @@ p{
 
 #footer .row #number{
     font-size: 25px;
-    font-weight: 700;
     letter-spacing: 0;
 }
 
@@ -334,6 +583,13 @@ p{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 2s;
+}
+
+#footer .row #fb:hover{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #footer .row .top .right #kang_line{
@@ -343,6 +599,13 @@ p{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 2s;
+}
+
+#footer .row .top .right #kang_line:hover{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #footer .row .bottom .right #wen_line{
@@ -352,6 +615,13 @@ p{
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 2s;
+}
+
+#footer .row .bottom .right #wen_line:hover{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #footer .row #map{
@@ -361,6 +631,12 @@ p{
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: 2s;
+}
+
+#footer .row #map:hover{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #footer .row .kang-body{
@@ -405,15 +681,13 @@ p{
     }
 
     #phone_nav{
-        width: 100%;
         height: 10vh;
         display: block;
-        position: fixed;
-        top: 0;
     }
 
-    #phone_nav .dropdown-menu {
-        background-color: rgba(255,255,255,0.7);
+    #phone_nav .row{
+        width: 100%;
+        height: 100%;
     }
 
     #phone_nav .phone_logo{
@@ -425,31 +699,39 @@ p{
         background-repeat: no-repeat;
     }
 
+    #phone_nav .card-body{
+       background-color: rgba(255,255,255,0.5);
+    }
+
+    #phone_nav .card-body a{
+        color: #42210B;
+    }
+
+    #phone_nav .card-body a:hover{
+        text-decoration: none;
+    }
+
     /* banner */
     #banner_swiper{
         height: 50vh;
     }
 
-    /* 小農資訊 */
-    #news .word_box #specialty{
-        display: none;
+    /* 鄰里小農 */    
+    #about #content #bottom{
+        font-size: 16px;
     }
 
-    #news .word_box #traffic{
-        display: none;
-    }
-    
     /* footer */
     #footer p{
-        font-size: 20px;
+        font-size: 16px;
     }
 
     #footer .row{
-        padding: 0;
+        padding: 15px 0;
     }
 
     #footer .row #number{
-        font-size: 22px;
+        font-size: 16px;
     }
 
     #footer .row #map_box{

@@ -52,20 +52,30 @@
     </nav>
 
     <!-- 手機版 -->
-    <section id="phone_nav" class="p-1">
-        <div class="dropdown d-flex">
-            <div class="col btn dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-                <i class="fas fa-bars"></i>
+    <section id="phone_nav" class="container-fluid">
+        <div class="row">
+            <div class="col-3 p-2 d-flex align-items-center justify-content-center">
+                <i class="fas fa-bars" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                    aria-controls="collapseExample"></i>
             </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a id="nav_about" class="dropdown-item text-center" href="#about">鄰里小農</a>
-                <a id="nav_product" class="dropdown-item text-center" href="#product">小農產品</a>
-                <a id="nav_fun" class="dropdown-item text-center" href="#fun">鄰里趣遊</a>
-                <a id="nav_news" class="dropdown-item text-center" href="#news">小農資訊</a>
-            </div>
-            <div class="col-8 p-1 d-flex align-items-center justify-content-center">
+            <div class="col p-2 d-flex align-items-center justify-content-center">
                 <a class="phone_logo" href="#"></a>
+            </div>
+        </div>
+        <div class="collapse" id="collapseExample">
+            <div style="height:50vh" class="card card-body">
+                <a id="nav_about" class="col text-center" href="#about">
+                    <h5>鄰里小農</h5>
+                </a>
+                <a id="nav_product" class="col text-center" href="#product">
+                    <h5>小農產品</h5>
+                </a>
+                <a id="nav_fun" class="col text-center" href="#fun">
+                    <h5>鄰里趣遊</h5>
+                </a>
+                <a id="nav_news" class="col text-center" href="#news">
+                    <h5>小農資訊</h5>
+                </a>
             </div>
         </div>
     </section>
@@ -84,7 +94,7 @@
         <div class="bg_img">
             <div id="bg_white">
                 <div id="content" class="container p-2 d-flex flex-column justify-content-between">
-                    <div id="title" class="text-center d-flex justify-content-center align-items-center">
+                    <div id="title" class="text-center font-weight-bold d-flex justify-content-center align-items-center">
                         <div>
                             <p id="title_word">鄰里小農</p>
                         </div>
@@ -92,7 +102,7 @@
                     <div class="box p-3">
                         <div id="top"></div>
                         <div id="bottom" class="bg-light p-3">
-                            <p class="text-justify">
+                            <p>
                                 位處<b class="text-dark">苗栗後龍</b>，小農們依靠零散的田地默默耕耘。<br>
                                 因為年輕人大多搬至外地工作的關係，生活至此的小農們平均歲數超過半百，巡視田地、依靠農活換取小筆金額補貼家用成為他們日常生活的一部分。
                                 鄰里小農的存在目的，就是為了推廣讓更多人知曉小農們所產出的農產品，好讓他們的生活能夠更加安穩、不用為了生活花費而苦惱。
@@ -109,10 +119,189 @@
         <div class="bg_img">
             <div id="bg_white">
                 <div id="content" class="container p-2 d-flex flex-column justify-content-between">
-                    <div id="title" class="text-center d-flex justify-content-center align-items-center">
+                    <div id="title" class="text-center font-weight-bold d-flex justify-content-center align-items-center">
                         <div>
                             <p id="title_word">小農產品</p>
                         </div>
+                    </div>
+                    <div class="box p-3">
+                        <div id="product_top" class="w-100 d-flex position-relative">
+                            <div class="product_box w-100 h-100">
+                                <div id="peanut" class="w-100 h-100" data-toggle="modal" data-target="#peanut_modal"></div>
+                            </div>
+                            <div class="modal fade" id="peanut_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里之花</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span id="modal_x" aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <div class="row p-3">
+                                                <div id="small_peanut" class="col-4 w-100"></div>
+                                                <div class="col-8">
+                                                    <div class="row p-2">
+                                                        <h4 class="font-weight-bold">鄰里之花</h4>
+                                                    </div>
+                                                    <div class="row d-flex flex-column justify-content-around">
+                                                        <div class="col-12 p-2">
+                                                            <p>生吃有獨特味道，熟食有難忘口感。<br>耗時數月的成長，躲在地底只為了孕育飽滿的花生仁。再加上農民辛苦的收穫，將口齒留香的產品送至您的手中。</p>
+                                                        </div>
+                                                        <div class="col-12 p-2">
+                                                            <span class="font-weight-bold">產季 : 春收 6 ~ 8月、秋收 10 ~ 11月<br>價格
+                                                                : 60 ~ 70元/台斤</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row p-3 d-flex">
+                                                <div class="col"></div>
+                                                <div class="col-8">
+                                                    <h4 class="font-weight-bold">特色</h4>
+                                                    <div class="p-3">
+                                                        <p>&#9055;長高、長大、骨骼棒-鈣含量極高，促進成長發育</p>
+                                                        <p>&#9055;記憶力UP-可處進細胞發育、提高智力</p>
+                                                        <p>&#9055;助你全身營養多-蛋白質含量30%，是小麥的兩倍多、稻米的三倍</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 p-3 d-flex">
+                                <h4 class="row font-weight-bold p-2">鄰里之花</h4>
+                                <div id="word_section" class="row p-2 w-100 position-absolute d-flex justify-content-around">
+                                    <div class="col-12 w-100 d-flex justify-content-around">
+                                        <p class="text-center">7天</p>
+                                        <p class="text-center">30 ~ 45天</p>
+                                        <p class="text-center">60天</p>
+                                    </div>
+                                    <div class="col-12 w-100 d-flex justify-content-between">
+                                        <div class="black_circle"></div>
+                                        <div class="black_circle"></div>
+                                        <div class="black_circle"></div>
+                                        <div class="black_circle"></div>
+                                    </div>
+                                    <div class="col-12 -100 d-flex justify-content-between">
+                                        <p class="text-center">播種</p>
+                                        <p class="text-center">發芽</p>
+                                        <p class="text-center">開花</p>
+                                        <p class="text-center">採收</p>
+                                    </div>
+                                    <div class="border position-absolute"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product_bottom" class="w-100 d-flex">
+                            <div class="col-8 p-3">
+                                <h4 class="row font-weight-bold p-2">鄰里瓜寶</h4>
+                                <div id="word_section" class="row p-2 w-100 position-absolute d-flex justify-content-around">
+                                    <div class="col-12 w-100 d-flex justify-content-around">
+                                        <p class="text-center">20 ~ 30天</p>
+                                        <p class="text-center">20天</p>
+                                        <p class="text-center">30 ~ 35天</p>
+                                        <p class="text-center">40天</p>
+                                    </div>
+                                    <div class="col-12 w-100 d-flex justify-content-between">
+                                        <div class="black_circle"></div>
+                                        <div class="black_circle"></div>
+                                        <div class="black_circle"></div>
+                                        <div class="black_circle"></div>
+                                        <div class="black_circle"></div>
+                                    </div>
+                                    <div class="col-12 -100 d-flex justify-content-between">
+                                        <p class="text-center">瓜苗種植</p>
+                                        <p class="text-center">長葉茁壯</p>
+                                        <p class="text-center">藤蔓生長</p>
+                                        <p class="text-center">結果</p>
+                                        <p class="text-center">採收</p>
+                                    </div>
+                                    <div class="border position-absolute"></div>
+                                </div>
+                            </div>
+                            <div class="product_box w-100 h-100">
+                                <div id="watermelon" class=" w-100 h-100" data-toggle="modal" data-target="#watermelon_modal"></div>
+                            </div>
+                            <div class="modal fade" id="watermelon_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里瓜寶</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span id="modal_x" aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <div class="row p-3">
+                                                <div id="small_watermelon" class="col-4 w-100"></div>
+                                                <div class="col-8">
+                                                    <div class="row p-2">
+                                                        <h4 class="font-weight-bold">鄰里瓜寶</h4>
+                                                    </div>
+                                                    <div class="row d-flex flex-column justify-content-around">
+                                                        <div class="col-12 p-2">
+                                                            <p>砂質壤土的環境下，排水順暢的條件使它不會成為毫無味道的灌水瓜。<br>炎熱的天氣，何不來顆西瓜讓它甜美的果肉驅散盛夏的酷熱！</p>
+                                                        </div>
+                                                        <div class="col-12 p-2">
+                                                            <span class="font-weight-bold">產季：6~8月<br>價格：10~18元/台斤</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row p-3 d-flex">
+                                                <div class="col"></div>
+                                                <div class="col-8">
+                                                    <h4 class="font-weight-bold">特色</h4>
+                                                    <div class="p-3">
+                                                        <p>&#9055;中風遠離我-擁有大量番茄紅素，可降低約20%的中風風險</p>
+                                                        <p>&#9055;食在馬殺雞-豐富的鉀，可幫助調節神經、放鬆肌肉</p>
+                                                        <p>&#9055;睡眠品質頂瓜瓜-膽鹼有助提節生理時鐘，維持平順睡眠周期</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="product_item" class="w-100">
+                            <div id="product_item_swiper" class="swiper-container h-100">
+                                <div class="swiper-wrapper d-flex">
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <div id="gourd"></div>
+                                            <h5 class="text-center font-weight-bold bg-light">金瓜</h5>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <div id="corn"></div>
+                                            <h5 class="text-center font-weight-bold bg-light">玉米</h5>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <div id="Sweet_potato"></div>
+                                            <h5 class="text-center font-weight-bold bg-light">番薯</h5>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <div id="oyster"></div>
+                                            <h5 class="text-center font-weight-bold bg-light">石蚵</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="color: #42210B" class="font-weight-bold text-center">~農產品購買方式 "限" 以當地購買、面交(限苗栗縣)為主~</h4>
                     </div>
                 </div>
             </div>
@@ -124,9 +313,234 @@
         <div class="bg_img">
             <div id="bg_white">
                 <div id="content" class="container p-2 d-flex flex-column justify-content-between">
-                    <div id="title" class="text-center d-flex justify-content-center align-items-center">
+                    <div id="title" class="text-center font-weight-bold d-flex justify-content-center align-items-center">
                         <div>
                             <p id="title_word">鄰里趣遊</p>
+                        </div>
+                    </div>
+                    <div class="box p-3">
+                        <div class="row">
+                            <div class="col d-flex justify-content-around">
+                                <div class="circle text-center d-flex align-items-center justify-content-center">
+                                    <h4 class="font-weight-bold text-danger">食</h4>
+                                </div>
+                                <div>
+                                    <p id="hover_word" class="top font-weight-bold" data-toggle="modal" data-target="#food_modal">台灣水牛城</p>
+                                    <div class="modal fade" id="food_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里趣遊
+                                                        - 台灣水牛城</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span id="modal_x" aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="row p-3">
+                                                        <div id="food" class="col-12"></div>
+                                                    </div>
+                                                    <div class="row p-3 d-flex flex-column">
+                                                        <h3 class="font-weight-bold p-3">台灣水牛城</h3>
+                                                        <div class="p-3 d-flex flex-column justify-content-around">
+                                                            <p>親近動物，樂享美食。<br>水牛城讓您不僅玩得開心，也吃得放心!</p>
+                                                            <span class="font-weight-bold">位置:苗栗縣後龍鎮龍坑里17鄰十班坑181-06號</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-around">
+                                <div class="circle text-center d-flex align-items-center justify-content-center">
+                                    <h4 class="font-weight-bold text-danger">景</h4>
+                                </div>
+                                <div>
+                                    <p id="hover_word" class="top font-weight-bold" data-toggle="modal" data-target="#view_a_modal">好望角</p>
+                                    <div class="modal fade" id="view_a_modal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里趣遊
+                                                        - 好望角</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span id="modal_x" aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="row p-3">
+                                                        <div id="view_a" class="col-12"></div>
+                                                    </div>
+                                                    <div class="row p-3 d-flex flex-column">
+                                                        <h3 class="font-weight-bold p-3">好望角</h3>
+                                                        <div class="p-3 d-flex flex-column justify-content-around">
+                                                            <p>近距離觀望風車，眺望遼闊海景。在海風的吹拂下擁抱自然，就來好望角!</p>
+                                                            <span class="font-weight-bold">位置 : 苗栗縣後龍鎮灣瓦、後龍溪出海口南邊</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p id="hover_word" class="font-weight-bold" data-toggle="modal" data-target="#view_b_modal">外埔漁港</p>
+                                    <div class="modal fade" id="view_b_modal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里趣遊
+                                                        - 外埔漁港</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span id="modal_x" aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="row p-3">
+                                                        <div id="view_b" class="col-12"></div>
+                                                    </div>
+                                                    <div class="row p-3 d-flex flex-column">
+                                                        <h3 class="font-weight-bold p-3">外埔漁港</h3>
+                                                        <div class="p-3 d-flex flex-column justify-content-around">
+                                                            <p>沿著走道傾聽海浪拍打，享受海風的包覆。擁有歷史與功用交織，本島僅存的百年石滬。</p>
+                                                            <span class="font-weight-bold">位置 : 苗栗縣龍鎮海埔里</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-around">
+                                <div class="circle text-center d-flex align-items-center justify-content-center">
+                                    <h4 class="font-weight-bold text-danger">觀</h4>
+                                </div>
+                                <div>
+                                    <p id="hover_word" class="top font-weight-bold" data-toggle="modal" data-target="#history_a_modal">客家圓樓</p>
+                                    <div class="modal fade" id="history_a_modal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里趣遊
+                                                        - 客家圓樓</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span id="modal_x" aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="row p-3">
+                                                        <div id="history_a" class="col-12"></div>
+                                                    </div>
+                                                    <div class="row p-3 d-flex flex-column">
+                                                        <h3 class="font-weight-bold p-3">客家圓樓</h3>
+                                                        <div class="p-3 d-flex flex-column justify-content-around">
+                                                            <p>客家人的代表象徵—土樓。<br>不僅帶您深入理解客家精神，也能到鄰近的北勢溪親水廊道走走，欣賞水塘美景。</p>
+                                                            <span class="font-weight-bold">位置 : 苗栗縣後龍鎮校椅里7鄰新港三路295號</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p id="hover_word" class="font-weight-bold" data-toggle="modal" data-target="#history_b_modal">英才書院</p>
+                                    <div class="modal fade" id="history_b_modal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里趣遊
+                                                        - 英才書院</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span id="modal_x" aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="row p-3">
+                                                        <div id="history_b" class="col-12"></div>
+                                                    </div>
+                                                    <div class="row p-3 d-flex flex-column">
+                                                        <h3 class="font-weight-bold p-3">英才書院</h3>
+                                                        <div class="p-3 d-flex flex-column justify-content-around">
+                                                            <p>穿越歷史的廊道，古時讀書授課的行徑宛如歷歷在目。</p>
+                                                            <span class="font-weight-bold">位置 : 苗栗縣後龍鎮新港三路700號</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p id="hover_word" class="font-weight-bold" data-toggle="modal" data-target="#history_c_modal">鄭崇和墓</p>
+                                    <div class="modal fade" id="history_c_modal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里趣遊
+                                                        - 鄭崇和墓</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span id="modal_x" aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="row p-3">
+                                                        <div id="history_c" class="col-12"></div>
+                                                    </div>
+                                                    <div class="row p-3 d-flex flex-column">
+                                                        <h3 class="font-weight-bold p-3">鄭崇和墓</h3>
+                                                        <div class="p-3 d-flex flex-column justify-content-around">
+                                                            <p>古時為民用盡心，今日沉眠列古蹟。</p>
+                                                            <span class="font-weight-bold">位置 :
+                                                                苗栗縣後龍鎮十班坑7-Eleven龍坑門市五點鐘方位</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex justify-content-around">
+                                <div class="circle text-center d-flex align-items-center justify-content-center">
+                                    <h4 class="font-weight-bold text-danger">憩</h4>
+                                </div>
+                                <div>
+                                    <p id="hover_word" class="top font-weight-bold" data-toggle="modal" data-target="#rest_modal">遊桐花休閒汽車旅館</p>
+                                    <div class="modal fade" id="rest_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里趣遊
+                                                        -
+                                                        遊桐花休閒汽車旅館</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span id="modal_x" aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="row p-3">
+                                                        <div id="rest" class="col-12"></div>
+                                                    </div>
+                                                    <div class="row p-3 d-flex flex-column">
+                                                        <h3 class="font-weight-bold p-3">遊桐花休閒汽車旅館</h3>
+                                                        <div class="p-3 d-flex flex-column justify-content-around">
+                                                            <p>想要有更多時間享受風光美景嗎?<br>想要悠閒地慢慢品嘗鄉村人情味嗎?<br>這裡，是讓您下榻休息、養精續稅，隔天整裝再出發的好去處!</p>
+                                                            <p>電話 : 037-733669</p>
+                                                            <a href="http://www.amanimotel.com.tw/html/houlong_03.htm">遊桐花休閒汽車旅館</a>
+                                                            <span class="font-weight-bold">位置 : 苗栗縣後龍鎮十班坑155-16號</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -139,7 +553,7 @@
         <div class="bg_img">
             <div id="bg_white">
                 <div id="content" class="container p-2 d-flex flex-column justify-content-between">
-                    <div id="title" class="text-center d-flex justify-content-center align-items-center">
+                    <div id="title" class="text-center font-weight-bold d-flex justify-content-center align-items-center">
                         <div>
                             <p id="title_word">小農資訊</p>
                         </div>
@@ -148,17 +562,19 @@
                         <div id="top"></div>
                         <div id="bottom" class="bg-light p-3">
                             <h5>位置</h5>
-                            <div class="p-3 text-justify">
+                            <div class="p-3">
                                 <p>1.國道三號-後龍交流道西濱交流道中間處</p><br>
                                 <p>2.7-11龍坑門市往西濱交流道一公里處，鐵道與道路交集之處</p>
                             </div>
-                            <button id="button" type="button" class="btn" data-toggle="modal" data-target="#news_modal">Map</button>
+                            <button id="button" type="button" class="btn font-weight-bold" data-toggle="modal"
+                                data-target="#news_modal">Map</button>
                             <div class="modal fade" id="news_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                                 aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalCenterTitle">鄰里小農 - 地圖資訊</h5>
+                                            <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里小農
+                                                - 地圖資訊</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span id="modal_x" aria-hidden="true">&times;</span>
                                             </button>
@@ -172,17 +588,17 @@
                     <div class="word_box p-3">
                         <div id="word_top">
                             <div class="bg_color"></div>
-                            <h5 id="word">您不可不知的事</h5>
+                            <h4 id="word">您不可不知的事</h4>
                         </div>
                         <ul>
-                            <li class="text-justify">後龍的花生、西瓜，可是當地的特產<br>
+                            <li class="font-weight-bold">後龍的花生、西瓜，可是當地的特產<br>
                                 <div id="specialty" data-toggle="modal" data-target="#specialty_modal"></div>
                                 <div class="modal fade" id="specialty_modal" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 id="exampleModalCenterTitle" class="modal-title">後龍的花生、西瓜，可是當地的特產</h5>
+                                                <h5 id="exampleModalCenterTitle" class="modal-title font-weight-bold">後龍的花生、西瓜，可是當地的特產</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span id="modal_x" aria-hidden="true">&times;</span>
                                                 </button>
@@ -192,26 +608,28 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="text-justify">雖然不及竹南、頭份出名，可是後龍可是交通要道<br>
+                            <li class="font-weight-bold">雖然不及竹南、頭份出名，可是後龍可是交通要道<br>
                                 <div id="traffic" data-toggle="modal" data-target="#traffic_modal"></div>
                                 <div class="modal fade" id="traffic_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
                                     aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 id="exampleModalCenterTitle" class="modal-title">雖然不及竹南、頭份出名，可是後龍可是交通要道</h5>
+                                                <h5 id="exampleModalCenterTitle" class="modal-title font-weight-bold">雖然不及竹南、頭份出名，可是後龍可是交通要道</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span id="modal_x" aria-hidden="true">&times;</span>
                                                 </button>
                                             </div>
-                                            <div class="traffic-body text-center"><a href="https://zh.wikipedia.org/wiki/%E5%BE%8C%E9%BE%8D%E9%8E%AE_(%E5%8F%B0%E7%81%A3)">連結點我</a></div>
+                                            <div class="traffic-body text-center">
+                                                <a href="https://zh.wikipedia.org/wiki/%E5%BE%8C%E9%BE%8D%E9%8E%AE_(%E5%8F%B0%E7%81%A3)">連結點我</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="text-justify">農產品以當地購買、面交(限苗栗縣)為主</li>
-                            <li class="text-justify">量大、熟客另有優惠</li>
-                            <li class="text-justify">現場購買可能會有意想不到的農產品出現喔!</li>
+                            <li class="font-weight-bold">農產品以當地購買、約地(限苗栗縣)面交為主</li>
+                            <li class="font-weight-bold">量大、熟客另有優惠</li>
+                            <li class="font-weight-bold">現場購買可能會有意想不到的農產品出現喔!</li>
                         </ul>
                     </div>
                 </div>
@@ -229,9 +647,9 @@
                         <div class="top d-flex">
                             <div class="left d-flex flex-column justify-content-center">
                                 <p>康先生</p>
-                                <p id="number">0936-309-700</p>
+                                <p id="number" class="font-weight-bold">0936-309-700</p>
                             </div>
-                            <div class="right w-50 d-flex align-items-center justify-content-around">
+                            <div class="right w-50 d-flex align-items-center justify-content-center">
                                 <a id="fb" href=""></a>
                                 <a id="kang_line" href="" data-toggle="modal" data-target="#kang_modal"></a>
                                 <div class="modal fade" id="kang_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -239,7 +657,8 @@
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalCenterTitle">康先生 - Line</h5>
+                                                <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">康先生
+                                                    - Line</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span id="modal_x" aria-hidden="true">&times;</span>
                                                 </button>
@@ -253,9 +672,9 @@
                         <div class="bottom d-flex">
                             <div class="left d-flex flex-column justify-content-center">
                                 <p>溫小姐</p>
-                                <p id="number">0936-379-700</p>
+                                <p id="number" class="font-weight-bold">0936-379-700</p>
                             </div>
-                            <div class="right w-50 d-flex align-items-center justify-content-around">
+                            <div class="right w-50 d-flex align-items-center justify-content-center">
                                 <a id="fb" href=""></a>
                                 <a id="wen_line" href="" data-toggle="modal" data-target="#wen_modal"></a>
                                 <div class="modal fade" id="wen_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -263,7 +682,8 @@
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalCenterTitle">溫小姐 - Line</h5>
+                                                <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">溫小姐
+                                                    - Line</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span id="modal_x" aria-hidden="true">&times;</span>
                                                 </button>
@@ -282,7 +702,8 @@
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalCenterTitle">鄰里小農 - 地圖資訊</h5>
+                                        <h5 class="modal-title font-weight-bold" id="exampleModalCenterTitle">鄰里小農 -
+                                            地圖資訊</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span id="modal_x" aria-hidden="true">&times;</span>
                                         </button>
