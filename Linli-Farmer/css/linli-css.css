@@ -87,6 +87,7 @@ p{
 
 #nav #nav_word_bg{
     background-color: rgba(126, 185,7,0.5);
+    font-size: 20px;
 }
 
 #nav .nav_word:hover{
@@ -199,14 +200,13 @@ p{
 }
 
 #product #product_top, #product #product_bottom{
-    height: 35vh;
+    height: 50vh;
     background-color: white;
     margin-bottom: 50px;
 }
 
 #product #product_item{
-    height: 35vh;
-    margin-bottom: 50px;
+    height: 50vh;
 }
 
 #product #peanut{
@@ -224,7 +224,7 @@ p{
 }
 
 #product #small_peanut{
-    height: 35vh;
+    height: 50vh;
     background-image: url("/Linli-Farmer/img/peanut.jpg");
     background-size: cover;
     background-position: center;
@@ -247,7 +247,7 @@ p{
 
  #product #word_section .border{
     width: 90%;
-    height: 2px;
+    height: 1px;
     background-color: #42210B;
     top: 50%;
     transform: translateY(-50%);
@@ -268,7 +268,7 @@ p{
 }
 
 #product #small_watermelon{
-    height: 35vh;
+    height: 50vh;
     background-image: url("/Linli-Farmer/img/watermelon.jpg");
     background-size: cover;
     background-position: center;
@@ -312,7 +312,7 @@ p{
 }
 
 #product #product_item h5{
-    margin-top: 1.75em;
+    margin-top: .5em;
 }
 
 /* 鄰里趣遊 */
@@ -359,7 +359,7 @@ p{
 }
 
 #fun .row #food{
-    width: 35vw;
+    width: 50vw;
     height: 75vh;
     background-image: url("/Linli-Farmer/img/food.jpg");
     background-size: 100% 100%;
@@ -369,7 +369,7 @@ p{
 }
 
 #fun .row #view_a{
-    width: 35vw;
+    width: 50vw;
     height: 75vh;
     background-image: url("/Linli-Farmer/img/view_a.jpg");
     background-size: 100% 100%;
@@ -379,7 +379,7 @@ p{
 }
 
 #fun .row #view_b{
-    width: 35vw;
+    width: 50vw;
     height: 75vh;
     background-image: url("/Linli-Farmer/img/view_b.jpg");
     background-size: 100% 100%;
@@ -389,7 +389,7 @@ p{
 }
 
 #fun .row #history_a{
-    width: 35vw;
+    width: 50vw;
     height: 75vh;
     background-image: url("/Linli-Farmer/img/history_a.jpg");
     background-size: auto;
@@ -399,31 +399,31 @@ p{
 }
 
 #fun .row #history_b{
-    width: 35vw;
+    width: 50vw;
     height: 75vh;
     background-image: url("/Linli-Farmer/img/history_b.jpg");
     background-size: auto;
-    background-position: -40% 85%;
+    background-position: 50% 85%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 #fun .row #history_c{
-    width: 35vw;
+    width: 50vw;
     height: 75vh;
     background-image: url("/Linli-Farmer/img/history_c.jpg");
-    background-size: auto;
-    background-position: 0% 55%;
+    background-size: 100% 100%;
+    background-position: 100% 55%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 #fun .row #rest{
-    width: 35vw;
+    width: 50vw;
     height: 75vh;
     background-image: url("/Linli-Farmer/img/rest.jpg");
-    background-size: auto;
-    background-position: -30% 45%;
+    background-size: 100% 100%;
+    background-position: 100% 50%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -459,16 +459,6 @@ p{
     font-family: arial;
 }
 
-#news #content #bottom #button{
-    background-color: #C7B199;
-    transition: 2s;
-}
-
-#news #content #bottom #button:hover{
-    transform: scale(1.05);
-    transition: 1s;
-}
-
 #news .news-body{
     height: 75vh;
     background-image: url('/Linli-Farmer/img/map.jpg');
@@ -498,10 +488,6 @@ p{
     bottom: 0;
     right: 0;
     background-color: #C7B199;
-}
-
-#news .phone_map{
-    display: none;
 }
 
 #news .word_box li{
@@ -598,8 +584,8 @@ p{
 }
 
 #footer .row #fb{
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
     background-image: url('/Linli-Farmer/img/fb.png');
     background-size: contain;
     background-position: center;
@@ -614,8 +600,8 @@ p{
 }
 
 #footer .row .top .right #kang_line{
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
     background-image: url('/Linli-Farmer/img/kang-line.jpg');
     background-size: contain;
     background-position: center;
@@ -630,8 +616,8 @@ p{
 }
 
 #footer .row .bottom .right #wen_line{
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
     background-image: url('/Linli-Farmer/img/wen-line.jpg');
     background-size: contain;
     background-position: center;
@@ -646,13 +632,12 @@ p{
 }
 
 #footer .row #map{
-    height: 90%;
-    background-image: url('/Linli-Farmer/img/map.jpg');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
     transition: 2s;
+}
+
+#footer .row #map{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 #footer .row #map:hover{
@@ -707,47 +692,6 @@ p{
     /* 小農資訊 */
     #news .word_box #specialty, #news .word_box #traffic{
         display: none;
-    }
-
-    /* 鄰里趣遊 */
-    #fun .row #history_a{
-        width: 35vw;
-        height: 75vh;
-        background-image: url("/Linli-Farmer/img/history_a.jpg");
-        background-size: auto;
-        background-position: 100% 50%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-
-    #fun .row #history_b{
-        width: 35vw;
-        height: 75vh;
-        background-image: url("/Linli-Farmer/img/history_b.jpg");
-        background-size: auto;
-        background-position: 75% 85%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-
-    #fun .row #history_c{
-        width: 35vw;
-        height: 75vh;
-        background-image: url("/Linli-Farmer/img/history_c.jpg");
-        background-size: auto;
-        background-position: 128% 50%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-
-    #fun .row #rest{
-        width: 35vw;
-        height: 75vh;
-        background-image: url("/Linli-Farmer/img/rest.jpg");
-        background-size: auto;
-        background-position: 107% 45%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
     }
 
     /* footer */
@@ -818,17 +762,6 @@ p{
     /* 小農資訊 */
     #news #content #top{
         height: 30vh;
-    }
-
-    #news #content #bottom #button{
-        display: none;
-    }
-
-    #news .phone_map{
-        display: block;
-        font-family: 微軟正黑體;
-        font-size: 18px;
-        letter-spacing: 3px;
     }
 
     /* footer */
