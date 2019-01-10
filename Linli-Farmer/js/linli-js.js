@@ -33,6 +33,9 @@ $('#nav_news').click(function () {
     }, 1000);
 });
 
+// 小農產品點擊提示
+
+
 // 小農產品-小項目
 var product_item_swiper = new Swiper('#product_item_swiper', {
     slidesPerView: 4,

@@ -20,8 +20,8 @@ p{
 
 /* 標題背景及文字((葉子 */
 #title{
-    width: 200px;
-    height: 90px;
+    width: 250px;
+    height: 100px;
     background-image: url('/Linli-Farmer/img/title_img.png');
     background-size: contain;
     background-position: center;
@@ -30,6 +30,11 @@ p{
 
 #title_word{
     font-size: 35px;
+    font-family: 微軟正黑體;
+}
+
+#prompt{
+    font-size: 25px;
     font-family: 微軟正黑體;
 }
 
@@ -53,47 +58,47 @@ p{
 
 /* nav */
 #nav{
+    width: 100%;
     height: 10vh;
     background-color: #7EB907;
     z-index: 999;
-    position: fixed;
-    top: 0;
 }
 
-#phone_nav{
-    background-color: #7EB907;
-    z-index: 66666;
-    position: fixed;
-    top: 0;
-}
-
-#nav #img_a{
-    width: 100%;
+#nav #img_logo{
     height: 100%;
     background-image: url("/Linli-Farmer/img/logo-png.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 2s;
 }
 
-#nav #word{
-    font-size: 22px;
+#nav #img_logo:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+#nav .nav_word{
     font-family: 微軟正黑體;
+    cursor: pointer;
+    transition: 2s;
 }
 
-#nav #word a{
-    color: white;
+#nav #nav_word_bg{
+    background-color: rgba(126, 185,7,0.5);
 }
 
-#nav #word a:hover{
-    text-decoration: none;
-}
-
-#phone_nav{
-    display: none;
+#nav .nav_word:hover{
+    transform: scale(1.05);
+    transition: 1s;
 }
 
 /* banner */
+#banner{
+    height: 90vh;
+}
+
 #banner_swiper{
     height: 90vh;
     background-color: rgb(151, 122, 90,0.3);
@@ -103,8 +108,8 @@ p{
     width: 100%;
     height: 100%;
     background-image: url('/Linli-Farmer/img/field-work.jpg');
-    background-size: 100% 100%;
-    background-position: center;
+    background-size: cover;
+    background-position: 80% 80%;
     background-repeat: no-repeat;
 }
 
@@ -112,8 +117,8 @@ p{
     width: 100%;
     height: 100%;
     background-image: url('/Linli-Farmer/img/field.jpg');
-    background-size: 100% 100%;
-    background-position: center;
+    background-size: cover;
+    background-position: 70% 70%;
     background-repeat: no-repeat;
 }
 
@@ -121,9 +126,18 @@ p{
     width: 100%;
     height: 100%;
     background-image: url('/Linli-Farmer/img/street.jpg');
-    background-size: 100% 100%;
-    background-position: center;
+    background-size: cover;
+    background-position: 90% 90%;
     background-repeat: no-repeat;
+}
+
+#banner_word{
+    font-size: 50px;
+    font-family: 微軟正黑體;
+    z-index: 666;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* 鄰里小農 */
@@ -152,7 +166,7 @@ p{
 
 #about #content #bottom{
     color: #42210B;
-    font-size: 20px;
+    font-size: 22px;
     font-family: arial;
     line-height: 35px;
 }
@@ -227,7 +241,6 @@ p{
     height: 35px;
     background-color: #42210B;
     border-radius: 99999999px;
-    cursor: pointer;
     margin: 20px 0;
     z-index: 5;
  }
@@ -487,9 +500,13 @@ p{
     background-color: #C7B199;
 }
 
+#news .phone_map{
+    display: none;
+}
+
 #news .word_box li{
     color: #762031;
-
+    font-size: 22px;
 }
 
 #news .word_box #specialty{
@@ -574,6 +591,10 @@ p{
 #footer .row #number{
     font-size: 25px;
     letter-spacing: 0;
+}
+
+#footer .row .top .right, #footer .row .bottom .right{
+    width: 50%;
 }
 
 #footer .row #fb{
@@ -663,87 +684,189 @@ p{
     background-repeat: no-repeat;
 }
 
+.phone_footer{
+    display: none;
+}
 
-/* 手機板當螢幕寬度小於500發生變化 */
-@media (max-width:500px){
+
+
+/* 當手機螢幕寬度等於1300px進行變化 */
+@media (max-width:1300px){
+    #banner_word{
+        font-size: 33px;
+    }
+}
+
+/* 當手機螢幕寬度等於900px進行變化 */
+@media (max-width:900px){
+    /* banner */
+    #banner_word{
+        font-size: 27px;
+    }
+
+    /* 小農資訊 */
+    #news .word_box #specialty, #news .word_box #traffic{
+        display: none;
+    }
+
+    /* 鄰里趣遊 */
+    #fun .row #history_a{
+        width: 35vw;
+        height: 75vh;
+        background-image: url("/Linli-Farmer/img/history_a.jpg");
+        background-size: auto;
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    #fun .row #history_b{
+        width: 35vw;
+        height: 75vh;
+        background-image: url("/Linli-Farmer/img/history_b.jpg");
+        background-size: auto;
+        background-position: 75% 85%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    #fun .row #history_c{
+        width: 35vw;
+        height: 75vh;
+        background-image: url("/Linli-Farmer/img/history_c.jpg");
+        background-size: auto;
+        background-position: 128% 50%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    #fun .row #rest{
+        width: 35vw;
+        height: 75vh;
+        background-image: url("/Linli-Farmer/img/rest.jpg");
+        background-size: auto;
+        background-position: 107% 45%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    /* footer */
+    #footer .row #logo{
+        display: none;
+    }
+
+    #footer .row .top .left, #footer .row .bottom .left{
+        width: 100%;
+    }
+
+    #footer .row .top .right{
+        display: none;
+    }
+
+    #footer .row #fb, #footer .row .top .right #kang_line, #footer .row .bottom .right #wen_line{
+        display: none;
+    }
+}
+
+/* 當手機螢幕寬度等於750px進行變化 */
+@media (max-width:750px){
+    #title{
+        width: 175px;
+        height: 75px;
+    }
+    
     #title_word{
         font-size: 25px;
     }
 
-    #title{
-        width: 100px;
-        height: 45px;
+    #about #content #bottom, #news #content #bottom,#news .word_box li{
+        font-size: 16px;
     }
 
-    /* nav */
-    #nav{
-        display: none;
+    #prompt{
+        font-size: 20px;
     }
-
-    #phone_nav{
-        height: 10vh;
-        display: block;
-    }
-
-    #phone_nav .row{
-        width: 100%;
-        height: 100%;
-    }
-
-    #phone_nav .phone_logo{
-        width: 100%;
-        height: 100%;
-        background-image: url("/Linli-Farmer/img/logo-png.png");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    #phone_nav .card-body{
-       background-color: rgba(255,255,255,0.5);
-    }
-
-    #phone_nav .card-body a{
-        color: #42210B;
-    }
-
-    #phone_nav .card-body a:hover{
-        text-decoration: none;
-    }
-
+   
     /* banner */
     #banner_swiper{
         height: 50vh;
     }
 
-    /* 鄰里小農 */    
-    #about #content #bottom{
-        font-size: 16px;
+    #banner_word{
+        font-size: 23px;
+    }
+
+    /* 小農資訊 */
+    #about #content #top{
+        height: 30vh;
+    }
+
+    /* 小農產品 */
+    #product .box{
+        display: none;
+    }
+
+    /* 鄰里趣遊 */
+    #fun .box{
+        display: none;
+    }
+
+    #fun #prompt{
+        display: none;
+    }
+
+    /* 小農資訊 */
+    #news #content #top{
+        height: 30vh;
+    }
+
+    #news #content #bottom #button{
+        display: none;
+    }
+
+    #news .phone_map{
+        display: block;
+        font-family: 微軟正黑體;
+        font-size: 18px;
+        letter-spacing: 3px;
     }
 
     /* footer */
-    #footer p{
-        font-size: 16px;
-    }
-
-    #footer .row{
-        padding: 15px 0;
-    }
-
-    #footer .row #number{
-        font-size: 16px;
-    }
-
-    #footer .row #map_box{
+    #footer .content{
         display: none;
     }
 
-    #footer .row .top .left,  #footer .row .bottom .left{
+    #footer .phone_footer{
+        display: block;
+    }
+
+    #footer .number{
+        font-size: 20px;
+    }
+
+    #footer .copyright{
+        font-size: 14px;
+    }
+}
+
+/* 當手機螢幕寬度等於500px進行變化 */
+@media (max-width:500px){
+    /* banner */
+    #banner_word{
+        font-size: 20px;
+    }
+
+    #banner_swiper .swiper-wrapper #img_1{
         width: 100%;
-        text-align: center;
+        height: 100%;
+        background-image: url('/Linli-Farmer/img/field-work.jpg');
+        background-size: cover;
+        background-position: 40% 10%;
+        background-repeat: no-repeat;
     }
 
-    #footer .row #logo, #footer .row .top .right #kang_line, #footer .row .bottom .right #wen_line{
-        display: none;
+    /* footer */
+    #news .phone_map{
+        font-size: 16px;
     }
 }
