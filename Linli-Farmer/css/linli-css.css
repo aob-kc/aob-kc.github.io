@@ -359,7 +359,7 @@ p{
 }
 
 #product #item_word{
-    margin-top: 16px;
+    margin-top: 10px;
 }
 
 #product #phone_item #phone_gourd{
@@ -386,7 +386,7 @@ p{
     background-repeat: no-repeat;
 }
 
-#product #phone_item #phone_oyster{
+#product #phone_oyster{
     height: 20vh;
     background-image: url("/Linli-Farmer/img/oyster.jpg");
     background-size: 100% 100%;
@@ -533,6 +533,14 @@ p{
     height: 1px;
     background-color: #762031;
     margin: 10px 0;
+}
+
+#fun #phone_item_tile{
+    font-size: 20px;
+}
+
+#fun #phone_item_content{
+    font-size: 16px;
 }
 
 /* 小農資訊 */
