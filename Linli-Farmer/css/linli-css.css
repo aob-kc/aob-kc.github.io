@@ -62,10 +62,11 @@ p{
     height: 10vh;
     background-color: #7EB907;
     z-index: 999;
+    overflow: hidden;
 }
 
 #nav #img_logo{
-    height: 100%;
+    height: 2em;
     background-image: url("/Linli-Farmer/img/logo-png.png");
     background-size: contain;
     background-position: center;
@@ -86,8 +87,8 @@ p{
 }
 
 #nav #nav_word_bg{
-    background-color: rgba(126, 185,7,0.5);
-    font-size: 20px;
+    font-size: 100%;
+    background-color: rgba(126,185,7,0.5);
 }
 
 #nav .nav_word:hover{
@@ -97,7 +98,7 @@ p{
 
 #nav .phone_navtoogle{
     background-color: rgba(255, 255,255,0.5);
-    margin-right: 10px;
+    margin-right: .75em;
     border-radius: 9999999px;
 }
 
@@ -206,13 +207,13 @@ p{
 }
 
 #product #product_top, #product #product_bottom{
-    height: 50vh;
+    height: 10em;
     background-color: white;
     margin-bottom: 50px;
 }
 
 #product #product_item{
-    height: 35vh;
+    height: 10em;
 }
 
 #product #peanut{
@@ -237,17 +238,22 @@ p{
     background-repeat: no-repeat;
 }
 
-#product #word_section{
-   top: 50%;
-   transform: translateY(-50%);
+#product .content_word{
+    padding-top: 2vh;
+    padding-left: 3vw;
 }
 
+#product #word_section{
+    top: 50%;
+    transform: translateY(-50%);
+ }
+
 #product #word_section .black_circle{
-    width: 20px;
-    height: 20px;
+    width: .75em;
+    height: .75em;
     background-color: #42210B;
     border-radius: 99999999px;
-    margin: 20px 0;
+    margin: 1% 0;
     z-index: 5;
  }
 
@@ -283,7 +289,7 @@ p{
 
 #product #product_item #gourd{
     width: 100%;
-    height: 25vh;
+    height: 7em;
     background-image: url("/Linli-Farmer/img/gourd.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -292,7 +298,7 @@ p{
 
 #product #product_item #corn{
     width: 100%;
-    height: 25vh;
+    height: 7em;
     background-image: url("/Linli-Farmer/img/corn.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -301,7 +307,7 @@ p{
 
 #product #product_item #Sweet_potato{
     width: 100%;
-    height: 25vh;
+    height: 7em;
     background-image: url("/Linli-Farmer/img/Sweet_potato.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -310,7 +316,7 @@ p{
 
 #product #product_item #oyster{
     width: 100%;
-    height: 25vh;
+    height: 7em;
     background-image: url("/Linli-Farmer/img/Oyster.jpg");
     background-size: 100% 100%;
     background-position: center;
