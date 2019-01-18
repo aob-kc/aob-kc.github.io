@@ -58,7 +58,7 @@ p{
 
 /* nav */
 #nav{
-    width: 100%;
+    width:100%;
     height: 10vh;
     min-height: 3em;
     background-color: #7EB907;
@@ -151,6 +151,17 @@ p{
     bottom: 7%;
     left: 50%;
     transform: translateX(-50%);
+}
+
+#sb_word{
+    text-align: center;
+    font-size: 20px;
+    font-family: 微軟正黑體;
+    z-index: 666;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
 }
 
 /* 鄰里小農 */
@@ -829,8 +840,14 @@ p{
 
 /* 當手機螢幕寬度等於1300px進行變化 */
 @media (max-width:1300px){
+    /* banner */
     #banner_word{
         font-size: 33px;
+    }
+
+    /* product */
+    #product #product_item h5{
+        font-size: 1em;
     }
 }
 
@@ -839,6 +856,11 @@ p{
     /* banner */
     #banner_word{
         font-size: 27px;
+    }
+
+    /* product */
+    #product #product_item h5{
+        font-size: .75em;
     }
 
     /* 小農資訊 */
@@ -886,6 +908,7 @@ p{
     /* banner */
     #banner_swiper{
         height: 50vh;
+        min-height: 20em;
     }
 
     #banner_word{
@@ -942,9 +965,21 @@ p{
     }
 }
 
-/* 當手機螢幕寬度等於500px進行變化 */
-@media (max-width:500px){
+/* 當手機螢幕寬度等於600px進行變化 */
+@media (max-width:600px){
     /* banner */
+    #banner{
+        min-height: 15em;
+    }
+
+    #banner_word{
+        display: none;
+    }
+
+    #sb_word{
+        display: block;
+    }
+
     #banner_word{
         font-size: 20px;
     }
