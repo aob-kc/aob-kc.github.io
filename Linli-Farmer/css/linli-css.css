@@ -60,13 +60,13 @@ p{
 #nav{
     width: 100%;
     height: 10vh;
+    min-height: 3em;
     background-color: #7EB907;
     z-index: 999;
-    overflow: hidden;
 }
 
 #nav #img_logo{
-    height: 2em;
+    height: 100%;
     background-image: url("/Linli-Farmer/img/logo-png.png");
     background-size: contain;
     background-position: center;
@@ -87,8 +87,8 @@ p{
 }
 
 #nav #nav_word_bg{
-    font-size: 100%;
-    background-color: rgba(126,185,7,0.5);
+    background-color: rgba(126, 185,7,0.5);
+    font-size: 20px;
 }
 
 #nav .nav_word:hover{
@@ -98,8 +98,12 @@ p{
 
 #nav .phone_navtoogle{
     background-color: rgba(255, 255,255,0.5);
-    margin-right: .75em;
+    margin-right: 10px;
     border-radius: 9999999px;
+}
+
+#nav :focus {
+    outline: none;
 }
 
 /* banner */
@@ -109,6 +113,7 @@ p{
 
 #banner_swiper{
     height: 90vh;
+    min-height: 25em;
     background-color: rgb(151, 122, 90,0.3);
 }
 
@@ -166,6 +171,7 @@ p{
 
 #about #content #top{
     height: 50vh;
+    min-height: 10em;
     background-image: url('/Linli-Farmer/img/field.jpg');
     background-size: cover;
     background-position: center;
@@ -207,13 +213,33 @@ p{
 }
 
 #product #product_top, #product #product_bottom{
-    height: 10em;
+    height: 50vh;
+    min-height: 25em;
     background-color: white;
     margin-bottom: 50px;
 }
 
 #product #product_item{
-    height: 10em;
+    height: 35vh;
+    min-height: 20em;
+}
+
+#product #pr_imgword{
+    font-size: 2.5em;
+    letter-spacing: 10px;
+    font-weight: 700;
+    font-family: 微軟正黑體;
+    text-align: center;
+    padding-top: 57%;
+    color: transparent;
+}
+
+#product #pr_imgword:hover{
+    color: whitesmoke;
+}
+
+#product #pr_imgbox:hover{
+    background-color: rgba(0, 0,0,0.3);
 }
 
 #product #peanut{
@@ -238,22 +264,17 @@ p{
     background-repeat: no-repeat;
 }
 
-#product .content_word{
-    padding-top: 2vh;
-    padding-left: 3vw;
+#product #word_section{
+   top: 50%;
+   transform: translateY(-50%);
 }
 
-#product #word_section{
-    top: 50%;
-    transform: translateY(-50%);
- }
-
 #product #word_section .black_circle{
-    width: .75em;
-    height: .75em;
+    width: 20px;
+    height: 20px;
     background-color: #42210B;
     border-radius: 99999999px;
-    margin: 1% 0;
+    margin: 20px 0;
     z-index: 5;
  }
 
@@ -289,7 +310,8 @@ p{
 
 #product #product_item #gourd{
     width: 100%;
-    height: 7em;
+    height: 25vh;
+    min-height: 15em;
     background-image: url("/Linli-Farmer/img/gourd.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -298,7 +320,8 @@ p{
 
 #product #product_item #corn{
     width: 100%;
-    height: 7em;
+    height: 25vh;
+    min-height: 15em;
     background-image: url("/Linli-Farmer/img/corn.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -307,7 +330,8 @@ p{
 
 #product #product_item #Sweet_potato{
     width: 100%;
-    height: 7em;
+    height: 25vh;
+    min-height: 15em;
     background-image: url("/Linli-Farmer/img/Sweet_potato.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -316,7 +340,8 @@ p{
 
 #product #product_item #oyster{
     width: 100%;
-    height: 7em;
+    height: 25vh;
+    min-height: 15em;
     background-image: url("/Linli-Farmer/img/Oyster.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -333,6 +358,7 @@ p{
 
 #product #phone_top, #phone_bottom{
     height: 25vh;
+    min-height: 13em;
     background-color: white;
     margin-bottom: 25px;
 }
@@ -370,6 +396,7 @@ p{
 
 #product #phone_item #phone_gourd{
     height: 20vh;
+    min-height: 10em;
     background-image: url("/Linli-Farmer/img/gourd.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -378,6 +405,7 @@ p{
 
 #product #phone_item #phone_corn{
     height: 20vh;
+    min-height: 10em;
     background-image: url("/Linli-Farmer/img/corn.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -386,6 +414,7 @@ p{
 
 #product #phone_item #phone_Sweet_potato{
     height: 20vh;
+    min-height: 10em;
     background-image: url("/Linli-Farmer/img/Sweet_potato.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -394,6 +423,7 @@ p{
 
 #product #phone_oyster{
     height: 20vh;
+    min-height: 10em;
     background-image: url("/Linli-Farmer/img/Oyster.jpg");
     background-size: 100% 100%;
     background-position: center;
@@ -568,6 +598,7 @@ p{
 
 #news #content #top{
     height: 50vh;
+    min-height: 25em;
     background-image: url('/Linli-Farmer/img/street.jpg');
     background-size: cover;
     background-position: center;
@@ -930,6 +961,10 @@ p{
     /* footer */
     #news .phone_map{
         font-size: 16px;
+    }
+
+    #news #content #top{
+        min-height: 15em;
     }
 }
 
