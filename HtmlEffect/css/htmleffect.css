@@ -53,6 +53,7 @@ a{
 
 .box{
       margin-right: 3vw;
+      width: 45%;
 }
 
 /* all_box */
@@ -131,8 +132,8 @@ a{
       display: block;
 }
 
-/* 寬度到700px進行改變 */
-@media (max-width:700px){
+/* 寬度到500px進行改變 */
+@media (max-width:500px){
       .content_box{
             display: block;
       }
