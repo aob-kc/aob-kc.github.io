@@ -10,7 +10,8 @@
       <link rel="stylesheet" href="/HtmlEffect/css/htmleffect.css">
 
       <!-- tag logo -->
-      <link rel="shortcut icon" type="images/x-icon" href="https://s2.aconvert.com/convert/p3r68-cdx67/cbp2c-u1bt6-001.ico">
+      <link rel="shortcut icon " type="images/x-icon" href="./img/favicon.ico"> 
+      <link rel="shortcut icon" type="images/x-icon" href="https://aob-kc.github.io/HtmlEffect/img/favicon.ico">
 </head>
 
 <body>
@@ -36,14 +37,17 @@
                         <div id="html_content">
                               <div class="content_box">
                                     <div class="box">
+                                          <h5>html tag</h5>
                                           <p>del : <del>讓文字增加刪除線效果</del></p>
                                           <p>small : 會讓文字較小</p>
                                           <p>sup : 字體較小、位置偏上</p>
                                           <p>sub : 字體較小、位置偏下</p>
                                           <p>pre : 會讓文字隨著文章斷行而斷行，不需下br進行斷行</p>
                                     </div>
+                                    <br>
                                     <div class="box">
-                                          <p>"& nbsp;" : 空格效果(須把&與n中間空格拔掉</p>
+                                          <h5>特殊字符</h5>
+                                          <p>& nbsp; : 空格效果(須把&與n中間空格拔掉</p>
                                     </div>
                               </div>
                         </div>
@@ -52,8 +56,20 @@
                         <div id="css_content">
                               <div class="content_box">
                                     <div class="box">
-                                          <p>writing-mode: vertical-lr;<br>讓文字呈現垂直排版</p><br>
-                                          <p>background-image: linear-gradient(to 方向,顏色,顏色);<br>漸層效果</p>
+                                          <h5>文字相關</h5>
+                                          <p>writing-mode: vertical-lr;<br>讓文字呈現垂直排版</p>
+                                    </div>
+                                    <br>
+                                    <div class="box">
+                                          <h5>bg-color漸層</h5>
+                                          <p>background-image: linear-gradient(to 方向,顏色,顏色);</p>
+                                    </div>
+                              </div>
+                              <div class="content_box">
+                                    <div class="box">
+                                          <h5>隱藏卷軸，但是保有滾動效果</h5>
+                                          <b>css最上層下此指令</b>
+                                          <p>::-webkit-scrollbar{display:none;}</p>
                                     </div>
                               </div>
                         </div>
@@ -62,13 +78,62 @@
                         <div id="js_content">
                               <div class="content_box">
                                     <div class="box">
-                                          <p>$("element").slideToggle();<br>js遮色片效果<br>需css設定好hover效果、進行切換<br>原css需先設display:none，觸發後block</p><br>
-                                          <p>$("element").animate({width:'toggle'},作用秒數);<br>靠hover觸發事件發生</p>
+                                          <h5>遮色片效果(一)</h5>
+                                          <p>$("element").slideToggle();<br>需css設定好hover效果、進行切換<br>原css需先設display:none，觸發後block</p><br>
+                                          <h5>遮色片效果(二)</h5>
+                                          <p>$("element").animate({width:'toggle'},作用秒數);</p>
                                     </div>
+                                    <br>
                                     <div class="box">
-                                          <p>window.onbeforeunload = function () {<br>window.scrollTo(0, 0), 秒數;};<br>F5後會重整、頁面返回頂部</p><br>
-                                          <p>$('element').click(function () {<br>$('html,body').animate({<br>scrollTop: ($('tag').offset().top - $('nav').height())<br>}, 秒數);});<br>點擊後，會以滑動的方式移動至指定區塊</p>
+                                          <h5>重整頁面效果</h5>
+                                          <p>window.onbeforeunload = function () {<br>window.scrollTo(0, 0), 0;};<br>F5後會重整、頁面返回頂部</p><br>
+                                          <h5>點擊移動效果</h5>
+                                          <p>$('element').click(function () {<br>$('html,body').animate({<br>scrollTop:
+                                                ($('tag').offset().top - $('nav').height())<br>}, 秒數);});<br>點擊後，會以滑動的方式移動至指定區塊</p>
                                           <p>若有nav固定於頂部，($('tag').offset().top - $('nav').height())即可</p>
+                                    </div>
+                              </div>
+                              <div class="content_box">
+                                    <div class="box">
+                                          <h5>表單點擊切換</h5>
+                                          <b>css</b>
+                                          <p>#tag_a{width: 100px; height: 100px; background-color: aquamarine;}<br>
+                                                #tag_a.hide{width: 100px; height: 100px; background-color: wheat;}<br>
+                                                <br>
+                                                #tag_b{width: 100px; height: 100px; background-color:wheat ;}<br>
+                                                #tag_b.show{width: 100px; height: 100px; background-color: aquamarine;}<br>
+                                                <br>
+                                                #box_a{width: 100px; height: 100px; background-color:red ;}<br>
+                                                #box_a.hide{display: none;}<br>
+                                                <br>
+                                                #box_b{display: none;}<br>
+                                                #box_b.show{width: 100px; height: 100px; background-color:red ;}
+                                          </p>
+                                    </div>
+                                    <br>
+                                    <div class="box">
+                                          <h5>&nbsp;</h5>
+                                          <b>js</b>
+                                          <p>var tag_a = document.querySelector('#tag_a');<br>var tag_b =
+                                                document.querySelector("#tag_a");<br>var box_a =
+                                                document.querySelector("#box_a");<br>var box_b =
+                                                document.querySelector('#box_b');<br>
+                                                <br>
+                                                tag_a.onclick = function () {<br>
+                                                tab_a.classList.remove('hide');<br>
+                                                tab_b.classList.remove('show');<br>
+                                                <br>
+                                                box_a.classList.remove('hide');<br>
+                                                box_b.classList.remove('show');<br>
+                                                };<br>
+                                                <br>
+                                                tag_b.onclick = function () {<br>
+                                                tab_a.classList.add('hide');<br>
+                                                tab_b.classList.add('show');<br>
+                                                <br>
+                                                box_a.classList.add('hide');<br>
+                                                box_b.classList.add('show');<br>
+                                                };</p>
                                     </div>
                               </div>
                         </div>
@@ -76,15 +141,15 @@
                         <!-- 其他 -->
                         <div id="order_content">
                               <div class="content_box ">
-                                    <div class="sm_box">
-                                          <div class="blank">
-                                                <p>個人網頁</p>
-                                                <a href="https://aob-kc.github.io/Linli-Farmer/index.html">鄰里小農</a>
-                                          </div>
-                                          <div class="blank">
-                                                <p>團隊合作</p>
-                                                <a href="https://moncoeurweb.github.io/Moncoeur/">心之芳庭<br>(職訓期間-舊網改版)</a>
-                                          </div>
+                                    <div class="box">
+                                          <h5>網頁 - 個人製作</h5>
+                                          <a href="https://aob-kc.github.io/Linli-Farmer/index.html">鄰里小農</a>
+
+                                    </div>
+                                    <br>
+                                    <div class="box">
+                                          <h5>網頁 - 團隊合作</h5>
+                                          <a href="https://moncoeurweb.github.io/Moncoeur/">心之芳庭<br>(職訓期間-舊網改版)</a>
                                     </div>
                               </div>
                         </div>

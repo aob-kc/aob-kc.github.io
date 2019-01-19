@@ -2,6 +2,11 @@ body{
       margin: 0;
 }
 
+/* 隱藏滾軸畫面，還能保有滾動效果 */
+::-webkit-scrollbar{
+      display:none;
+}
+
 #bg_img{
       width: 100vw;
       height: 100vh;
@@ -21,39 +26,31 @@ body{
       background-color: rgba(255, 255, 255, 0.6);
 }
 
+h5{
+      margin: 0;
+      color: brown;
+      font-weight: 900;
+}
+
 p{
       margin: 0;
-      font-size: 1.5vmin;
-      line-height: 1.5em;
+      font-size: .75em;
+      line-height: 1.25em;
 }
 
 a{
       text-decoration: none;
-      font-size: 2vmin;
+      font-size: .5em;
+      margin: 0;
 }
 
-.sm_box{
-      display: flex;
+b{
+      font-size: .8em;
+      color: purple;
 }
 
 .blank{
-      margin-right: 3vw;
-}
-
-/* 內部總box */
-.content_box{
-      padding-top: 3vh;
-      padding-bottom: 3vh;
-      padding-left: 2vw;
-      padding-right: 2vw;
-      width: 95%;
-      margin: auto;
-      display: flex;
-}
-
-.box{
-      margin-right: 3vw;
-      width: 45%;
+      margin-right: .5em;
 }
 
 /* all_box */
@@ -102,7 +99,7 @@ a{
       left: 50%;
       transform: translate(-50% , -50%);
       font-weight: 900;
-      font-size: 3vmin;
+      font-size: .75em;
 }
 
 /* content_box */
@@ -118,6 +115,7 @@ a{
       left: 0;
       width: 100%;
       height: 100%;
+      overflow: auto;
 }
 
 #css_content, #js_content, #order_content{
@@ -130,6 +128,22 @@ a{
 
 #css_content.show, #js_content.show, #order_content.show{
       display: block;
+}
+
+/* 內部box */
+.content_box{
+      padding-top: .5em;
+      padding-bottom: .5em;
+      padding-left: .5em;
+      padding-right: .5em;
+      width: 95%;
+      margin: auto;
+      display: flex;
+}
+
+.box{
+      margin-right: .5em;
+      width: 45%;
 }
 
 /* 寬度到500px進行改變 */
@@ -146,5 +160,4 @@ a{
             margin-right: 0;
             width: 100%;
       }
-      
 }
