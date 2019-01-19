@@ -74,7 +74,7 @@ b{
 }
 
 #html_title{
-      background-color: aquamarine;
+      background-color: lightblue;
       color: blue;
 }
 
@@ -89,7 +89,7 @@ b{
 }
 
 #css_title.show, #js_title.show, #order_title.show{
-      background-color: aquamarine;
+      background-color: lightblue;
       color: blue;
 }
 

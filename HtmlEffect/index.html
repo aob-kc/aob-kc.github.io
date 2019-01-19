@@ -89,7 +89,7 @@
                                           <p>window.onbeforeunload = function () {<br>window.scrollTo(0, 0), 0;};<br>F5後會重整、頁面返回頂部</p><br>
                                           <h5>點擊移動效果</h5>
                                           <p>$('element').click(function () {<br>$('html,body').animate({<br>scrollTop:
-                                                ($('tag').offset().top - $('nav').height())<br>}, 秒數);});<br>點擊後，會以滑動的方式移動至指定區塊</p>
+                                                ($('tag').offset().top)<br>}, 秒數);});</p>
                                           <p>若有nav固定於頂部，($('tag').offset().top - $('nav').height())即可</p>
                                     </div>
                               </div>
