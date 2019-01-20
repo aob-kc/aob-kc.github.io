@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-image: url("http://dayapapers.com.tw/pro_imgs/e6c1734546eff382400eaa494a251466.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h5, p{
+    margin: 0;
+}
+
+/* 大區塊 */
+section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#left_box{
+    width: 15%;
+    height: 100%;
+    background-color: rgba(135, 206, 250, 0.7);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+#right_box{
+    width: 85%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+/* 左邊直條 */
+.lb_word{
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Indie Flower', cursive;
+}
+
+.lb_word:hover{
+    background-color: rgba(255, 160, 122, 0.75);
+}
+
+.about_tag.show, .ps_tag.show, .ai_tag.show, .web_tag.show, .work_tag.show{
+    background-color: rgba(173, 255, 47, 0.75);
+    box-shadow: .5px .5px .5px .5px rgba(0, 0, 0, 0.2);
+}
+
+.copyright{
+    width: 100%;
+    font-size: .75em;
+    color: white;
+    position: absolute;
+    bottom: 7px;
+    font-family: 'Teko', sans-serif;
+}
+
+.copyright p{
+    text-align: center;
+}
+
+/* 右邊區塊 */
+#right_box .rb{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+}
+
+/* show切換 */
+.logo.hide{
+    display: none;
+}
+
+.kang_about, .ps_about, .ai_about, .web_about, .works_about{
+    display: none;
+}
+
+.kang_about.show, .ps_about.show, .ai_about.show, .web_about.show, .works_about.show{
+    display: block;
+}
+
+/* logo */
+.logo{
+    position: relative;
+}
+
+.logo .logo_box{
+    width: 250px;
+    height: 250px;
+    background-color: brown;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+/* kang_about */
+.kang_about .about_left{
+    width: 35%;
+    height: 100%;
+    float: left;
+}
+
+.kang_about .about_left h5, .kang_about .about_left p{
+    margin-bottom: .3em;
+}
+
+.kang_about .about_left .kang_img{
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+    margin-bottom: .5em;
+}
+
+.kang_about .about_right{
+    width: 65%;
+    height: 100%;
+    float: left;
+    background-color: tan;
+}
+
