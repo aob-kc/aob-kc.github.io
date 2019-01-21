@@ -76,7 +76,6 @@ section{
     position: absolute;
     top: 0;
     left: 0;
-    padding: 1em;
 }
 
 /* show切換 */
@@ -109,6 +108,10 @@ section{
 }
 
 /* kang_about */
+.kang_about{
+    padding: 1em;
+}
+
 .kang_about .about_left{
     width: 35%;
     height: 100%;
@@ -133,3 +136,76 @@ section{
     background-color: tan;
 }
 
+/* ps_about */
+.ps_about{
+    padding: 1em;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.ps_about h5{
+    font-size: 1em;
+    font-weight: 700;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    color: brown;
+}
+
+.ps_about p{
+    margin-bottom: .3em;
+}
+
+.ps_about .box_a{
+    width: 100%;
+    display: flex;
+}
+
+.ps_about .box_a div{
+    display: flex;
+    flex-direction: column;
+}
+
+.ps_about img{
+    width: 50%;
+    height: 100%;
+    margin-right: 3em;
+}
+
+.ps_about .bg{
+    width: 50%;
+}
+
+.ps_about .bg_a{
+    width: 50%;
+    height: 50%;
+}
+
+.ps_about .bg_works{
+    width: 50%;
+    height: 50%;
+}
+
+.ps_about .snow{
+    width: 33%;
+}
+
+.ps_about .snow_people{
+    width: 65%;
+}
+
+.ps_about .snow_b{
+    width: 80%;
+    height: 75%;
+}
+
+.ps_about .car_works{
+    width: 70%;
+    height: 75%;
+}
+
+/* RWD */
+@media (max-width:700px){
+    .ps_about img{
+        width: 90%;
+    }
+}
