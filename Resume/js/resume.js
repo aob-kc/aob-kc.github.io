@@ -86,3 +86,18 @@ work_tag.onclick = function(){
     web_about.classList.remove("show");
     works_about.classList.add("show");
 };
+
+// 小螢幕nav
+var small_nav = document.querySelector("#small_nav");
+var sn_line = document.querySelector(".sn_line");
+var sn_line_a = document.querySelector(".sn_line_a");
+var sn_line_b = document.querySelector(".sn_line_b");
+var small_nav_box = document.querySelector("#small_nav_box");
+
+small_nav.onclick = function(){
+    small_nav.classList.toggle("click");
+    sn_line.classList.toggle("click");
+    sn_line_a.classList.toggle("click");
+    sn_line_b.classList.toggle("click");
+    small_nav_box.classList.toggle("show");
+};

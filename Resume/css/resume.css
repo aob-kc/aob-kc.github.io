@@ -19,6 +19,7 @@ section{
     width: 100vw;
     height: 100vh;
     display: flex;
+    position: relative;
 }
 
 #left_box{
@@ -34,6 +35,14 @@ section{
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     position: relative;
+}
+
+#small_nav{
+    display: none;
+}
+
+#small_nav_box{
+    display: none;
 }
 
 /* 左邊直條 */
@@ -205,6 +214,83 @@ section{
 
 /* RWD */
 @media (max-width:700px){
+    #small_nav{
+        display: block;
+        position: fixed;
+        top: 1em;
+        left: 1em;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(135, 206, 250, 0.7);
+        border: 2px solid  rgb(135, 206, 250);
+        border-radius: 99999999px;
+        z-index: 999999;
+    }
+
+    #small_nav.click{
+        background-color:rgba(255, 255, 255, 0.7);
+    }
+
+    #small_nav .sn_line, #small_nav .sn_line_a, #small_nav .sn_line_b{
+        width: 70%;
+        height: 2px;
+        background-color:white;
+        margin: .6em auto;
+    }
+
+    #small_nav .sn_line.click, #small_nav .sn_line_a.click, #small_nav .sn_line_b.click{
+        background-color:rgb(135, 206, 250);
+    }
+
+    #small_nav_box.show{
+        display: block;
+        width: 250px;
+        height: 100vh;
+        background-color: rgba(135, 206, 250, 0.7);
+        position: relative;
+        z-index: 99999;
+        animation: sn_box .5s;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    @keyframes sn_box {
+        from{
+            width: 0;
+        }top{
+            width: 100vw;
+        }
+    }
+
+    .sn_wordbox{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .sn_copy{
+        text-align: center;
+        font-size: .75em;
+        color: white;
+        position: absolute;
+        left: 50%;
+        bottom: 7px;
+        transform: translateX(-50%);
+        font-family: 'Teko', sans-serif;
+    }
+
+    #left_box{
+        display: none;
+    }
+
+    #sn_bg{
+        width: 15%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
     .ps_about img{
         width: 90%;
     }
