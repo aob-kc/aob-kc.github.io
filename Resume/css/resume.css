@@ -10,8 +10,19 @@ body{
     background-repeat: no-repeat;
 }
 
-h5, p{
+h5{
     margin: 0;
+    font-size: 1em;
+    color: brown;
+}
+
+p{
+    margin: 0;
+    font-size: .9em;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* 大區塊 */
@@ -24,6 +35,7 @@ section{
 
 #left_box{
     width: 15%;
+    min-width: 5em;
     height: 100%;
     background-color: rgba(135, 206, 250, 0.7);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
@@ -87,6 +99,14 @@ section{
     left: 0;
 }
 
+#right_box h5{
+    font-family: 'cwTeXYen', sans-serif;
+}
+
+#right_box p, #right_box a{
+    font-family: DFKai-sb;
+}
+
 /* show切換 */
 .logo.hide{
     display: none;
@@ -121,13 +141,17 @@ section{
     padding: 1em;
 }
 
+.kang_about p{
+    text-align: justify;
+}
+
 .kang_about .about_left{
-    width: 35%;
+    width: 45%;
     height: 100%;
     float: left;
 }
 
-.kang_about .about_left h5, .kang_about .about_left p{
+.kang_about h5, .kang_about p{
     margin-bottom: .3em;
 }
 
@@ -139,10 +163,11 @@ section{
 }
 
 .kang_about .about_right{
-    width: 65%;
+    width: 55%;
     height: 100%;
     float: left;
-    background-color: tan;
+    background-color: rgba(135, 206, 250, 0.3);
+    padding: 2em;
 }
 
 /* ps_about */
@@ -153,11 +178,9 @@ section{
 }
 
 .ps_about h5{
-    font-size: 1em;
     font-weight: 700;
     padding-top: .5em;
     padding-bottom: .5em;
-    color: brown;
 }
 
 .ps_about p{
@@ -176,7 +199,6 @@ section{
 
 .ps_about img{
     width: 50%;
-    height: 100%;
     margin-right: 3em;
 }
 
@@ -203,8 +225,17 @@ section{
 }
 
 .ps_about .snow_b{
-    width: 80%;
-    height: 75%;
+    width: 75%;
+    height: 100%;
+    margin-left: .5em;
+}
+
+.ps_about .human{
+    width: 100%;
+}
+
+.ps_about .snow_works{
+    width: 100%;
 }
 
 .ps_about .car_works{
@@ -212,85 +243,38 @@ section{
     height: 75%;
 }
 
-/* RWD */
+/* ai */
+.ai_about{
+    padding: 1em;
+}
+
+/* web */
+.web_about{
+    padding: 1em;
+}
+
+.web_about .web_box{
+    width: 100%;
+}
+
+.web_about h5{
+    margin-bottom: .5em;
+}
+
+.web_about p, .web_about a{
+    margin-bottom: .3em;
+}
+
+/* works */
+.works_about{
+    padding: 1em;
+}
+
+
+
+/* rwd */
+/* 當寬度等於、低於700px進行變化 */
 @media (max-width:700px){
-    #small_nav{
-        display: block;
-        position: fixed;
-        top: 1em;
-        left: 1em;
-        width: 50px;
-        height: 50px;
-        background-color: rgba(135, 206, 250, 0.7);
-        border: 2px solid  rgb(135, 206, 250);
-        border-radius: 99999999px;
-        z-index: 999999;
-    }
-
-    #small_nav.click{
-        background-color:rgba(255, 255, 255, 0.7);
-    }
-
-    #small_nav .sn_line, #small_nav .sn_line_a, #small_nav .sn_line_b{
-        width: 70%;
-        height: 2px;
-        background-color:white;
-        margin: .6em auto;
-    }
-
-    #small_nav .sn_line.click, #small_nav .sn_line_a.click, #small_nav .sn_line_b.click{
-        background-color:rgb(135, 206, 250);
-    }
-
-    #small_nav_box.show{
-        display: block;
-        width: 250px;
-        height: 100vh;
-        background-color: rgba(135, 206, 250, 0.7);
-        position: relative;
-        z-index: 99999;
-        animation: sn_box .5s;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    @keyframes sn_box {
-        from{
-            width: 0;
-        }top{
-            width: 100vw;
-        }
-    }
-
-    .sn_wordbox{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .sn_copy{
-        text-align: center;
-        font-size: .75em;
-        color: white;
-        position: absolute;
-        left: 50%;
-        bottom: 7px;
-        transform: translateX(-50%);
-        font-family: 'Teko', sans-serif;
-    }
-
-    #left_box{
-        display: none;
-    }
-
-    #sn_bg{
-        width: 15%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-
     .ps_about img{
         width: 90%;
     }
