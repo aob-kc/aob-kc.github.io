@@ -445,6 +445,10 @@ p{
     margin-top: 25px;
 }
 
+#product :focus {
+    outline: none;
+}
+
 
 /* 鄰里趣遊 */
 #fun .bg_img{
@@ -588,6 +592,10 @@ p{
 
 #fun #phone_item_content{
     font-size: 16px;
+}
+
+#fun :focus {
+    outline: none;
 }
 
 /* 小農資訊 */
@@ -830,6 +838,10 @@ p{
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#footer :focus {
+    outline: none;
 }
 
 .phone_footer{
