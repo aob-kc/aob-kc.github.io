@@ -37,6 +37,7 @@ section{
 
 #left_box{
     width: 15%;
+    min-width: 5em;
     height: 100%;
     background-color: rgba(135, 206, 250, 0.7);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
@@ -48,15 +49,9 @@ section{
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     position: relative;
-    overflow: scroll;
-    overflow-x: hidden;
 }
 
 #small_nav{
-    display: none;
-}
-
-#small_nav_box{
     display: none;
 }
 
@@ -117,6 +112,8 @@ section{
 
 .kang_about, .ps_about, .ai_about, .web_about, .works_about{
     display: none;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .kang_about.show, .ps_about.show, .ai_about.show, .web_about.show, .works_about.show{
@@ -150,9 +147,12 @@ section{
     text-align: justify;
 }
 
+.kang_about .about_box{
+    width: 100%;
+}
+
 .kang_about .about_left{
     width: 45%;
-    height: 100%;
     float: left;
 }
 
@@ -161,10 +161,10 @@ section{
 }
 
 .kang_about .about_left .kang_img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 175px;
     margin-bottom: .5em;
-    background-image: url('/Resume/img/kang.png');
+    background-image: url('/Resume/img/head_shot.jpg');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -172,17 +172,19 @@ section{
 
 .kang_about .about_right{
     width: 55%;
-    height: 100%;
     float: left;
-    background-color: rgba(135, 206, 250, 0.3);
     padding: 2em;
+}
+
+.about_test{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
 }
 
 /* ps_about */
 .ps_about{
     padding: 1em;
-    overflow: scroll;
-    overflow-x: hidden;
 }
 
 .ps_about h5{
@@ -261,6 +263,10 @@ section{
     font-weight: 700;
     padding-top: .5em;
     padding-bottom: .5em;
+}
+
+.ai_box{
+    margin: auto;
 }
 
 .ai_about p{
@@ -349,6 +355,11 @@ section{
     display: flex;
 }
 
+.works_about .long_img img{
+    width: 500px;
+    height: 700px;
+}
+
 .works_about .Matte_Painting img{
     width: 700px;
     height: 500px;
@@ -359,8 +370,8 @@ section{
 
 
 /* rwd */
-/* 當寬度等於、低於700px進行變化 */
-@media (max-width:700px){
+/* 當寬度等於、低於1040px進行變化 */
+@media (max-width:1040px){
     h5{
         font-size: 1em;
     }
@@ -368,6 +379,19 @@ section{
     p{
         margin: 0;
         font-size: .9em;
+    }
+
+    /* kang */
+    .kang_about .about_left{
+        width: 100%;
+        float: none;
+    }
+
+    .kang_about .about_right{
+        width: 100%;
+        float: none;
+        padding: 0;
+        margin-bottom: 1em;
     }
 
     /* ps */
@@ -378,7 +402,7 @@ section{
 
     /* ai */
     .ai_about img{
-        width: 90%;
+        width: 450px;
     }
 
     .ai_about .long_img{
@@ -387,8 +411,7 @@ section{
     }
     
     .ai_about .long_img img{
-        margin: auto;
-        width: 90%;
+        width: 450px;
         margin-bottom: .5em;
     }
 
@@ -400,12 +423,184 @@ section{
 
     /* works */
     .works_about img{
-        width: 90%;
+        width: 450px;
+        height: 550px;
         margin-bottom: .5em;
     }
 
     .works_about .content{
         display: flex;
         flex-direction: column;
+    }
+
+    .works_about .Matte_Painting img{
+        width: 500px;
+        height: 300px;
+        margin-right: 1em;
+    }
+
+    .works_about .long_img img{
+        width: 450px;
+        height: 650px;
+    }
+}
+
+/* 螢幕寬小於700px */
+@media (max-width:700px){
+    #left_box{
+        width: 100%;
+        height: 4em;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+    
+    #right_box{
+        width: 100%;
+        height: calc(100% - 4em);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    /* ai */
+    .ai_about img{
+        width: 350px;
+    }
+
+    .ai_about .long_img img{
+        width: 350px;
+        height: 450px;
+    }
+
+    /* works */
+    .works_about img{
+        width: 350px;
+        height: 450px;
+    }
+
+    .works_about .Matte_Painting img{
+        width: 400px;
+        height: 200px;
+    }
+
+    
+    .works_about .long_img img{
+        width: 350px;
+        height: 450px;
+    }
+}
+
+/* 螢幕寬度小於500px */
+@media (max-width:500px){
+    /* 手機板選單按鈕 */
+    #small_nav{
+        display: block;
+        width: 100%;
+        height: 4em;
+        background-color: rgb(135, 206, 250);
+        z-index: 9;
+        position: relative;
+    }
+
+    #small_nav .sn_all{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2em;
+        height: 2em;
+        margin-left: .5em;
+        background-color: #33201C;
+        border-radius: 9999999999px;
+    }
+
+    #small_nav .sn_box{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #small_nav .sn_line{
+        width: 60%;
+        height: 2px;
+        background-color: white;
+    }
+
+    #small_nav .sn_line:nth-child(2){
+        margin-top: .3em;
+        margin-bottom: .3em;
+    }
+
+    /* 頂部nav選單 */
+    #left_box{
+        background-color: rgb(135, 206, 250);
+        height: 13em;
+        top: 4em;
+        z-index: 9;
+        display: none;
+        border-top: 2px solid white;
+        animation: sn_nav_show .3s;
+    }
+
+    @keyframes sn_nav_show {
+        from{
+            height: 0;
+        }to{
+            height: 13em;
+        }
+    }
+
+    #left_box.show{
+        display: block;
+    }
+
+    .lb_word{
+        padding-top: .5em;
+        padding-bottom: .5em;
+        animation: sn_nav_word .3s;
+    }
+
+    @keyframes sn_nav_word {
+        from{
+            opacity: 0;
+        }to{
+            opacity: 1;
+        }
+    }
+
+    /* ai */
+    .ai_about img{
+        width: 250px;
+    }
+    
+    .ai_about .long_img img{
+        width: 250px;
+    }
+
+    /* web */
+    #qr {
+        width: 150px;
+    }
+
+    /* works */
+    .works_about img{
+        width: 250px;
+        height: 350px;
+    }
+
+    .works_about .Matte_Painting img{
+        width: 250px;
+        height: 150px;
+    }
+
+    
+    .works_about .long_img img{
+        width: 250px;
+        height: 350px;
     }
 }

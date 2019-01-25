@@ -1,3 +1,11 @@
+// 小螢幕選單顯示、隱藏
+var sn_btn = document.querySelector('.sn_all');
+var nav = document.querySelector('#left_box');
+
+sn_btn.onclick = function(){
+    nav.classList.toggle('show');
+};
+
 // 區塊切換顯示效果
 var about_tag = document.querySelector(".about_tag");
 var ps_tag = document.querySelector(".ps_tag");
@@ -25,6 +33,7 @@ about_tag.onclick = function(){
     ai_about.classList.remove("show");
     web_about.classList.remove("show");
     works_about.classList.remove("show");
+    nav.classList.remove('show');
 };
 
 ps_tag.onclick = function(){
@@ -40,6 +49,7 @@ ps_tag.onclick = function(){
     ai_about.classList.remove("show");
     web_about.classList.remove("show");
     works_about.classList.remove("show");
+    nav.classList.remove('show');
 };
 
 ai_tag.onclick = function(){
@@ -55,6 +65,7 @@ ai_tag.onclick = function(){
     ai_about.classList.add("show");
     web_about.classList.remove("show");
     works_about.classList.remove("show");
+    nav.classList.remove('show');
 };
 
 web_tag.onclick = function(){
@@ -70,6 +81,7 @@ web_tag.onclick = function(){
     ai_about.classList.remove("show");
     web_about.classList.add("show");
     works_about.classList.remove("show");
+    nav.classList.remove('show');
 };
 
 work_tag.onclick = function(){
@@ -85,19 +97,6 @@ work_tag.onclick = function(){
     ai_about.classList.remove("show");
     web_about.classList.remove("show");
     works_about.classList.add("show");
-};
 
-// 小螢幕nav
-var small_nav = document.querySelector("#small_nav");
-var sn_line = document.querySelector(".sn_line");
-var sn_line_a = document.querySelector(".sn_line_a");
-var sn_line_b = document.querySelector(".sn_line_b");
-var small_nav_box = document.querySelector("#small_nav_box");
-
-small_nav.onclick = function(){
-    small_nav.classList.toggle("click");
-    sn_line.classList.toggle("click");
-    sn_line_a.classList.toggle("click");
-    sn_line_b.classList.toggle("click");
-    small_nav_box.classList.toggle("show");
+    nav.classList.remove('show');
 };
