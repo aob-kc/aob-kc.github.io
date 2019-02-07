@@ -1,5 +1,6 @@
 body{
       margin: 0;
+      overflow: hidden;
 }
 
 /* 隱藏滾軸畫面，還能保有滾動效果 */
@@ -63,7 +64,7 @@ b{
 
 #title_box{
       width: 100%;
-      height: 5%;
+      height: 5vh;
       min-height: 3em;
       background-color: wheat;
       display: flex;
@@ -108,8 +109,9 @@ b{
 /* content_box */
 #content_box{
       width: 100%;
-      height: 95%;
+      height: 89%;
       position: relative;
+      overflow: auto;
 }
 
 #html_content, #css_content, #js_content, #order_content{
@@ -117,8 +119,7 @@ b{
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      overflow: auto;
+      /* overflow: auto; */
 }
 
 #css_content, #js_content, #order_content{
