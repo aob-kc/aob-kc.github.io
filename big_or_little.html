@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比大小</title>
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            cursor: context-menu;
+        }
+
+        body {
+            margin: 0;
+            background-color: lightpink;
+        }
+
+        /*  */
+        header {
+            width: 100%;
+            height: 10vh;
+            position: relative;
+        }
+
+        header h2 {
+            margin: 0;
+            letter-spacing: 5px;
+            font-family: 'ZCOOL XiaoWei', serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*  */
+        section {
+            max-width: 1000px;
+            height: 85vh;
+            margin: auto;
+            background-color: whitesmoke;
+            border-radius: 15px;
+        }
+
+        section .left {
+            border-right: 2px dashed lightpink;
+            width: 50%;
+            height: 70%;
+            position: relative;
+            float: left;
+        }
+
+        section .right {
+            border-left: 2px dashed lightpink;
+            width: 50%;
+            height: 70%;
+            float: left;
+            position: relative;
+        }
+
+        section h4 {
+            font-family: ‘cwTeXYen’, sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        section .left p,
+        section .right p {
+            font-size: 35px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        section .left p {
+            color: blue;
+        }
+
+        section .right p {
+            color: orangered;
+        }
+
+        section .footer {
+            width: 100%;
+            height: 30%;
+            float: left;
+            border-top: 2px solid lightpink;
+            position: relative;
+        }
+
+        section .footer p {
+            margin: 0;
+            font-size: 12px;
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        section .footer #result {
+            font-family: '微軟正黑體';
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -75%);
+        }
+
+        section .footer #btn {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        /*  */
+        footer {
+            width: 100%;
+            height: 5vh;
+            position: relative;
+        }
+
+        footer p {
+            color: rgba(0, 0, 0, .5);
+            margin: 0;
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-family: 'ZCOOL XiaoWei', serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>比大小</h2>
+    </header>
+
+    <section>
+        <div class="left">
+            <h4>Player</h4>
+            <p id="player">??</p>
+        </div>
+        <div class="right">
+            <h4>Computer</h4>
+            <p id="computer">??</p>
+        </div>
+        <div class="footer">
+            <p>1~99之間數字，比大小</p>
+            <h3 id="result"></h3>
+            <button id="btn">比大小</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>©HTML5 Game-比大小 by aob-kc</p>
+    </footer>
+
+
+    <script>
+        var btn = document.querySelector('#btn')
+
+        btn.onclick = function () {
+            // player
+            var l = Math.floor(Math.random() * 99) + 1;
+            var player = document.querySelector('#player');
+            player.innerHTML = l;
+
+            // computer
+            var r = Math.floor(Math.random() * 99) + 1;
+            var computer = document.querySelector('#computer');
+            computer.innerHTML = r;
+
+            // 結果判斷
+            var result = document.querySelector('#result');
+            if (l > r) {
+                result.innerHTML = '贏惹d(`･∀･)b';
+            }if(l < r){
+                result.innerHTML = '輸惹｡ﾟヽ(ﾟ´Д`)ﾉﾟ｡';
+            }if(l == r){
+                result.innerHTML = '和局(ㅅ˘ㅂ˘)';
+            }
+        }
+    </script>
+</body>
+
+</html>
