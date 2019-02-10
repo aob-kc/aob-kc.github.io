@@ -1,12 +1,750 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        #opacity {
+            width: 100vw;
+            height: 99vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 998;
+            opacity: .3;
+        }
+
+        #show_time {
+            margin: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            text-shadow: 2px 1px 3px black;
+            color: white;
+            position: absolute;
+            bottom: 10.5em;
+        }
+
+        /* left */
+        #left {
+            width: 150px;
+            position: absolute;
+            bottom: 0;
+            left: -15px;
+        }
+
+        #left_canvas {
+            width: 100%;
+            height: 20em;
+        }
+
+        /* left_2 */
+        #left_2 {
+            width: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 110px;
+            z-index: -1;
+        }
+
+        #left_2_canvas {
+            width: 100%;
+            height: 16em;
+        }
+
+        /* left_3 */
+        #left_3 {
+            width: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 213px;
+            z-index: -1;
+        }
+
+        #left_3_canvas {
+            width: 100%;
+            height: 18em;
+        }
+
+        /* left_4 */
+        #left_4 {
+            width: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 313px;
+            z-index: 1;
+        }
+
+        #left_4_canvas {
+            width: 100%;
+            height: 14em;
+        }
+
+        /* left_5 */
+        #left_5 {
+            width: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 407px;
+            z-index: -1;
+        }
+
+        #left_5_canvas {
+            width: 100%;
+            height: 21em;
+        }
+
+        /* left_6 */
+        #left_6 {
+            width: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 555px;
+            z-index: 1;
+        }
+
+        #left_6_canvas {
+            width: 100%;
+            height: 22.3em;
+        }
+
+        /* house */
+        #house {
+            width: 600px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9;
+        }
+
+        #house_canvas {
+            width: 100%;
+            height: 18.5em;
+        }
+
+        /* right */
+        #right {
+            position: absolute;
+            bottom: 0;
+            right: -5px;
+            width: 150px;
+        }
+
+        #right_canvas {
+            width: 100%;
+            height: 17em;
+        }
+
+        /* right_2 */
+        #right_2 {
+            position: absolute;
+            bottom: 0;
+            right: 105px;
+            width: 125px;
+            z-index: 1;
+        }
+
+        #right_2_canvas {
+            width: 100%;
+            height: 17em;
+        }
+
+        /* right_3 */
+        #right_3 {
+            position: absolute;
+            bottom: 0;
+            right: 233px;
+            width: 125px;
+            z-index: -1;
+        }
+
+        #right_3_canvas {
+            width: 100%;
+            height: 22em;
+        }
+
+        /* right_4 */
+        #right_4 {
+            position: absolute;
+            bottom: 0;
+            right: 345px;
+            width: 125px;
+            z-index: 1;
+        }
+
+        #right_4_canvas {
+            width: 100%;
+            height: 21em;
+        }
+
+        /* right_5 */
+        #right_5 {
+            position: absolute;
+            bottom: 0;
+            right: 514px;
+            width: 125px;
+            z-index: 1;
+        }
+
+        #right_5_canvas {
+            width: 100%;
+            height: 20.5em;
+        }
+
+
+        footer {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            color: rgba(255, 255, 255, .5);
+            font-size: 16px;
+            letter-spacing: 3px;
+            position: absolute;
+            bottom: 0;
+            background-color: #211816;
+            z-index: 999;
+        }
+
+        /* rwd */
+        @media (max-width:700px) {
+            #house {
+                width: 450px;
+            }
+        }
+
+        @media (max-width:500px) {
+            #left {
+                left: -50px;
+            }
+
+            #house {
+                width: 350px;
+            }
+
+            #house_canvas {
+                height: 13em;
+            }
+
+            #right_2 {
+                right: 87px;
+            }
+
+            #right_3 {
+                right: 173px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div>text</div>
+    <div id="opacity"></div>
+    <h1 id="show_time"></h1>
+    <!-- left_tree -->
+    <section id="left">
+        <canvas id="left_canvas"></canvas>
+    </section>
+    <section id="left_2">
+        <canvas id="left_2_canvas"></canvas>
+    </section>
+    <section id="left_3">
+        <canvas id="left_3_canvas"></canvas>
+    </section>
+    <section id="left_4">
+        <canvas id="left_4_canvas"></canvas>
+    </section>
+    <section id="left_5">
+        <canvas id="left_5_canvas"></canvas>
+    </section>
+    <section id="left_6">
+        <canvas id="left_6_canvas"></canvas>
+    </section>
+
+    <!-- house -->
+    <section id="house">
+        <canvas id="house_canvas"></canvas>
+    </section>
+
+    <!-- right_tree -->
+    <section id="right">
+        <canvas id="right_canvas"></canvas>
+    </section>
+    <section id="right_2">
+        <canvas id="right_2_canvas"></canvas>
+    </section>
+    <section id="right_3">
+        <canvas id="right_3_canvas"></canvas>
+    </section>
+    <section id="right_4">
+        <canvas id="right_4_canvas"></canvas>
+    </section>
+    <section id="right_5">
+        <canvas id="right_5_canvas"></canvas>
+    </section>
+
+    <footer>©aob-kc.github.io</footer>
+
+    <script>
+        // 時間變化
+        // 背景顏色
+        var opacity = document.querySelector('#opacity');
+        var time = new Date().getHours();
+        if (time >= 4) {
+            document.bgColor = '#adadad';
+        } if (time >= 7) {
+            document.bgColor = '#84c1ff';
+        } if (time >= 11) {
+            document.bgColor = '#46a3ff	';
+        } if (time >= 14) {
+            document.bgColor = '#6a6aff';
+        } if (time >= 17) {
+            document.bgColor = '#ffed97';
+            opacity.style.backgroundColor = "#ffed97";
+        } if (time >= 20) {
+            document.bgColor = '#080B0F';
+            opacity.style.backgroundColor = "#080B0F";
+        }
+
+        // 時間顯示
+        setInterval(function () {
+            var show_time = document.querySelector('#show_time');
+            var date = new Date();
+            var y = date.getFullYear();
+            var mm = date.getMonth() + 1;
+            var d = date.getDate();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            show_time.innerHTML = y + ' / ' + mm + ' / ' + d + '<br/>' + h + ' : ' + m + ' : ' + s;
+        }, 500);
+
+        // 
+
+        // left樹木
+        var canvas = document.querySelector('#left_canvas');
+        var pic = canvas.getContext('2d');
+
+        //第一塊三角形形狀建立
+        pic.moveTo(150, 0);
+        pic.lineTo(0, 50);
+        pic.lineTo(300, 50);
+
+        // 第二塊三角
+        pic.moveTo(150, 35);
+        pic.lineTo(0, 80);
+        pic.lineTo(300, 80);
+
+        // wood
+        pic.fillStyle = '#79503B';
+        pic.fillRect(125, 100, 75, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        pic.moveTo(150, 55);
+        pic.lineTo(0, 105);
+        pic.lineTo(300, 105);
+
+        // 三角型填色
+        pic.fillStyle = "#407F3F";
+        pic.fill(); // 將形狀閉合、填充方式繪製出來
+
+        // 
+
+        // left_2樹木
+        var l2_canvas = document.querySelector('#left_2_canvas');
+        var l2_pic = l2_canvas.getContext('2d');
+
+        //第一塊三角形形狀建立
+        l2_pic.moveTo(150, 0);
+        l2_pic.lineTo(0, 55);
+        l2_pic.lineTo(300, 55);
+
+        // 第二塊三角
+        l2_pic.moveTo(150, 35);
+        l2_pic.lineTo(0, 83);
+        l2_pic.lineTo(300, 83);
+
+        // wood
+        l2_pic.fillStyle = '#4D3900';
+        l2_pic.fillRect(130, 100, 60, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        l2_pic.moveTo(150, 55);
+        l2_pic.lineTo(0, 110);
+        l2_pic.lineTo(300, 110);
+
+        // 三角型填色
+        l2_pic.fillStyle = "#1E3319";
+        l2_pic.fill();
+
+        // 
+
+        // left_3樹木
+        var l3_canvas = document.querySelector('#left_3_canvas');
+        var l3_pic = l3_canvas.getContext('2d');
+
+        //第一塊三角形形狀建立
+        l3_pic.moveTo(150, 0);
+        l3_pic.lineTo(0, 55);
+        l3_pic.lineTo(300, 55);
+
+        // 第二塊三角
+        l3_pic.moveTo(150, 35);
+        l3_pic.lineTo(0, 83);
+        l3_pic.lineTo(300, 83);
+
+        // wood
+        l3_pic.fillStyle = '#79503B';
+        l3_pic.fillRect(130, 100, 60, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        l3_pic.moveTo(150, 55);
+        l3_pic.lineTo(0, 110);
+        l3_pic.lineTo(300, 110);
+
+        // 三角型填色
+        l3_pic.fillStyle = "#228B22";
+        l3_pic.fill();
+
+        // 
+
+        // left_4樹木
+        var l4_canvas = document.querySelector('#left_4_canvas');
+        var l4_pic = l4_canvas.getContext('2d');
+
+        // 第一塊三角
+        l4_pic.moveTo(150, 35);
+        l4_pic.lineTo(0, 83);
+        l4_pic.lineTo(300, 83);
+
+        // wood
+        l4_pic.fillStyle = '#79503B';
+        l4_pic.fillRect(115, 100, 80, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        l4_pic.moveTo(150, 55);
+        l4_pic.lineTo(0, 110);
+        l4_pic.lineTo(300, 110);
+
+        // 三角型填色
+        l4_pic.fillStyle = "#006400";
+        l4_pic.fill();
+
+        // 
+
+        // left_5樹木
+        var l5_canvas = document.querySelector('#left_5_canvas');
+        var l5_pic = l5_canvas.getContext('2d');
+
+        // 第一塊三角
+        l5_pic.moveTo(150, 35);
+        l5_pic.lineTo(0, 83);
+        l5_pic.lineTo(300, 83);
+
+        // wood
+        l5_pic.fillStyle = '#79503B';
+        l5_pic.fillRect(115, 100, 80, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        l5_pic.moveTo(150, 55);
+        l5_pic.lineTo(0, 110);
+        l5_pic.lineTo(300, 110);
+
+        // 三角型填色
+        l5_pic.fillStyle = "#64a600";
+        l5_pic.fill();
+
+        // 
+
+        // left_6樹木
+        var l6_canvas = document.querySelector('#left_6_canvas');
+        var l6_pic = l6_canvas.getContext('2d');
+
+        // 第一塊三角
+        l6_pic.moveTo(150, 35);
+        l6_pic.lineTo(0, 83);
+        l6_pic.lineTo(300, 83);
+
+        // wood
+        l6_pic.fillStyle = '#79503B';
+        l6_pic.fillRect(115, 100, 80, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        l6_pic.moveTo(150, 55);
+        l6_pic.lineTo(0, 110);
+        l6_pic.lineTo(300, 110);
+
+        // 三角型填色
+        l6_pic.fillStyle = "#467500";
+        l6_pic.fill();
+
+        // 
+
+        // house
+        var house = document.querySelector('#house_canvas');
+        var h_pic = house.getContext('2d');
+
+        // 牆面
+        h_pic.fillStyle = "#C9872C";
+        h_pic.fillRect(25, 60, 200, 200);
+
+        // door
+        h_pic.fillStyle = "#4D1F00";
+        h_pic.fillRect(103, 70, 52, 200);
+
+        h_pic.fillStyle = "#B87333";
+        h_pic.fillRect(105, 72, 48, 200);
+
+        h_pic.fillStyle = "#ffffff";
+        h_pic.fillRect(110, 75, 38, 35);
+
+        if (time >= 20) {
+            h_pic.fillStyle = "#ffff93";
+            h_pic.fillRect(110, 75, 38, 35);
+        }
+
+        h_pic.fillStyle = "#fffccf";
+        h_pic.lineTo(106, 113);
+        h_pic.lineTo(106, 116);
+        h_pic.lineTo(117, 115);
+        h_pic.lineTo(117, 114);
+
+        // 圍欄
+        // door_left
+        h_pic.fillStyle = "#E5C46F";
+        h_pic.fillRect(5, 60, 8, 200);
+
+        h_pic.fillStyle = "#E5C46F";
+        h_pic.fillRect(90, 60, 8, 200);
+
+        // door_right
+        h_pic.fillStyle = "#E5C46F";
+        h_pic.fillRect(160, 60, 8, 200);
+
+        h_pic.fillStyle = "#E5C46F";
+        h_pic.fillRect(220, 60, 8, 200);
+
+        // 橫桿
+        h_pic.fillStyle = "#E5C46F";
+        h_pic.fillRect(5, 105, 90, 5);
+
+        h_pic.fillStyle = "#E5C46F";
+        h_pic.fillRect(160, 105, 90, 5);
+
+        // 橫桿直柱
+        h_pic.fillStyle = "#E5C46F";
+        h_pic.fillRect(30, 105, 5, 35);
+
+        h_pic.fillStyle = "#E5C46F";
+        h_pic.fillRect(60, 105, 5, 35);
+
+        h_pic.fillStyle = "#E5C46F";
+        h_pic.fillRect(190, 105, 5, 35);
+
+        // 底部木層
+        h_pic.fillStyle = "#211816";
+        h_pic.fillRect(5, 136, 220, 100);
+
+        // 木層樓梯
+        h_pic.fillStyle = "#ffffff";
+        h_pic.fillRect(98, 136, 62, 10);
+
+        h_pic.fillStyle = "#bbb";
+        h_pic.fillRect(98, 138, 62, 2);
+
+        h_pic.fillStyle = "#bbb";
+        h_pic.fillRect(98, 142, 62, 2);
+
+        // 煙囪
+        h_pic.fillStyle = "#211816";
+        h_pic.fillRect(225, 0, 30, 5);
+
+        h_pic.fillStyle = "#79503B";
+        h_pic.fillRect(225, 5, 30, 145);
+
+        // 屋頂
+        h_pic.moveTo(25, 35);
+        h_pic.lineTo(0, 60);
+        h_pic.lineTo(225, 60);
+        h_pic.lineTo(225, 35);
+        h_pic.fillStyle = "#754D4E";
+        h_pic.fill();
+
+        // 木斧
+        h_pic.fillStyle = "#79503B";
+        h_pic.fillRect(290, 128, 15, 3);
+
+        h_pic.fillStyle = "#D3D3D3";
+        h_pic.fillRect(270, 128, 20, 8);
+
+        h_pic.fillStyle = "#B87333";
+        h_pic.fillRect(265, 135, 30, 25);
+
+        // 
+
+        // right樹木
+        var r_canvas = document.querySelector('#right_canvas');
+        var r_pic = r_canvas.getContext('2d');
+
+        //第一塊三角形形狀建立
+        r_pic.moveTo(150, 0);
+        r_pic.lineTo(0, 50);
+        r_pic.lineTo(300, 50);
+
+        // 第二塊三角
+        r_pic.moveTo(150, 35);
+        r_pic.lineTo(0, 80);
+        r_pic.lineTo(300, 80);
+
+        // wood
+        r_pic.fillStyle = '#4D3900';
+        r_pic.fillRect(130, 100, 50, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        r_pic.moveTo(150, 55);
+        r_pic.lineTo(0, 105);
+        r_pic.lineTo(300, 105);
+
+        // 三角型填色
+        r_pic.fillStyle = "#55721F";
+        r_pic.fill(); // 將形狀閉合、填充方式繪製出來
+
+        // 
+
+        // right_2樹木
+        var r2_canvas = document.querySelector('#right_2_canvas');
+        var r2_pic = r2_canvas.getContext('2d');
+
+        //第一塊三角形形狀建立
+        r2_pic.moveTo(150, 10);
+        r2_pic.lineTo(0, 50);
+        r2_pic.lineTo(300, 50);
+
+        // 第二塊三角
+        r2_pic.moveTo(150, 35);
+        r2_pic.lineTo(0, 80);
+        r2_pic.lineTo(300, 80);
+
+        // wood
+        r2_pic.fillStyle = '#79503B';
+        r2_pic.fillRect(130, 100, 55, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        r2_pic.moveTo(150, 55);
+        r2_pic.lineTo(0, 105);
+        r2_pic.lineTo(300, 105);
+
+        // 三角型填色
+        r2_pic.fillStyle = "#323E28";
+        r2_pic.fill(); // 將形狀閉合、填充方式繪製出來
+
+        // 
+
+        // right_3樹木
+        var r3_canvas = document.querySelector('#right_3_canvas');
+        var r3_pic = r3_canvas.getContext('2d');
+
+        //第一塊三角形形狀建立
+        r3_pic.moveTo(150, 10);
+        r3_pic.lineTo(0, 50);
+        r3_pic.lineTo(300, 50);
+
+        // 第二塊三角
+        r3_pic.moveTo(150, 35);
+        r3_pic.lineTo(0, 80);
+        r3_pic.lineTo(300, 80);
+
+        // wood
+        r3_pic.fillStyle = '#4D3900';
+        r3_pic.fillRect(125, 100, 75, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        r3_pic.moveTo(150, 55);
+        r3_pic.lineTo(0, 105);
+        r3_pic.lineTo(300, 105);
+
+        // 三角型填色
+        r3_pic.fillStyle = "#2E8B57";
+        r3_pic.fill();
+
+        // 
+
+        // right_4樹木
+        var r4_canvas = document.querySelector('#right_4_canvas');
+        var r4_pic = r4_canvas.getContext('2d');
+
+        // 第一塊三角
+        r4_pic.moveTo(150, 60);
+        r4_pic.lineTo(0, 105);
+        r4_pic.lineTo(300, 105);
+
+        // wood
+        r4_pic.fillStyle = '#4D3900';
+        r4_pic.fillRect(110, 125, 90, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第二塊三角
+        r4_pic.moveTo(150, 80);
+        r4_pic.lineTo(0, 130);
+        r4_pic.lineTo(300, 130);
+
+        // 三角型填色
+        r4_pic.fillStyle = "#006400";
+        r4_pic.fill();
+
+        // 
+
+        // right_5樹木
+        var r5_canvas = document.querySelector('#right_5_canvas');
+        var r5_pic = r5_canvas.getContext('2d');
+
+        //第一塊三角形形狀建立
+        r5_pic.moveTo(150, 10);
+        r5_pic.lineTo(0, 50);
+        r5_pic.lineTo(300, 50);
+
+        // 第二塊三角
+        r5_pic.moveTo(150, 35);
+        r5_pic.lineTo(0, 80);
+        r5_pic.lineTo(300, 80);
+
+        // wood
+        r5_pic.fillStyle = '#4D3900';
+        r5_pic.fillRect(125, 100, 75, 100);
+
+        // 後建立會壓在上層，以此遮蓋木頭
+        // 第三塊三角
+        r5_pic.moveTo(150, 55);
+        r5_pic.lineTo(0, 105);
+        r5_pic.lineTo(300, 105);
+
+        // 三角型填色
+        r5_pic.fillStyle = "#00a600";
+        r5_pic.fill();
+    </script>
 </body>
+
 </html>
