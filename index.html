@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 鎖掉手機版雙擊放大關鍵字: maximum-scale=1.0, user-scalable=0 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>aob-kc.github.io</title>
     <style>
@@ -13,9 +14,12 @@
         }
 
         body {
-            width: 100vw;
-            height: 100vh;
             margin: 0;
+        }
+
+        #all {
+            width: 100%;
+            height: 100vh;
             position: relative;
         }
 
@@ -37,7 +41,384 @@
             text-shadow: 2px 1px 3px black;
             color: white;
             position: absolute;
-            bottom: 10.5em;
+            bottom: 14.5em;
+        }
+
+        #time_smoke {
+            position: absolute;
+            bottom: 21.5em;
+            width: 300px;
+            height: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: visible;
+            z-index: 599;
+        }
+
+        #time_smoke div:first-child {
+            width: 65px;
+            height: 65px;
+            border-radius: 9999em;
+            margin-top: -15px;
+            margin-left: -25px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(2) {
+            width: 85px;
+            height: 85px;
+            border-radius: 9999em;
+            margin-top: -80px;
+            margin-left: 10px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(3) {
+            width: 90px;
+            height: 90px;
+            border-radius: 9999em;
+            margin-top: -70px;
+            margin-left: 57px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(4) {
+            width: 115px;
+            height: 115px;
+            border-radius: 9999em;
+            margin-top: -117px;
+            margin-left: 107px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(5) {
+            width: 87px;
+            height: 87px;
+            border-radius: 9999em;
+            margin-top: -103px;
+            margin-left: 175px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(6) {
+            width: 111px;
+            height: 111px;
+            border-radius: 9999em;
+            margin-top: -75px;
+            margin-left: 211px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(7) {
+            width: 93px;
+            height: 93px;
+            border-radius: 9999em;
+            margin-top: -66px;
+            margin-left: 258px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(8) {
+            width: 77px;
+            height: 77px;
+            border-radius: 9999em;
+            margin-top: -65px;
+            margin-left: 236px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(9) {
+            width: 103px;
+            height: 103px;
+            border-radius: 9999em;
+            margin-top: -99px;
+            margin-left: 166px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(10) {
+            width: 123px;
+            height: 123px;
+            border-radius: 9999em;
+            margin-top: -133px;
+            margin-left: 99px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(11) {
+            width: 99px;
+            height: 99px;
+            border-radius: 9999em;
+            margin-top: -95px;
+            margin-left: 55px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(12) {
+            width: 75px;
+            height: 75px;
+            border-radius: 9999em;
+            margin-top: -83px;
+            margin-left: 30px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(13) {
+            width: 87px;
+            height: 87px;
+            border-radius: 9999em;
+            margin-top: -95px;
+            margin-left: 5px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(14) {
+            width: 75px;
+            height: 75px;
+            border-radius: 9999em;
+            margin-top: -83px;
+            margin-left: -15px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        #time_smoke div:nth-child(15) {
+            width: 75px;
+            height: 75px;
+            border-radius: 9999em;
+            margin-top: -95px;
+            margin-left: -35px;
+            animation: ts 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes ts {
+            0% {
+                background-color: #fcfcfc;
+                transform: scale(.9);
+            }
+
+            50% {
+                transform: scale(1);
+                opacity: .99;
+            }
+
+            100% {
+                background-color: #fcfcfc;
+                transform: scale(.9);
+            }
+        }
+
+        /* star */
+        #star {
+            width: 100%;
+            height: 100vh;
+            z-index: -3;
+            position: relative;
+            display: none;
+        }
+
+        #star div:nth-child(1) {
+            width: 7.5px;
+            height: 7.5px;
+            border-radius: 9999em;
+            animation: star 3s infinite;
+            position: absolute;
+            top: 10%;
+            left: 17.5%;
+        }
+
+        #star div:nth-child(2) {
+            width: 9px;
+            height: 9px;
+            border-radius: 9999em;
+            animation: star2 3s infinite;
+            position: absolute;
+            top: 30%;
+            left: 33%;
+        }
+
+        #star div:nth-child(3) {
+            width: 7px;
+            height: 7px;
+            border-radius: 9999em;
+            animation: star2 3s infinite;
+            position: absolute;
+            bottom: 30%;
+            right: 33%;
+        }
+
+        #star div:nth-child(4) {
+            width: 5px;
+            height: 5px;
+            border-radius: 9999em;
+            animation: star 3s infinite;
+            position: absolute;
+            bottom: 77%;
+            right: 25%;
+        }
+
+        #star div:nth-child(5) {
+            width: 10px;
+            height: 10px;
+            border-radius: 9999em;
+            animation: star 3s infinite;
+            position: absolute;
+            bottom: 25%;
+            right: 77%;
+        }
+
+        #star div:nth-child(6) {
+            width: 10px;
+            height: 10px;
+            border-radius: 9999em;
+            animation: star2 3s infinite;
+            position: absolute;
+            top: 77%;
+            left: 77%;
+        }
+
+        #star div:nth-child(7) {
+            width: 6.5px;
+            height: 6.5px;
+            border-radius: 9999em;
+            animation: star2 3s infinite;
+            position: absolute;
+            top: 10%;
+            right: 10%;
+        }
+
+        #star div:nth-child(8) {
+            width: 6.5px;
+            height: 6.5px;
+            border-radius: 9999em;
+            animation: star 3s infinite;
+            position: absolute;
+            top: 87%;
+            right: 9%;
+        }
+
+        #star div:nth-child(9) {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999em;
+            animation: star2 3s infinite;
+            position: absolute;
+            top: 15%;
+            left: 7%;
+        }
+
+        #star div:nth-child(10) {
+            width: 5px;
+            height: 5px;
+            border-radius: 9999em;
+            animation: star2 3s infinite;
+            position: absolute;
+            bottom: 10%;
+            left: 13%;
+        }
+
+        #star div:nth-child(11) {
+            width: 9px;
+            height: 9px;
+            border-radius: 9999em;
+            animation: star 3s infinite;
+            position: absolute;
+            top: 27%;
+            left: 23%;
+        }
+
+        #star div:nth-child(12) {
+            width: 10px;
+            height: 10px;
+            border-radius: 9999em;
+            animation: star 3s infinite;
+            position: absolute;
+            top: 6%;
+            left: 68%;
+        }
+
+        #star div:nth-child(13) {
+            width: 9px;
+            height: 9px;
+            border-radius: 9999em;
+            animation: star 3s infinite;
+            position: absolute;
+            top: 25%;
+            right: 7%;
+        }
+
+        #star div:nth-child(14) {
+            width: 7px;
+            height: 7px;
+            border-radius: 9999em;
+            animation: star 3s infinite;
+            position: absolute;
+            top: 33%;
+            right: 55%;
+        }
+
+        #star div:nth-child(15) {
+            width: 5px;
+            height: 5px;
+            border-radius: 9999em;
+            animation: star2 3s infinite;
+            position: absolute;
+            top: 37%;
+            right: 15%;
+        }
+
+        @keyframes star {
+            0% {
+                background-color: #fffcec;
+                opacity: 1;
+                transform: scale(.75)
+            }
+
+            50% {
+                background-color: #fffcec;
+                opacity: .5;
+                transform: scale(.5)
+            }
+
+            100% {
+                background-color: #fffcec;
+                opacity: 1;
+                transform: scale(.75)
+            }
+        }
+
+        @keyframes star2 {
+            0% {
+                background-color: #ffffdf;
+                opacity: .75;
+                transform: scale(.9);
+            }
+
+            50% {
+                background-color: #ffffdf;
+                opacity: 1;
+                transform: scale(.65);
+            }
+
+            100% {
+                background-color: #ffffdf;
+                opacity: .75;
+                transform: scale(.9);
+            }
         }
 
         /* left */
@@ -121,6 +502,71 @@
         #left_6_canvas {
             width: 100%;
             height: 22.3em;
+        }
+
+        /* 煙 */
+        #anime {
+            width: 600px;
+            height: 5em;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            bottom: 19em;
+            z-index: 9;
+        }
+
+        #anime .smoke1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 9999em;
+            background-color: #fcfcfc;
+            position: absolute;
+            bottom: 0;
+            right: 75px;
+            animation: opacity1 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes opacity1 {
+            0% {
+                opacity: .5;
+            }
+
+            50% {
+                transform: scale(.8);
+                opacity: 1;
+            }
+
+            100% {
+                opacity: .5;
+            }
+        }
+
+        #anime .smoke2 {
+            width: 50px;
+            height: 50px;
+            border-radius: 9999em;
+            background-color: #fcfcfc;
+            position: absolute;
+            bottom: 1.45em;
+            right: 60px;
+            animation: opacity2 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes opacity2 {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: .5;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
 
         /* house */
@@ -223,8 +669,25 @@
 
         /* rwd */
         @media (max-width:700px) {
-            #house {
+            #show_time {
+                bottom: 11em;
+            }
+
+            #time_smoke {
+                bottom: 16.25em;
+            }
+
+            #anime {
                 width: 450px;
+                bottom: 13em;
+            }
+
+            #house {
+                width: 400px;
+            }
+
+            #house_canvas {
+                height: 12.5em;
             }
         }
 
@@ -233,12 +696,17 @@
                 left: -50px;
             }
 
+            #anime {
+                width: 375px;
+                bottom: 12.5em;
+            }
+
             #house {
-                width: 350px;
+                width: 300px;
             }
 
             #house_canvas {
-                height: 13em;
+                height: 12em;
             }
 
             #right_2 {
@@ -253,59 +721,104 @@
 </head>
 
 <body>
-    <div id="opacity"></div>
-    <h1 id="show_time"></h1>
-    <!-- left_tree -->
-    <section id="left">
-        <canvas id="left_canvas"></canvas>
-    </section>
-    <section id="left_2">
-        <canvas id="left_2_canvas"></canvas>
-    </section>
-    <section id="left_3">
-        <canvas id="left_3_canvas"></canvas>
-    </section>
-    <section id="left_4">
-        <canvas id="left_4_canvas"></canvas>
-    </section>
-    <section id="left_5">
-        <canvas id="left_5_canvas"></canvas>
-    </section>
-    <section id="left_6">
-        <canvas id="left_6_canvas"></canvas>
+    <section id="all">
+        <div id="opacity"></div>
+        <h1 id="show_time"></h1>
+        <div id="time_smoke">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="star">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- left_tree -->
+        <section id="left">
+            <canvas id="left_canvas"></canvas>
+        </section>
+        <section id="left_2">
+            <canvas id="left_2_canvas"></canvas>
+        </section>
+        <section id="left_3">
+            <canvas id="left_3_canvas"></canvas>
+        </section>
+        <section id="left_4">
+            <canvas id="left_4_canvas"></canvas>
+        </section>
+        <section id="left_5">
+            <canvas id="left_5_canvas"></canvas>
+        </section>
+        <section id="left_6">
+            <canvas id="left_6_canvas"></canvas>
+        </section>
+        <!-- 煙 -->
+        <section id="anime">
+            <div class="smoke1"></div>
+            <div class="smoke2"></div>
+        </section>
+        <!-- house -->
+        <section id="house">
+            <canvas id="house_canvas"></canvas>
+        </section>
+
+        <!-- right_tree -->
+        <section id="right">
+            <canvas id="right_canvas"></canvas>
+        </section>
+        <section id="right_2">
+            <canvas id="right_2_canvas"></canvas>
+        </section>
+        <section id="right_3">
+            <canvas id="right_3_canvas"></canvas>
+        </section>
+        <section id="right_4">
+            <canvas id="right_4_canvas"></canvas>
+        </section>
+        <section id="right_5">
+            <canvas id="right_5_canvas"></canvas>
+        </section>
+
+        <footer>©aob-kc.github.io</footer>
     </section>
 
-    <!-- house -->
-    <section id="house">
-        <canvas id="house_canvas"></canvas>
-    </section>
-
-    <!-- right_tree -->
-    <section id="right">
-        <canvas id="right_canvas"></canvas>
-    </section>
-    <section id="right_2">
-        <canvas id="right_2_canvas"></canvas>
-    </section>
-    <section id="right_3">
-        <canvas id="right_3_canvas"></canvas>
-    </section>
-    <section id="right_4">
-        <canvas id="right_4_canvas"></canvas>
-    </section>
-    <section id="right_5">
-        <canvas id="right_5_canvas"></canvas>
-    </section>
-
-    <footer>©aob-kc.github.io</footer>
 
     <script>
         // 時間變化
         // 背景顏色
         var opacity = document.querySelector('#opacity');
+        var star = document.querySelector('#star');
         var time = new Date().getHours();
         if (time >= 4) {
             document.bgColor = '#adadad';
+            star.style.display = 'block';
+        } if (time >= 6) {
+            star.style.display = 'none';
         } if (time >= 7) {
             document.bgColor = '#84c1ff';
         } if (time >= 11) {
@@ -315,8 +828,12 @@
         } if (time >= 17) {
             document.bgColor = '#ffed97';
             opacity.style.backgroundColor = "#ffed97";
+        } if (time >= 18) {
+            document.bgColor = '#272727';
+            opacity.style.backgroundColor = "#272727";
         } if (time >= 20) {
             document.bgColor = '#080B0F';
+            star.style.display = 'block';
             opacity.style.backgroundColor = "#080B0F";
         }
 
@@ -518,8 +1035,8 @@
         h_pic.fillStyle = "#ffffff";
         h_pic.fillRect(110, 75, 38, 35);
 
-        if (time >= 20) {
-            h_pic.fillStyle = "#ffff93";
+        if (time >= 18) {
+            h_pic.fillStyle = "#ffffce";
             h_pic.fillRect(110, 75, 38, 35);
         }
 
