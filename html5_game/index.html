@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Html5_Game</title>
+    <style>
+        body {
+            background-color: rgba(238, 240, 163, 0.3);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        caption {
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr {
+            background-color: white;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+
+        tr:nth-child(1) {
+            background-color: rgb(200, 200, 200);
+        }
+
+        td:nth-child(2) {
+            width: 300px;
+        }
+
+        th {
+            font-weight: 700;
+        }
+
+        /*  */
+        @media (max-width:500px) {
+            th {
+                font-size: 16px;
+            }
+
+            td {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Html5_Game</caption>
+        <tr>
+            <th>名稱</th>
+            <th>作用</th>
+            <th>核心語法</th>
+            <th>製作時間</th>
+            <th>連結</th>
+        </tr>
+        <tr>
+            <th>數字比大小</th>
+            <td>兩者不同的數字，進行大小比對判斷，並顯示比較後的結果。</td>
+            <td>if判斷式、<br>Math.floor(Math.random())</td>
+            <td>2019.02</td>
+            <th><a href="./big_or_little.html" target="_blank">點擊前往</a></th>
+        </tr>
+    </table>
+</body>
+
+</html>
