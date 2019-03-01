@@ -38,7 +38,7 @@
             width: 100%;
             z-index: 1000;
             text-align: center;
-            text-shadow: 2px 1px 3px black;
+            text-shadow: 0px 0px 7.5px black;
             color: white;
             position: absolute;
             bottom: 14.5em;
@@ -814,24 +814,32 @@
         var opacity = document.querySelector('#opacity');
         var star = document.querySelector('#star');
         var time = new Date().getHours();
-        if (time >= 4) {
-            document.bgColor = '#adadad';
+        if (time < 6) {
+            document.bgColor = '#080B0F';
             star.style.display = 'block';
-        } if (time >= 6) {
+            opacity.style.backgroundColor = "#080B0F";
+        }
+        if (time >= 6) {
             star.style.display = 'none';
-        } if (time >= 7) {
+        }
+        if (time >= 7) {
             document.bgColor = '#84c1ff';
-        } if (time >= 11) {
+        }
+        if (time >= 11) {
             document.bgColor = '#46a3ff	';
-        } if (time >= 14) {
+        }
+        if (time >= 14) {
             document.bgColor = '#6a6aff';
-        } if (time >= 17) {
+        }
+        if (time >= 17) {
             document.bgColor = '#ffed97';
             opacity.style.backgroundColor = "#ffed97";
-        } if (time >= 18) {
+        }
+        if (time >= 18) {
             document.bgColor = '#272727';
             opacity.style.backgroundColor = "#272727";
-        } if (time >= 20) {
+        }
+        if (time >= 20) {
             document.bgColor = '#080B0F';
             star.style.display = 'block';
             opacity.style.backgroundColor = "#080B0F";
@@ -847,7 +855,52 @@
             var h = date.getHours();
             var m = date.getMinutes();
             var s = date.getSeconds();
-            show_time.innerHTML = y + ' / ' + mm + ' / ' + d + '<br/>' + h + ' : ' + m + ' : ' + s;
+
+            // 時間調整
+            if (mm < 10) {
+                var nmm = '0' + mm
+            } else {
+                nmm = m
+            }
+
+            if (d < 10) {
+                var nd = '0' + d
+            } else {
+                nd = d
+            }
+
+            if (h < 10) {
+                var nh = '0' + h
+            } else {
+                nh = h
+            }
+
+            if (m < 10) {
+                var nm = '0' + m
+            } else {
+                nm = m
+            }
+
+            if (s < 10) {
+                var ns = '0' + s
+            } else {
+                ns = s
+            }
+
+            // 星期調整
+            var w = new Array(7)
+            w[0] = '日'
+            w[1] = '一'
+            w[2] = '二'
+            w[3] = '三'
+            w[4] = '四'
+            w[5] = '五'
+            w[6] = '六'
+
+            var nw = w[date.getDay()]
+
+            show_time.innerHTML = y + ' / ' + nmm + ' / ' + nd + ' (' + nw + ') ' + '<br/>' + nh + ' : ' + nm +
+                ' : ' + ns;
         }, 500);
 
         // 
@@ -1036,6 +1089,10 @@
         h_pic.fillRect(110, 75, 38, 35);
 
         if (time >= 18) {
+            h_pic.fillStyle = "#ffffce";
+            h_pic.fillRect(110, 75, 38, 35);
+        }
+        if (time < 6) {
             h_pic.fillStyle = "#ffffce";
             h_pic.fillRect(110, 75, 38, 35);
         }
