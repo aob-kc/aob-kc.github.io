@@ -37,22 +37,76 @@
                         <div id="html_content">
                               <div class="content_box">
                                     <div class="box">
-                                          <h5>html_tag</h5>
+                                          <h5>(一)</h5>
                                           <p>del : <del>讓文字增加刪除線效果</del></p>
-                                          <p>small : 會讓文字較小</p>
                                           <p>sup : 字體較小、位置偏上</p>
                                           <p>sub : 字體較小、位置偏下</p>
-                                          <p>pre : 讓文字隨著文章斷行而斷行，不需下br進行斷行</p>
+                                          <p>ul : 前綴為<b>圖示</b>的列表清單</p>
+                                          <p>ol : 前綴為<b>數字</b>的列表清單</p>
                                     </div>
                                     <br>
+                                    <div class="box">
+                                          <p>pre : 讓文字隨著文章斷行而斷行，不需下br進行斷行</p>
+                                          <p>ins : <ins>文字加上底線</ins></p>
+                                          <p>bdo : 添加屬性dir="rtl or ltr"</p>
+                                          <b><bdo dir="rtl">此為bdo示範效果</bdo></b>
+                                          <p>blockquote : 塊引用。自動生成padding效果</p>
+                                    </div>
+                                    <br>
+                              </div>
+                              <div class="content_box">
+                                    <div class="box">
+                                          <h5>(二)</h5>
+                                          <p>nav : navbar區塊</p>
+                                          <p>header : 章節頭部</p>
+                                          <p>footer : 章節尾部</p>
+                                          <p>main : 章節當中的主要內容</p>
+                                          <p title="例如現在這樣">title : 該屬性添加後，當滑鼠移至該物件，會出現輸入於title內的文字</p>
+                                    </div>
+                                    <br>
+                                    <div class="box">
+                                          <p>dl/dt/dd : 建立清單/項目/該項目的描述</p>
+                                          <p>figure : 代表與文檔有關的圖例</p>
+                                          <p>figcaption : 針對< figure>做文字說明</p>
+                                          <p>video : 放置影片。<br><b>需要添加靜音屬性才能自動撥放</b></p>
+                                          <p>audio : 放置純音檔</p>
+                                    </div>
+                                    <br>
+                              </div>
+                              <div class="content_box">
+                                    <div class="box">
+                                          <h5>(三)</h5>
+                                          <p>table/tr/th/td : 建立表格/列/首列標題/內容</p>
+                                          <p>caption : 表格標題，放置於tr、th、th之上，table之下</p>
+                                          <p>colgroup : 內部放col的tag，可對此添加span="影響欄數"style="作用效果"</p>
+                                          <p>textarea : 功用同input，只是此可設定寬高、欄列限制</p>
+                                          <b>maxlength可限制textarea當中的最大文字輸入限度</b>
+                                    </div>
+                                    <br>
+                                    <div class="box">
+                                          <p>meter : 設定min、max訂定範圍值，再給透過value給予其比例</p>
+                                          <b>另可設定low、high屬性，讓value低於或超過時改變顏色顯示警告</b>
+                                          <p>select : 下拉選單</p>
+                                          <p>optgroup/option : 兩者皆出現於下拉選單內，前者作為標題區分後者，後者即為區分後的子項目</p>
+                                          <b>optgroup內添加label屬性，即可顯示標題名稱</b><br>
+                                          <b>option內添加value給予值</b>
+                                    </div>
+                                    <br>
+                              </div>
+                              <div class="content_box">
                                     <div class="box">
                                           <h5>特殊字符</h5>
                                           <p>& nbsp; : 空格效果(需把&與n中間空格拔掉</p>
                                           <br>
+                                    </div>
+                                    <div class="box">
                                           <h5>新視窗開啟錨點連結</h5>
                                           <p>
                                                 < a href="" <b>target="_blank"</b> >
                                           </p>
+                                          <br>
+                                          <h5>連結點擊下載</h5>
+                                          <p>於< a>內添加download屬性，且href放置欲下載的檔案，download填的是下載時的檔案名稱</p>
                                     </div>
                                     <br>
                               </div>
@@ -62,68 +116,120 @@
                         <div id="css_content">
                               <div class="content_box">
                                     <div class="box">
-                                          <h5>文字相關</h5>
-                                          <p>writing-mode: vertical-lr;<br>讓文字呈現垂直排版</p>
+                                          <h5>(一)</h5>
+                                          <p>outline : 物件外框邊線，和border不同，是向外生長</p>
+                                          <p>text-decoration : 讓"線"出現在文字的上、中、下</p>
+                                          <b>上:overline/中:line-through/下:ubderline</b>
+                                          <p>text-transform : 控制英文大小寫設定</p>
+                                          <b>全大寫:uppercase/全小寫:lowercase/僅單字字首大寫:capitalize</b>
                                     </div>
                                     <br>
                                     <div class="box">
-                                          <h5>bg-color漸層</h5>
-                                          <p>background-image: linear-gradient(to 方向,顏色,顏色);</p>
+                                          <p>text-indent : 使段落開頭內縮指定數值</p>
+                                          <p>word-spacing : 單字與單字間的間距調整</p>
+                                          <p>font-style : italic ←使字變成斜體</p> </div> <br>
+                                    </div>
+                                    <div class="content_box">
+                                          <div class="box">
+                                                <h5>組合器</h5>
+                                                <p>後代選擇器(space[空格鍵]) : <br>例 : #a .b</p>
+                                                <p>子選擇器(>) : <br>例 : div > p</p>
+                                                <b>div子層內的所有p進行選取，針對子層進行作用</b>
+                                          </div>
+                                          <br>
+                                          <div class="box">
+                                                <p>相鄰選擇器(+) : <br>例 : div + p</p>
+                                                <b>選取div後的p。不須相鄰，不可夾著其他tag</b>
+                                                <p>兄弟選擇器(~) : <br>例 : div ~ p</p>
+                                                <b>選取div後的所有p。通父層才可進行作用</b>
+                                          </div>
+                                          <br>
+                                    </div>
+                                    <div class="content_box">
+                                          <div class="box">
+                                                <h5>文字相關</h5>
+                                                <p>writing-mode: vertical-lr;<br>讓文字呈現垂直排版</p>
+                                          </div>
+                                          <br>
+                                          <div class="box">
+                                                <h5>bg-color漸層</h5>
+                                                <p>background-image: linear-gradient(to 方向,顏色,顏色);</p>
+                                          </div>
+                                          <br>
+                                    </div>
+                                    <div class="content_box">
+                                          <div class="box">
+                                                <h5>隱藏卷軸，但是保有滾動效果</h5>
+                                                <b>css最上層下此指令</b>
+                                                <p>::-webkit-scrollbar{display:none;}</p>
+                                          </div>
+                                          <br>
                                     </div>
                               </div>
-                              <div class="content_box">
-                                    <div class="box">
-                                          <h5>隱藏卷軸，但是保有滾動效果</h5>
-                                          <b>css最上層下此指令</b>
-                                          <p>::-webkit-scrollbar{display:none;}</p>
-                                    </div>
-                              </div>
-                        </div>
 
-                        <!-- js相關 -->
-                        <div id="js_content">
-                              <div class="content_box">
-                                    <div class="box">
-                                          <h5>遮色片效果(一)</h5>
-                                          <p>$("element").slideToggle();<br>需css設定好hover效果、進行切換<br>原css需先設display:none，觸發後block</p><br>
-                                          <h5>遮色片效果(二)</h5>
-                                          <p>$("element").animate({width:'toggle'},作用秒數);</p>
+                              <!-- js相關 -->
+                              <div id="js_content">
+                                    <div class="content_box">
+                                          <div class="box">
+                                                <h5>遮色片效果(一)</h5>
+                                                <p>$("element").slideToggle();<br>需css設定好hover效果、進行切換<br>原css需先設display:none，觸發後block</p><br>
+                                                <h5>遮色片效果(二)</h5>
+                                                <p>$("element").animate({width:'toggle'},作用秒數);</p>
+                                          </div>
+                                          <br>
+                                          <div class="box">
+                                                <h5>重整頁面效果</h5>
+                                                <p>window.onbeforeunload = function () {<br>window.scrollTo(0, 0), 0;};<br>F5後會重整、頁面返回頂部</p><br>
+                                                <h5>點擊移動效果</h5>
+                                                <p>$('element').click(function () {<br>$('html,body').animate({<br>scrollTop:
+                                                      ($('tag').offset().top)<br>}, 秒數);});</p>
+                                                <p>若有nav固定於頂部，($('tag').offset().top - $('nav').height())即可</p>
+                                          </div>
+                                    </div>
+                                    <div class="content_box">
+                                          <div class="box">
+                                                <h5>滾軸移動使物件產生效果</h5>
+                                                <p>window.onscroll = function(){<br>
+                                                      // 抓取此份文件的滾軸<br>
+                                                      let scrollTop = document.documentElement.scrollTop;<br>
+                                                      if(scrollTop >
+                                                      200){
+                                                      //欲變化效果
+                                                      }
+                                                      };
+                                                </p>
+                                                <br>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <!-- 其他 -->
+                              <div id="order_content">
+                                    <div class="content_box">
+                                          <div class="box">
+                                                <h5>github網頁</h5>
+                                                <a href="https://aob-kc.github.io/" target="_blank">aob-kc.github.io</a>
+                                          </div>
+                                          <div class="box">
+                                                <h5>codepen</h5>
+                                                <a href="https://codepen.io/aob-kc/" target="_blank">aob-kc_codepen連結</a>
+                                          </div>
                                     </div>
                                     <br>
-                                    <div class="box">
-                                          <h5>重整頁面效果</h5>
-                                          <p>window.onbeforeunload = function () {<br>window.scrollTo(0, 0), 0;};<br>F5後會重整、頁面返回頂部</p><br>
-                                          <h5>點擊移動效果</h5>
-                                          <p>$('element').click(function () {<br>$('html,body').animate({<br>scrollTop:
-                                                ($('tag').offset().top)<br>}, 秒數);});</p>
-                                          <p>若有nav固定於頂部，($('tag').offset().top - $('nav').height())即可</p>
+                                    <div class="content_box ">
+                                          <div class="box">
+                                                <h5>個人製作</h5>
+                                                <a href="https://aob-kc.github.io/Linli-Farmer/index.html" target="_blank">鄰里小農</a>
+
+                                          </div>
+                                          <br>
+                                          <div class="box">
+                                                <h5>職訓 - 團隊合作</h5>
+                                                <a href="https://moncoeurweb.github.io/Moncoeur/" target="_blank">心之芳庭<br>(職訓期間-舊網改版)</a>
+                                          </div>
                                     </div>
                               </div>
                         </div>
-
-                        <!-- 其他 -->
-                        <div id="order_content">
-                              <div class="content_box">
-                                    <div class="box">
-                                          <h5>codepen</h5>
-                                          <a href="https://codepen.io/aob-kc/">aob-kc_codepen連結</a>
-                                    </div>
-                              </div>
-                              <br>
-                              <div class="content_box ">
-                                    <div class="box">
-                                          <h5>網頁 - 個人製作</h5>
-                                          <a href="https://aob-kc.github.io/Linli-Farmer/index.html">鄰里小農</a>
-
-                                    </div>
-                                    <br>
-                                    <div class="box">
-                                          <h5>網頁 - 團隊合作</h5>
-                                          <a href="https://moncoeurweb.github.io/Moncoeur/">心之芳庭<br>(職訓期間-舊網改版)</a>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
             </section>
       </div>
 
