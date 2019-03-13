@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>偵測裝置寬高</title>
+    <style>
+        body {
+            margin: 0;
+            position: relative;
+            height: 100vh;
+        }
+
+        div {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: gray;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h3>您目前的裝置寬度:</h3>
+        <p id="result"></p>
+        <span>( 寬 x 高 )</span>
+    </div>
+    <footer><small>偵測裝置用by aob-kc.guthub.io</small></footer>
+
+
+
+    <script>
+        var w = screen.width;
+        var h = screen.height;
+        var result = document.getElementById('result');
+        result.innerHTML = w + 'x' + h;
+
+        // 
+        var body_bg = ['#ff2d2d	', '#ff9224', '#02c874', 'skyblue', 'lightpink'];
+        var i = Math.floor(Math.random()*body_bg.length);
+        document.bgColor = body_bg[i];
+
+    </script>
+</body>
+
+</html>
