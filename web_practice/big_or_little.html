@@ -6,7 +6,7 @@
     <!-- 下列meta中的", maximum-scale=1.0, user-scalable=0"是將手機版本的雙擊放大功能取消掉 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>比大小</title>
+    <title>數字比大小</title>
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
     <style>
         * {
@@ -19,10 +19,10 @@
             background-color: lightpink;
         }
 
-        /* 隱藏滾軸 */
+        /* 隱藏滾軸
         ::-webkit-scrollbar {
             display: none;
-        }
+        } */
 
         /*  */
         header {
@@ -135,23 +135,13 @@
 
         /*  */
         footer {
-            width: 100%;
-            height: 5vh;
-            min-height: 1.25em;
-            position: relative;
-        }
-
-        footer p {
-            width: 100%;
-            text-align: center;
-            color: rgba(0, 0, 0, .5);
-            margin: 0;
-            letter-spacing: 2px;
-            font-size: 14px;
-            font-family: 'ZCOOL XiaoWei', serif;
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'ZCOOL XiaoWei', serif;
+            color: gray;
+            font-size: 14px;
         }
 
 
@@ -178,11 +168,11 @@
 
     <section>
         <div class="left">
-            <h4>Player</h4>
+            <h4>玩家</h4>
             <p id="player">??</p>
         </div>
         <div class="right">
-            <h4>Computer</h4>
+            <h4>敵手</h4>
             <p id="computer">??</p>
         </div>
         <div class="footer">
@@ -193,7 +183,7 @@
     </section>
 
     <footer>
-        <p>©aob-kc</p>
+        比大小 by aob-kc
     </footer>
 
 
