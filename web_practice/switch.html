@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if、switch練習</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            height: 100vh;
+            position: relative;
+        }
+
+        button:focus{
+            outline: none;
+        }
+
+        #box{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+
+        #description{
+            border-radius: 25%;
+        }
+
+        /*  */
+        section{
+            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 9;
+            width: 500px;
+            border-radius: 15px;
+            display: none;
+        }
+
+        #top{
+            position: relative;
+            width: 100%;
+            background-color: brown;
+            border-radius: 15px 15px 0 0 ;
+            padding: 5px;
+        }
+
+        #top p{
+            display: inline;
+            color: white;
+        }
+
+        #top button{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 5px;
+            margin: 0;
+            background-color: white;
+            border-radius: 15%;
+            cursor: pointer;
+        }
+
+        #center{
+            width: 100%;
+            padding: 5px;
+            border-radius: 0 0 15px 15px;
+            background-color: whitesmoke;
+        }
+
+        #center p{
+            margin: 0;
+            text-align: justify;
+            padding: 5px;
+        }
+
+        /*  */
+        @media (max-width:750px){
+            section{
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <input type="text" placeholder="請在此輸入數值" onkeyup="this.value=this.value.replace(/\s+/g,'');this.value=this.value.replace(/[^\d]/g,'');">
+        <button>送出</button>
+        <p>請輸入1-7之間的數字</p>
+        <button id="description">說明</button>
+    </div>
+    <section>
+        <div id="top">
+            <p>說明</p>
+            <button>x</button>
+        </div>
+        <div id="center">
+            <p>利用if、switch針對input獲取數值進行背景顏色的改變。<br>
+                <p></p>
+                input輸入值獲取顏色:<br>
+                <span>
+                    1 = 紅
+                    2 = 橙
+                    3 = 黃
+                    4 = 綠<br>
+                    5 = 青
+                    6 = 藍
+                    7 = 紫
+                </span>
+            </p>
+        </div>
+    </section>
+
+
+    <script>
+        var input = document.querySelector('input');
+        var btn = document.querySelector('button');
+
+        btn.onclick = function () {
+            if (input.value < 1) {
+                alert('請勿輸入規定範圍內的數值');
+                input.value = '';
+            }
+            if (input.value > 7) {
+                alert('輸入的數值請勿超過7');
+                input.value = '';
+            } else {
+                var i = input.value - 1;
+
+                switch (i) {
+                    case (0):
+                        document.bgColor = '#ff2d2d';
+                        break;
+                    case (1):
+                        document.bgColor = '#ff9224';
+                        break;
+                    case (2):
+                        document.bgColor = '#ffffaa';
+                        break;
+                    case (3):
+                        document.bgColor = '#b7ff4a';
+                        break;
+                    case (4):
+                        document.bgColor = '#a6ffff';
+                        break;
+                    case (5):
+                        document.bgColor = '#0080ff';
+                        break;
+                    case (6):
+                        document.bgColor = '#9393ff';
+                }
+            }
+        }
+
+        // 
+        var description = document.getElementById('description');
+        var sec = document.querySelector('section');
+        description.onclick = function () {
+            document.bgColor = '#bebebe';
+            sec.style.display = 'block';
+        }
+
+        var close = document.querySelector('section button');
+        close.onclick = function () {
+            document.bgColor = '';
+            sec.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
