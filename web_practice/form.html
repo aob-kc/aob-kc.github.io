@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表單跳轉</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            position: relative;
+        }
+
+        /*  */
+
+        form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        #passbtn p {
+            margin: 10px auto;
+            padding: 2.5px;
+            width: 50%;
+            cursor: pointer;
+            border-radius: 15px;
+            background-color: wheat;
+        }
+
+        #passbtn p:hover {
+            background-color: skyblue;
+        }
+
+        /*  */
+        section {
+            z-index: 999;
+            width: 500px;
+            height: 500px;
+            background-color: whitesmoke;
+            border: 3px solid gray;
+            border-radius: 15px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        section div {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /*  */
+        footer{
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: gray;
+        }
+
+        /*  */
+        @media(max-width:750px) {
+            section {
+                width: 350px;
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://aob-kc.github.io/">
+        <p>建立密碼、透過密碼成功跳轉至新頁面</p>
+        <input type="text">
+        <button type="submit" onclick="return passgo()">提交</button><br>
+        <div id="passbtn">
+            <p>點此建立密碼</p>
+        </div>
+        <small></small>
+    </form>
+    <!--  -->
+    <section>
+        <div>
+            輸入密碼:
+            <input id="password" type="text"><br>
+            <button>提交</button>
+        </div>
+    </section>
+    <footer>by aob-kc</footer>
+
+
+    <!-- js -->
+    <script>
+        // 顯示鍵入密碼區塊
+        document.querySelector('form div').onclick = function () {
+            document.querySelector('section').style.display = 'block';
+        }
+
+        var x = document.getElementById('password');
+        // 密碼區塊提交按鍵設定
+        document.querySelector('section button').onclick = function () {
+            if (x.value == '') {
+                alert('請輸入密碼');
+            } else {
+                document.querySelector('section').style.display = 'none';
+                document.querySelector('form small').innerHTML = '您目前密碼:' + x.value;
+            }
+        }
+
+        // 利用以下函式，將submit默認傳送關閉
+        function passgo() {
+            if (document.querySelector('form input').value == "") {
+                alert('請輸入密碼');
+            }
+            if (document.querySelector('form input').value != x.value && document.querySelector('form input').value !=
+                "") {
+                alert('密碼錯誤，請輸入正確密碼');
+            }
+            if (document.querySelector('form input').value == x.value && document.querySelector('form input').value !=
+                "") {
+                return true;
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>
