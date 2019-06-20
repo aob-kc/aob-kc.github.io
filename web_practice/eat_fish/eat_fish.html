@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eat_Fish</title>
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- 標籤頁的logo圖案 -->
+    <link rel="shortcut icon" type="images/x-icon" href="./img/eat_fish_logo.ico">
+
+    <!--  -->
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        /* 最上方的說明按鍵區塊 */
+        nav {
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            cursor: url(./img/u.ico) 1 1, auto;
+            width: 100vw;
+            height: 50px;
+        }
+
+        #explain {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            border-radius: 99px;
+            background-color: skyblue;
+            border: 3px white solid;
+            box-shadow: 0 0 0 3px skyblue;
+        }
+
+        #explain:hover {
+            cursor: pointer;
+            box-shadow: 0 0 10px 1px gray;
+        }
+
+        #explain span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            font-weight: 900;
+            color: white;
+            cursor: default;
+        }
+
+        #explain span:hover {
+            cursor: pointer;
+        }
+
+        /* 說明內容 */
+        #explain_word {
+            z-index: 100;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50vw;
+            height: 50vh;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        #explain_word .top {
+            width: 100%;
+            height: 15%;
+            background-color: firebrick;
+            border-radius: 15px 15px 0 0;
+            position: relative;
+        }
+
+        #explain_word .top p {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            color: white;
+            letter-spacing: 5px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        #explain_word .top .leave {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 99px;
+        }
+
+        #explain_word .top .leave:hover {
+            box-shadow: 0 0 10px 1px black;
+        }
+
+        #explain_word .top .leave span {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: firebrick;
+        }
+
+        #explain_word .bottom {
+            width: 100%;
+            height: 85%;
+            background-color: wheat;
+            border-radius: 0 0 15px 15px;
+        }
+
+        #explain_word .bottom p {
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            margin: 0 5px;
+            padding-top: 10px;
+        }
+
+        /* 中間遊戲區塊 */
+        #eat_fish {
+            position: relative;
+            padding-top: 50PX;
+            cursor: url('./img/u.ico') 1 1, auto;
+            width: 100vw;
+            height: calc(100vh - 150px);
+        }
+
+        #eat_fish .fish {
+            position: absolute;
+            width: 175px;
+            height: 175px;
+            background-image: url("./img/a.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: none;
+        }
+
+        #eat_fish .fish:hover {
+            cursor: url('./img/u_hover.ico') 1 1, auto;
+            background-image: url("./img/a_hover.png");
+        }
+
+        /* 底部區塊 */
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100vw;
+            height: 100px;
+            background-color: firebrick;
+        }
+
+        footer .left {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+        footer .left .cans {
+            z-index: 1;
+            position: absolute;
+            top: 15%;
+            left: 7.5%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            width: 100px;
+            height: 150px;
+            background-image: url("./img/cans.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        footer .left .cans:hover {
+            top: -5%;
+            left: 10%;
+            width: 150px;
+            height: 200px;
+            background-image: url("./img/cans_onclick.png");
+        }
+
+        footer .left #fish_a {
+            position: absolute;
+            top: 50%;
+            left: 32.5%;
+            transform: translateY(-50%);
+            width: 75px;
+            height: 75px;
+            background-image: url("./img/fish_a.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        footer .left #fish_b {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+            width: 75px;
+            height: 75px;
+            background-image: url("./img/fish_black.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        footer .left #fish_c {
+            position: absolute;
+            top: 50%;
+            left: 67.5%;
+            transform: translateY(-50%);
+            width: 75px;
+            height: 75px;
+            background-image: url("./img/fish_black.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        footer .left #fish_d {
+            position: absolute;
+            top: 50%;
+            left: 85%;
+            transform: translateY(-50%);
+            width: 75px;
+            height: 75px;
+            background-image: url("./img/fish_black.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        footer .right {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            float: right;
+        }
+
+        footer .right p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 5px;
+            color: wheat;
+        }
+
+        footer .right p span {
+            margin-left: 15px;
+            margin-right: 15px;
+            font-size: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            letter-spacing: 5px;
+            color: black;
+        }
+
+        /* 小螢幕尺寸出現畫面 */
+        #small_size {
+            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99999999;
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            display: none;
+        }
+
+        #small_size div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        #small_size div span {
+            display: block;
+        }
+
+        /* 調整魚樣大小 */
+        @media (max-width:1500px) {
+            #eat_fish .fish {
+                width: 125px;
+                height: 125px;
+            }
+
+            footer .left .cans {
+                top: 15%;
+                left: 12.5%;
+                width: 100px;
+                height: 150px;
+            }
+
+            footer .left .cans:hover{
+                top: 0;
+                left: 16%;
+                width: 150px;
+                height: 200px;
+            }
+        }
+
+        /* 小螢幕出現解析度建議 */
+        @media (max-width:1300px),
+        (max-height:600px) {
+
+            nav,
+            #explain_word,
+            #eat_fish,
+            footer {
+                display: none;
+            }
+
+            #small_size {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 說明按鍵 -->
+    <nav>
+        <div id="explain">
+            <span>?</span>
+        </div>
+    </nav>
+    <!-- 說明內容 -->
+    <section id="explain_word">
+        <div class="top">
+            <p>規則說明</p>
+            <div class="leave">
+                <span>X</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>操作滑鼠，點擊畫面左下角的「飼料」進行餵食，等候魚群出現。</p>
+            <p>待魚群出現後，移動滑鼠點擊魚，進行吃魚動作。</p>
+            <p>隨著吃掉的魚數量增多，將會解鎖更多魚種。</p>
+        </div>
+    </section>
+    <!-- 中間魚群出沒出、RU滑鼠出現區塊 -->
+    <section id="eat_fish">
+        <div id="a" class="fish"></div>
+        <div id="b" class="fish"></div>
+        <div id="c" class="fish"></div>
+        <div id="d" class="fish"></div>
+        <div id="e" class="fish"></div>
+        <div id="f" class="fish"></div>
+        <div id="g" class="fish"></div>
+        <div id="h" class="fish"></div>
+        <div id="i" class="fish"></div>
+        <div id="j" class="fish"></div>
+    </section>
+    <!-- 底部 -->
+    <footer>
+        <section class="left">
+            <div class="cans"></div>
+            <div id="fish_a"></div>
+            <div id="fish_b"></div>
+            <div id="fish_c"></div>
+            <div id="fish_d"></div>
+        </section>
+        <section class="right">
+            <p>目前已經吃掉<span id="number">0</span>條魚</p>
+        </section>
+    </footer>
+
+    <section id="small_size">
+        <div>
+            <span>為了維護品質</span>
+            <span>請用較大解析度的螢幕開啟此網頁</span>
+            <span>(ゝ∀･)</span>
+        </div>
+    </section>
+
+    <!-- js -->
+    <script>
+        window.onload = function () {
+            // 點擊開啟規則說明
+            document.getElementById('explain').onclick = function () {
+                document.getElementById('explain_word').style.display = 'block';
+            }
+
+            // 點擊關閉規則說明
+            document.querySelector('.leave').onclick = function () {
+                document.getElementById('explain_word').style.display = 'none';
+            }
+
+            // 點擊飼料
+            document.querySelector('.cans').onclick = function () {
+                document.querySelector('#a').style.display = 'block';
+                document.querySelector('#b').style.display = 'block';
+                document.querySelector('#c').style.display = 'block';
+                document.querySelector('#d').style.display = 'block';
+                document.querySelector('#e').style.display = 'block';
+                document.querySelector('#f').style.display = 'block';
+                document.querySelector('#g').style.display = 'block';
+                document.querySelector('#h').style.display = 'block';
+                document.querySelector('#i').style.display = 'block';
+                document.querySelector('#j').style.display = 'block';
+
+                // 位置變化
+                document.querySelector('#a').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#a').style.top = Math.floor(Math.random() * 85) + "%";
+                document.querySelector('#b').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#b').style.top = Math.floor(Math.random() * 85) + "%";
+                document.querySelector('#c').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#c').style.top = Math.floor(Math.random() * 85) + "%";
+                document.querySelector('#d').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#d').style.top = Math.floor(Math.random() * 85) + "%";
+                document.querySelector('#e').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#e').style.top = Math.floor(Math.random() * 85) + "%";
+                document.querySelector('#f').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#f').style.top = Math.floor(Math.random() * 85) + "%";
+                document.querySelector('#g').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#g').style.top = Math.floor(Math.random() * 85) + "%";
+                document.querySelector('#h').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#h').style.top = Math.floor(Math.random() * 85) + "%";
+                document.querySelector('#i').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#i').style.top = Math.floor(Math.random() * 85) + "%";
+                document.querySelector('#j').style.left = Math.floor(Math.random() * 90) + "%";
+                document.querySelector('#j').style.top = Math.floor(Math.random() * 85) + "%";
+
+
+                // 添加fish_a魚貌版本
+                var fish_a = {
+                    img: "url('./img/a.png')",
+                    hover: "url('./img/a_hover.png')"
+                };
+                var fish_b = {
+                    img: "url('./img/b.png')",
+                    hover: "url('./img/b_hover.png')"
+                };
+                var fish_c = {
+                    img: "url('./img/c.png')",
+                    hover: "url('./img/c_onclick.png')"
+                };
+                var fish_d = {
+                    img: "url('./img/d.png')",
+                    hover: "url('./img/d_onclick.png')"
+                };
+
+                // 獲取魚貌隨機值
+                var b_show = [fish_a.img, fish_b.img];
+                var b_a = Math.floor(Math.random() * 2);
+                var b_b = Math.floor(Math.random() * 2);
+                var b_c = Math.floor(Math.random() * 2);
+                var b_d = Math.floor(Math.random() * 2);
+                var b_e = Math.floor(Math.random() * 2);
+                var b_f = Math.floor(Math.random() * 2);
+                var b_g = Math.floor(Math.random() * 2);
+                var b_h = Math.floor(Math.random() * 2);
+                var b_i = Math.floor(Math.random() * 2);
+                var b_j = Math.floor(Math.random() * 2);
+
+
+                var c_show = [fish_a.img, fish_b.img, fish_c.img];
+                var c_a = Math.floor(Math.random() * 3);
+                var c_b = Math.floor(Math.random() * 3);
+                var c_c = Math.floor(Math.random() * 3);
+                var c_d = Math.floor(Math.random() * 3);
+                var c_e = Math.floor(Math.random() * 3);
+                var c_f = Math.floor(Math.random() * 3);
+                var c_g = Math.floor(Math.random() * 3);
+                var c_h = Math.floor(Math.random() * 3);
+                var c_i = Math.floor(Math.random() * 3);
+                var c_j = Math.floor(Math.random() * 3);
+
+                var d_show = [fish_a.img, fish_b.img, fish_c.img, fish_d.img];
+                var d_a = Math.floor(Math.random() * 4);
+                var d_b = Math.floor(Math.random() * 4);
+                var d_c = Math.floor(Math.random() * 4);
+                var d_d = Math.floor(Math.random() * 4);
+                var d_e = Math.floor(Math.random() * 4);
+                var d_f = Math.floor(Math.random() * 4);
+                var d_g = Math.floor(Math.random() * 4);
+                var d_h = Math.floor(Math.random() * 4);
+                var d_i = Math.floor(Math.random() * 4);
+                var d_j = Math.floor(Math.random() * 4);
+
+                // 魚貌hover效果
+                var b_hover = [fish_a.hover, fish_b.hover];
+                var c_hover = [fish_a.hover, fish_b.hover, fish_c.hover];
+                var d_hover = [fish_a.hover, fish_b.hover, fish_c.hover, fish_d.hover];
+
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector("#a").style.backgroundImage = b_show[b_a];
+                    document.querySelector("#b").style.backgroundImage = b_show[b_b];
+                    document.querySelector("#c").style.backgroundImage = b_show[b_c];
+                    document.querySelector("#d").style.backgroundImage = b_show[b_d];
+                    document.querySelector("#e").style.backgroundImage = b_show[b_e];
+                    document.querySelector("#f").style.backgroundImage = b_show[b_f];
+                    document.querySelector("#g").style.backgroundImage = b_show[b_g];
+                    document.querySelector("#h").style.backgroundImage = b_show[b_h];
+                    document.querySelector("#i").style.backgroundImage = b_show[b_i];
+                    document.querySelector("#j").style.backgroundImage = b_show[b_j];
+
+                    // hover effect
+                    document.querySelector("#a").onmouseover = function () {
+                        document.querySelector("#a").style.backgroundImage = b_hover[b_a];
+                    }
+                    document.querySelector("#a").onmouseout = function () {
+                        document.querySelector("#a").style.backgroundImage = b_show[b_a];
+                    }
+
+                    document.querySelector("#b").onmouseover = function () {
+                        document.querySelector("#b").style.backgroundImage = b_hover[b_b];
+                    }
+                    document.querySelector("#b").onmouseout = function () {
+                        document.querySelector("#b").style.backgroundImage = b_show[b_b];
+                    }
+
+                    document.querySelector("#c").onmouseover = function () {
+                        document.querySelector("#c").style.backgroundImage = b_hover[b_c];
+                    }
+                    document.querySelector("#c").onmouseout = function () {
+                        document.querySelector("#c").style.backgroundImage = b_show[b_c];
+                    }
+
+                    document.querySelector("#d").onmouseover = function () {
+                        document.querySelector("#d").style.backgroundImage = b_hover[b_d];
+                    }
+                    document.querySelector("#d").onmouseout = function () {
+                        document.querySelector("#d").style.backgroundImage = b_show[b_d];
+                    }
+
+                    document.querySelector("#e").onmouseover = function () {
+                        document.querySelector("#e").style.backgroundImage = b_hover[b_e];
+                    }
+                    document.querySelector("#e").onmouseout = function () {
+                        document.querySelector("#e").style.backgroundImage = b_show[b_e];
+                    }
+
+                    document.querySelector("#f").onmouseover = function () {
+                        document.querySelector("#f").style.backgroundImage = b_hover[b_f];
+                    }
+                    document.querySelector("#f").onmouseout = function () {
+                        document.querySelector("#f").style.backgroundImage = b_show[b_f];
+                    }
+
+                    document.querySelector("#g").onmouseover = function () {
+                        document.querySelector("#g").style.backgroundImage = b_hover[b_g];
+                    }
+                    document.querySelector("#g").onmouseout = function () {
+                        document.querySelector("#g").style.backgroundImage = b_show[b_g];
+                    }
+
+                    document.querySelector("#h").onmouseover = function () {
+                        document.querySelector("#h").style.backgroundImage = b_hover[b_h];
+                    }
+                    document.querySelector("#h").onmouseout = function () {
+                        document.querySelector("#h").style.backgroundImage = b_show[b_h];
+                    }
+
+                    document.querySelector("#i").onmouseover = function () {
+                        document.querySelector("#i").style.backgroundImage = b_hover[b_i];
+                    }
+                    document.querySelector("#i").onmouseout = function () {
+                        document.querySelector("#i").style.backgroundImage = b_show[b_i];
+                    }
+
+                    document.querySelector("#j").onmouseover = function () {
+                        document.querySelector("#j").style.backgroundImage = b_hover[b_j];
+                    }
+                    document.querySelector("#j").onmouseout = function () {
+                        document.querySelector("#j").style.backgroundImage = b_show[b_j];
+                    }
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector("#a").style.backgroundImage = c_show[c_a];
+                    document.querySelector("#b").style.backgroundImage = c_show[c_b];
+                    document.querySelector("#c").style.backgroundImage = c_show[c_c];
+                    document.querySelector("#d").style.backgroundImage = c_show[c_d];
+                    document.querySelector("#e").style.backgroundImage = c_show[c_e];
+                    document.querySelector("#f").style.backgroundImage = c_show[c_f];
+                    document.querySelector("#g").style.backgroundImage = c_show[c_g];
+                    document.querySelector("#h").style.backgroundImage = c_show[c_h];
+                    document.querySelector("#i").style.backgroundImage = c_show[c_i];
+                    document.querySelector("#j").style.backgroundImage = c_show[c_j];
+
+                    // hover effect
+                    document.querySelector("#a").onmouseover = function () {
+                        document.querySelector("#a").style.backgroundImage = c_hover[c_a];
+                    }
+                    document.querySelector("#a").onmouseout = function () {
+                        document.querySelector("#a").style.backgroundImage = c_show[c_a];
+                    }
+
+                    document.querySelector("#b").onmouseover = function () {
+                        document.querySelector("#b").style.backgroundImage = c_hover[c_b];
+                    }
+                    document.querySelector("#b").onmouseout = function () {
+                        document.querySelector("#b").style.backgroundImage = c_show[c_b];
+                    }
+
+                    document.querySelector("#c").onmouseover = function () {
+                        document.querySelector("#c").style.backgroundImage = c_hover[c_c];
+                    }
+                    document.querySelector("#c").onmouseout = function () {
+                        document.querySelector("#c").style.backgroundImage = c_show[c_c];
+                    }
+
+                    document.querySelector("#d").onmouseover = function () {
+                        document.querySelector("#d").style.backgroundImage = c_hover[c_d];
+                    }
+                    document.querySelector("#d").onmouseout = function () {
+                        document.querySelector("#d").style.backgroundImage = c_show[c_d];
+                    }
+
+                    document.querySelector("#e").onmouseover = function () {
+                        document.querySelector("#e").style.backgroundImage = c_hover[c_e];
+                    }
+                    document.querySelector("#e").onmouseout = function () {
+                        document.querySelector("#e").style.backgroundImage = c_show[c_e];
+                    }
+
+                    document.querySelector("#f").onmouseover = function () {
+                        document.querySelector("#f").style.backgroundImage = c_hover[c_f];
+                    }
+                    document.querySelector("#f").onmouseout = function () {
+                        document.querySelector("#f").style.backgroundImage = c_show[c_f];
+                    }
+
+                    document.querySelector("#g").onmouseover = function () {
+                        document.querySelector("#g").style.backgroundImage = c_hover[c_g];
+                    }
+                    document.querySelector("#g").onmouseout = function () {
+                        document.querySelector("#g").style.backgroundImage = c_show[c_g];
+                    }
+
+                    document.querySelector("#h").onmouseover = function () {
+                        document.querySelector("#h").style.backgroundImage = c_hover[c_h];
+                    }
+                    document.querySelector("#h").onmouseout = function () {
+                        document.querySelector("#h").style.backgroundImage = c_show[c_h];
+                    }
+
+                    document.querySelector("#i").onmouseover = function () {
+                        document.querySelector("#i").style.backgroundImage = c_hover[c_i];
+                    }
+                    document.querySelector("#i").onmouseout = function () {
+                        document.querySelector("#i").style.backgroundImage = c_show[c_i];
+                    }
+
+                    document.querySelector("#j").onmouseover = function () {
+                        document.querySelector("#j").style.backgroundImage = c_hover[c_j];
+                    }
+                    document.querySelector("#j").onmouseout = function () {
+                        document.querySelector("#j").style.backgroundImage = c_show[c_j];
+                    }
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector("#a").style.backgroundImage = d_show[d_a];
+                    document.querySelector("#b").style.backgroundImage = d_show[d_b];
+                    document.querySelector("#c").style.backgroundImage = d_show[d_c];
+                    document.querySelector("#d").style.backgroundImage = d_show[d_d];
+                    document.querySelector("#e").style.backgroundImage = d_show[d_e];
+                    document.querySelector("#f").style.backgroundImage = d_show[d_f];
+                    document.querySelector("#g").style.backgroundImage = d_show[d_g];
+                    document.querySelector("#h").style.backgroundImage = d_show[d_h];
+                    document.querySelector("#i").style.backgroundImage = d_show[d_i];
+                    document.querySelector("#j").style.backgroundImage = d_show[d_j];
+
+                    // hover effect
+                    document.querySelector("#a").onmouseover = function () {
+                        document.querySelector("#a").style.backgroundImage = d_hover[d_a];
+                    }
+                    document.querySelector("#a").onmouseout = function () {
+                        document.querySelector("#a").style.backgroundImage = d_show[d_a];
+                    }
+
+                    document.querySelector("#b").onmouseover = function () {
+                        document.querySelector("#b").style.backgroundImage = d_hover[d_b];
+                    }
+                    document.querySelector("#b").onmouseout = function () {
+                        document.querySelector("#b").style.backgroundImage = d_show[d_b];
+                    }
+
+                    document.querySelector("#c").onmouseover = function () {
+                        document.querySelector("#c").style.backgroundImage = d_hover[d_c];
+                    }
+                    document.querySelector("#c").onmouseout = function () {
+                        document.querySelector("#c").style.backgroundImage = d_show[d_c];
+                    }
+
+                    document.querySelector("#d").onmouseover = function () {
+                        document.querySelector("#d").style.backgroundImage = d_hover[d_d];
+                    }
+                    document.querySelector("#d").onmouseout = function () {
+                        document.querySelector("#d").style.backgroundImage = d_show[d_d];
+                    }
+
+                    document.querySelector("#e").onmouseover = function () {
+                        document.querySelector("#e").style.backgroundImage = d_hover[d_e];
+                    }
+                    document.querySelector("#e").onmouseout = function () {
+                        document.querySelector("#e").style.backgroundImage = d_show[d_e];
+                    }
+
+                    document.querySelector("#f").onmouseover = function () {
+                        document.querySelector("#f").style.backgroundImage = d_hover[d_f];
+                    }
+                    document.querySelector("#f").onmouseout = function () {
+                        document.querySelector("#f").style.backgroundImage = d_show[d_f];
+                    }
+
+                    document.querySelector("#g").onmouseover = function () {
+                        document.querySelector("#g").style.backgroundImage = d_hover[d_g];
+                    }
+                    document.querySelector("#g").onmouseout = function () {
+                        document.querySelector("#g").style.backgroundImage = d_show[d_g];
+                    }
+
+                    document.querySelector("#h").onmouseover = function () {
+                        document.querySelector("#h").style.backgroundImage = d_hover[d_h];
+                    }
+                    document.querySelector("#h").onmouseout = function () {
+                        document.querySelector("#h").style.backgroundImage = d_show[d_h];
+                    }
+
+                    document.querySelector("#i").onmouseover = function () {
+                        document.querySelector("#i").style.backgroundImage = d_hover[d_i];
+                    }
+                    document.querySelector("#i").onmouseout = function () {
+                        document.querySelector("#i").style.backgroundImage = d_show[d_i];
+                    }
+
+                    document.querySelector("#j").onmouseover = function () {
+                        document.querySelector("#j").style.backgroundImage = d_hover[d_j];
+                    }
+                    document.querySelector("#j").onmouseout = function () {
+                        document.querySelector("#j").style.backgroundImage = d_show[d_j];
+                    }
+                }
+            }
+
+            // 點擊魚群、分數上漲
+            var i = 1;
+
+            document.getElementById('a').onclick = function () {
+                document.getElementById('a').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+
+            document.getElementById('b').onclick = function () {
+                document.getElementById('b').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+
+            document.getElementById('c').onclick = function () {
+                document.getElementById('c').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+
+            document.getElementById('d').onclick = function () {
+                document.getElementById('d').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+
+            document.getElementById('e').onclick = function () {
+                document.getElementById('e').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+
+            document.getElementById('f').onclick = function () {
+                document.getElementById('f').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+
+            document.getElementById('g').onclick = function () {
+                document.getElementById('g').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+
+            document.getElementById('h').onclick = function () {
+                document.getElementById('h').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+
+            document.getElementById('i').onclick = function () {
+                document.getElementById('i').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+
+            document.getElementById('j').onclick = function () {
+                document.getElementById('j').style.display = 'none';
+                document.querySelector('#number').innerHTML = i++;
+
+                // 顯示隱藏版的魚種圖示
+                if (document.querySelector('#number').innerHTML > 9) {
+                    document.querySelector('#fish_b').style.backgroundImage = "url('./img/fish_b.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 49) {
+                    document.querySelector('#fish_c').style.backgroundImage = "url('./img/fish_c.png')";
+                }
+                if (document.querySelector('#number').innerHTML > 99) {
+                    document.querySelector('#fish_d').style.backgroundImage = "url('./img/fish_d.png')";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
