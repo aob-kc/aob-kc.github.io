@@ -1,0 +1,722 @@
+/* 前置程式碼 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 1050px;
+}
+
+#clearfix {
+    clear: both;
+}
+
+p,
+span {
+    text-align: center;
+    font-size: 20px;
+}
+
+a,
+a:valid,
+a:focus {
+    color: black;
+}
+
+.null {
+    width: 100%;
+    height: 325px;
+    display: none;
+}
+
+/* top部分 */
+#top {
+    width: 100%;
+    height: 95vh;
+    min-height: 850px;
+    animation: top_background 15s infinite;
+}
+
+@keyframes top_background {
+    0% {
+        background-color: #ffecf5;
+    }
+
+    10% {
+        background-color: #ffe4ca;
+    }
+
+    30% {
+        background-color: #ffffce;
+    }
+
+    50% {
+        background-color: #e8ffc4;
+    }
+
+    70% {
+        background-color: #d2e9ff;
+    }
+
+    90% {
+        background-color: #f1e1ff;
+    }
+
+    100% {
+        background-color: #ffecf5;
+    }
+}
+
+/* top_left部分 */
+#top .left {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+#top .left .pic {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#top .left .pic .left_line {
+    width: 3px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #7b7b7b;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+#top .left .pic .right_line {
+    width: 3px;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #7b7b7b;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+#top .left .pic::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    border-top: 3px solid #7b7b7b;
+    transition: 0.5s;
+}
+
+#top .left .pic::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 0;
+    border-top: 3px solid #7b7b7b;
+    transition: 0.5s;
+}
+
+#top .left .pic:hover::before {
+    width: 100%;
+    transition: 0.5s;
+}
+
+#top .left .pic:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+#top .left .pic img {
+    width: 350px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#top .left .word {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#top .left .word p {
+    text-align: center;
+}
+
+/* top_right部分 */
+#top .right {
+    width: 50%;
+    height: 100%;
+    float: right;
+    position: relative;
+}
+
+#top .right .box {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#top .right p {
+    cursor: default;
+}
+
+#top .right .meter {
+    width: 100%;
+}
+
+/* 下方為變更meter顏色 */
+#top .right .meter::-webkit-meter-optimum-value {
+    background: rgba(0, 127, 255, .5);
+}
+
+#top .right #ps_meter::-webkit-meter-optimum-value {
+    transition: 2.5s;
+}
+
+#top .right #ai_meter::-webkit-meter-optimum-value {
+    transition: 3s;
+}
+
+#top .right #html_meter::-webkit-meter-optimum-value {
+    transition: 4s;
+}
+
+#top .right #css_meter::-webkit-meter-optimum-value {
+    transition: 3.5s;
+}
+
+#top .right #js_meter::-webkit-meter-optimum-value {
+    transition: 2.5s;
+}
+
+/* nav部分 */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 5vh;
+    min-height: 45px;
+    background-color: whitesmoke;
+}
+
+nav section {
+    margin: auto;
+    width: 99.99999%;
+    height: 100%;
+}
+
+nav section .issuu {
+    width: 33.33333%;
+    height: 100%;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+nav section .issuu .issuu_word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav section .issuu .issuu_line {
+    width: 0;
+    height: 3px;
+    background-color: orangered;
+    position: absolute;
+    bottom: 0;
+}
+
+nav section .web {
+    width: 33.33333%;
+    height: 100%;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+nav section .web .web_word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav section .web .web_line {
+    width: 0;
+    height: 3px;
+    background-color: orangered;
+    position: absolute;
+    bottom: 0;
+}
+
+nav section .minigame {
+    width: 33.33333%;
+    height: 100%;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+nav section .minigame .minigame_word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav .br {
+    display: none;
+}
+
+nav section .minigame .minigame_line {
+    width: 0;
+    height: 3px;
+    background-color: orangered;
+    position: absolute;
+    bottom: 0;
+}
+
+/* issuu區塊 */
+#issuu {
+    width: 100%;
+    height: 95vh;
+    min-height: 850px;
+    position: relative;
+}
+
+#issuu .back_img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .5;
+    background-image: url('/about/img/back_img_a.jpg');
+    background-position-x: center;
+    background-position-y: 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#issuu .box {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#issuu .box .left {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    float: left;
+}
+
+#issuu .box .left:hover {
+    cursor: pointer;
+}
+
+#issuu .box .left .top {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+
+#issuu .box .left .top .pic {
+    height: 100%;
+    background-image: url('/about/img/portfolio.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+
+#issuu .box .left .bottom {
+    width: 100%;
+    height: 15%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+#issuu .box .left .bottom p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#issuu .box .right {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    float: right;
+    cursor: pointer;
+}
+
+#issuu .box .right .top {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+
+#issuu .box .right .top .pic {
+    height: 100%;
+    background-image: url('/about/img/exercise.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+
+#issuu .box .right .bottom {
+    width: 100%;
+    height: 15%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+#issuu .box .right .bottom p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* web區塊 */
+#web {
+    width: 100%;
+    height: 95vh;
+    min-height: 850px;
+    position: relative;
+}
+
+#web .box {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#web .box .left {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    float: left;
+}
+
+#web .box .left:hover {
+    cursor: pointer;
+}
+
+#web .box .left .top {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+
+#web .box .left .top .pic {
+    height: 100%;
+    background-image: url('/about/img/linli.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+
+#web .box .left .bottom {
+    width: 100%;
+    height: 15%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+#web .box .left .bottom p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#web .box .right {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    float: right;
+    cursor: pointer;
+}
+
+#web .box .right .top {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+
+#web .box .right .top .pic {
+    height: 100%;
+    background-image: url('/about/img/moncoeur.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+
+#web .box .right .bottom {
+    width: 100%;
+    height: 15%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+#web .box .right .bottom p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* minigame區塊 */
+#minigame {
+    width: 100%;
+    height: 95vh;
+    min-height: 850px;
+    background-color: lightsteelblue;
+    position: relative;
+}
+
+#minigame .back_img{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .5;
+    background-image: url('/about/img/back_img_b.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#minigame .box {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#minigame .box .left {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    float: left;
+}
+
+#minigame .box .left:hover {
+    cursor: pointer;
+}
+
+#minigame .box .left .top {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+
+#minigame .box .left .top .pic {
+    height: 100%;
+    background-image: url('/about/img/eat_fish.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 2s;
+}
+
+#minigame .box .left .bottom {
+    width: 100%;
+    height: 15%;
+    background-color: whitesmoke;
+    position: relative;
+}
+
+#minigame .box .left .bottom p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* footer區塊 */
+footer {
+    width: 100%;
+    height: 45px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* RWD寬高變化 */
+@media (max-width:1400px) {
+
+    #top,
+    #issuu,
+    #web,
+    #minigame {
+        height: 0;
+        min-height: 550px;
+    }
+
+    #top .left .pic img {
+        width: 200px;
+    }
+
+    #issuu .box .left,
+    #issuu .box .right,
+    #web .box .left,
+    #web .box .right,
+    #minigame .box .left {
+        width: 250px;
+    }
+
+    #issuu p,
+    #web p,
+    #minigame p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:1000px) {
+    body {
+        min-width: 0;
+    }
+
+    #top .left small {
+        font-size: 15px;
+    }
+
+    nav span {
+        font-size: 18px;
+    }
+
+    #issuu .box .left,
+    #issuu .box .right,
+    #web .box .left,
+    #web .box .right,
+    #minigame .box .left {
+        width: 200px;
+    }
+
+    #issuu p,
+    #web p,
+    #minigame p,
+    #footer p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:850px) {
+
+    #issuu .box,
+    #web .box,
+    #minigame .box {
+        width: 75%;
+    }
+
+    nav span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:700px) {
+    .null {
+        display: block;
+    }
+
+    #top {
+        min-height: 800px;
+    }
+
+    #top .left {
+        width: 100%;
+        height: 350px;
+    }
+
+    #top .left .pic {
+        width: 50%;
+        height: 75%;
+    }
+
+    #top .left .pic img {
+        width: 175px;
+    }
+
+    #top .right {
+        width: 100%;
+        height: 350px;
+    }
+
+    #top p {
+        font-size: 18px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    #issuu,
+    #web {
+        min-height: 850px;
+    }
+
+    #minigame {
+        min-height: 425px;
+    }
+
+    #issuu .box,
+    #web .box,
+    #minigame .box {
+        width: 50%;
+        height: 75%;
+    }
+
+    #issuu .box .left,
+    #issuu .box .right,
+    #web .box .left,
+    #web .box .right,
+    #minigame .box .left {
+        width: 100%;
+        height: 300px;
+    }
+}
